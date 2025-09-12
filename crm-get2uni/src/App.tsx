@@ -39,7 +39,7 @@ function App() {
 
   // const theme1 = ()=>{
   //   console.log('working');
- 
+
   //   document.documentElement.classList.remove("dark")
   // }
 
