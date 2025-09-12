@@ -2,6 +2,8 @@ import toast, { Toaster } from "react-hot-toast"
 import { useTranslation } from "react-i18next";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router";
+import SideBar from "./components/SideBar/SideBar";
+import { SidebarProvider } from "./components/ui/sidebar";
 
 function App() {
 
@@ -14,7 +16,7 @@ function App() {
 
   // const theme1 = ()=>{
   //   console.log('working');
- 
+
   //   document.documentElement.classList.remove("dark")
   // }
 
@@ -54,8 +56,12 @@ function App() {
            theme1()
         }}>EN</button>
       </div> */}
-
-    <RouterProvider router={router}/>
+      <>
+        <SidebarProvider>   
+          <SideBar />
+          <RouterProvider router={router} />
+        </SidebarProvider>
+      </>
     </>
   )
 }
