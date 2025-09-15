@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/button"
 
 export default function LoginPage() {
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-screen
+    xsm:px-8
+    ">
      
       <div className="flex justify-end p-4 pt-10 pr-10">
         <Button  to="/signup" className="cursor-pointer">Sign Up</Button>
