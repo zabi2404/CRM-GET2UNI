@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import {  useTheme } from "./Zustand/themeSwitcherStore";
 import i18n from "./i18n";
 import { useLanguage } from "./Zustand/LanguageSwitcherStore";
+import { SidebarProvider } from "./components/ui/sidebar";
 function App() {
 
   const {theme} = useTheme();
@@ -29,43 +30,16 @@ function App() {
 
 
 
-
-  // 
-
-  // const theme = ()=>{
-  //   console.log('working');
-  //   document.documentElement.classList.add("dark")
-  // }
-
-  // const theme1 = ()=>{
-  //   console.log('working');
-
-  //   document.documentElement.classList.remove("dark")
-  // }
-
-  // const calltoast = () => {
-  //   {
-
-  //     toast('Hello Darkness!',
-  //       {
-  //         icon: '👏',
-  //         style: {
-  //           borderRadius: '15px',
-  //           background: '#3393',
-  //           color: '#fff',
-  //         },
-  //       }
-  //     )
-  //   }
-
-  // }
-
   return (
     <>
+
+<SidebarProvider> 
     <TopBar/>
      <Toaster/>
 
     <RouterProvider router={router}/>
+
+    </SidebarProvider> 
     </>
   )
 }
