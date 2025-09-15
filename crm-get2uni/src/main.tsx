@@ -7,9 +7,11 @@ import { store } from "./Redux/Store/Store.tsx";
 import "./i18n";
 
 createRoot(document.getElementById('root')!).render(
+    
   <Provider store={store}>
   <StrictMode>
     <App />
   </StrictMode>
-</Provider>,
+</Provider>
+   ,
 )
