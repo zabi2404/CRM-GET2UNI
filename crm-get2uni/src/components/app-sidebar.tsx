@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Home, User, Users, Star, DollarSign, BarChart2, Bell, MessageSquare, BookOpen, LogOut } from "lucide-react"
-import { NavLink } from "react-router-dom"
+import { NavLink, useLocation } from "react-router-dom"
 import {
   Sidebar,
   SidebarContent,
@@ -32,9 +32,16 @@ const data = {
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-  const [activeLink, setActiveLink] = React.useState("/dashboard") // track active link
+  const [activeLink, setActiveLink] = React.useState("") // track active link
 
-  return (
+  const location = useLocation();
+
+
+React.useEffect(() => {
+  setActiveLink(location.pathname);
+}, [location.pathname]);
+return (
+
     <Sidebar {...props}>
       <SidebarHeader>
         <SidebarMenu>

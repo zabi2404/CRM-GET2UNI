@@ -3,43 +3,40 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./router";
 import TopBar from "./components/common/TopBar";
 import { useEffect } from "react";
-import {  useTheme } from "./Zustand/themeSwitcherStore";
+import { useTheme } from "./Zustand/themeSwitcherStore";
 import i18n from "./i18n";
 import { useLanguage } from "./Zustand/LanguageSwitcherStore";
 import { SidebarProvider } from "./components/ui/sidebar";
 function App() {
 
-  const {theme} = useTheme();
-  const {language} = useLanguage();
+  const { theme } = useTheme();
+  const { language } = useLanguage();
   useEffect(() => {
-   
-    if(theme==='dark'){
+
+    if (theme === 'dark') {
       document.documentElement.classList.add('dark')
-    }else{
+    } else {
       document.documentElement.classList.remove('dark')
     }
-    
-    if(language === 'French'){
+
+    if (language === 'French') {
       i18n.changeLanguage("fr")
       return
-  }else{
+    } else {
 
-    i18n.changeLanguage("en")
-  }
-  }, [theme,language]);
+      i18n.changeLanguage("en")
+    }
+  }, [theme, language]);
 
 
 
   return (
     <>
 
-<SidebarProvider> 
-    <TopBar/>
-     <Toaster/>
-
-    <RouterProvider router={router}/>
-
-    </SidebarProvider> 
+     
+        <Toaster />
+        <RouterProvider router={router} />
+     
     </>
   )
 }

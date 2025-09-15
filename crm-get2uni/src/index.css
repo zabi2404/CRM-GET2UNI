@@ -55,7 +55,7 @@
 :root {
   --radius: 0.625rem;
 
-  --background: #F9FAFB;
+  --background: white;
   /* Light Gray */
   --foreground: #1F2937;
   /* Dark Gray/Black */
@@ -72,7 +72,7 @@
 
   --secondary: #004466;
   /* Dark Navy */
-  --secondary-foreground: #FFFFFF;
+  --secondary-foreground: #F9FAFB;
 
   --muted: #E5E7EB;
   /* Neutral light gray */
@@ -127,7 +127,7 @@
   --primary-foreground: #F9FAFB;
 
   --secondary: #004466;
-  --secondary-foreground: #F9FAFB;
+  --secondary-foreground: #16191d;
 
   --muted: #4B5563;
   --muted-foreground: #9CA3AF;
