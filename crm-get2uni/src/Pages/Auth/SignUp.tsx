@@ -1,13 +1,15 @@
 import { SignUpForm } from "@/components/SignUp-form"
 import { Button } from "@/components/ui/button"
+import { useTranslation } from "react-i18next";
 
 export default function SignUp() {
+  const { t } = useTranslation();
   return (
-    <div className="flex relative flex-col h-screen
+    <div className="flex relative flex-col 
     xsm:px-8
     ">
      <div className="absolute right-0 p-4">
-        <Button  to="/login" className="cursor-pointer">Log In</Button>
+        <Button  to="/login" className="cursor-pointer">{t('auth.login')}</Button>
       </div>
       
 

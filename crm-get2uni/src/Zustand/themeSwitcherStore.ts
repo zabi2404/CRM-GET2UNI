@@ -1,6 +1,12 @@
 import { create } from "zustand";
 
-export const useTheme = create(() => ({
+
+type themeState ={
+     theme:string | null,
+     setTheme:(value:string)=>void
+}
+
+export const useTheme = create<themeState>(() => ({
  theme:localStorage.getItem('theme'),
 
  setTheme:(value:string)=>{

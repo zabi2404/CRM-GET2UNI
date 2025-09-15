@@ -11,13 +11,14 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
+import { useTranslation } from "react-i18next"
 
 export function DatePicker() {
   const [date, setDate] = useState<Date | undefined>(undefined)
-
+ const { t } = useTranslation();
   return (
     <div className="flex flex-col space-y-2 w-full">
-      <label className="text-sm font-medium">Date of birth</label>
+      <label className="text-sm font-medium">{t('auth.dob')}</label>
       <Popover>
         <PopoverTrigger asChild>
           <Button
@@ -30,7 +31,7 @@ export function DatePicker() {
             {date ? (
               format(date, "PPP")
             ) : (
-              <span>Pick a date</span>
+              <span>{t('auth.pickDate')}</span>
             )}
             <CalendarIcon className="ml-auto h-4 w-4  hover:text-black " />
           </Button>

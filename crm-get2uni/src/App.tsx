@@ -3,10 +3,13 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./router";
 import TopBar from "./components/common/TopBar";
 import { useEffect } from "react";
-import {  useTheme } from "./Zustand/Store";
+import {  useTheme } from "./Zustand/themeSwitcherStore";
+import i18n from "./i18n";
+import { useLanguage } from "./Zustand/LanguageSwitcherStore";
 function App() {
 
   const {theme} = useTheme();
+  const {language} = useLanguage();
   useEffect(() => {
    
     if(theme==='dark'){
@@ -15,12 +18,19 @@ function App() {
       document.documentElement.classList.remove('dark')
     }
     
-  }, [theme]);
+    if(language === 'French'){
+      i18n.changeLanguage("fr")
+      return
+  }else{
+
+    i18n.changeLanguage("en")
+  }
+  }, [theme,language]);
 
 
 
 
-  // const { t, i18n } = useTranslation();
+  // 
 
   // const theme = ()=>{
   //   console.log('working');

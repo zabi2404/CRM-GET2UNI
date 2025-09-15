@@ -1,5 +1,28 @@
 {
-    "welcome": "Bienvenue à Code Hub",
-    "login": "Connexion"
+  "auth": {
+    "title": "Connectez-vous à votre compte",
+    "subtitle": "Entrez votre e-mail ci-dessous pour vous connecter à votre compte",
+    "forgotPassword": "Mot de passe oublié ?",
+    "button": "Se connecter",
+    "createAccount": "Créez votre compte pour commencer",
+
+    "noAccount": "Vous n'avez pas encore de compte ?",
+    "signupMessage": "Inscrivez-vous et rejoignez-nous dès aujourd'hui !",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "login": "Se connecter",
+    "signup": "S'inscrire",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "dob": "Date de naissance",
+    "pickDate": "Choisir une date",
+    "type": "Type",
+    "whatsapp": "Numéro WhatsApp",
+    "phone": "Numéro de téléphone",
+    "next": "Suivant",
+    "alreadyAccount": "Vous avez déjà un compte ?",
+    "forgotYourPassword": "Mot de passe oublié",
+    "forgotPasswordDescription": "Pas de problème ! Entrez votre adresse e-mail ci-dessous et nous vous enverrons les instructions pour réinitialiser votre mot de passe.",
+    "sendResetInstruction": "Envoyer les instructions de réinitialisation"
   }
-  
+}
