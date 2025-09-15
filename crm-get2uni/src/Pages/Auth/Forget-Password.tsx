@@ -1,11 +1,22 @@
-import React from 'react';
+import { ForgetPasswordForm } from "@/components/common/ForgetPassword-form"
+import { Button } from "@/components/ui/button"
 
-const ForgetPassword = () => {
-    return (
-        <div>
-            
+export default function ForgetPassword() {
+  return (
+    <div className="flex flex-col h-screen
+    xsm:px-8
+    ">
+     
+      <div className="flex justify-end p-4 pt-10 pr-10">
+        <Button  to="/signup" className="cursor-pointer">Sign Up</Button>
+      </div>
+
+     
+      <div className="flex flex-1 items-center justify-center">
+        <div className="w-full max-w-md min-[1440px]:max-w-[600px] transition-all duration-200">
+          <ForgetPasswordForm />
         </div>
-    );
+      </div>
+    </div>
+  )
 }
-
-export default ForgetPassword;
