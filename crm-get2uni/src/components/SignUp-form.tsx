@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label"
 import { TypeSelect } from "./common/TypeSelect"
 import { DatePicker } from "./common/DatePicker"
 import { PhoneInput } from "./common/PhoneInput"
+import { Link, Links } from "react-router-dom"
 
 export function SignUpForm({
   className,
@@ -38,7 +39,12 @@ export function SignUpForm({
         </div>
         <div className="grid gap-3">
         <Label >Type</Label>
-        <TypeSelect />
+        <TypeSelect 
+        value1="Transfer"
+        value2="Change of Status"
+        value3="International"
+        value4="Second Masters"
+        />
         </div>
         <div className="grid gap-3">
           <Label htmlFor="email">Email Address</Label>
@@ -66,9 +72,9 @@ export function SignUpForm({
       </div>
       <div className="text-center text-sm">
       <p>Already have an Account?</p>
-        <a href="/login" className="text-primary hover:underline">
+        <Link to="/login" className="text-primary hover:underline">
         Log In
-        </a>
+        </Link>
       </div>
      
     </form>

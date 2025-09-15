@@ -1,9 +1,24 @@
-import toast, { Toaster } from "react-hot-toast"
-import { useTranslation } from "react-i18next";
+import toast, { Toaster } from "react-hot-toast";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router";
-
+import TopBar from "./components/common/TopBar";
+import { useEffect } from "react";
+import {  useTheme } from "./Zustand/Store";
 function App() {
+
+  const {theme} = useTheme();
+  useEffect(() => {
+   
+    if(theme==='dark'){
+      document.documentElement.classList.add('dark')
+    }else{
+      document.documentElement.classList.remove('dark')
+    }
+    
+  }, [theme]);
+
+
+
 
   // const { t, i18n } = useTranslation();
 
@@ -37,23 +52,8 @@ function App() {
 
   return (
     <>
-      {/* <Toaster />
-      <p className="text-foreground"
-        onClick={calltoast}
-      >hi</p>
-
-      <div className="flex justify-center flex-col items-center">
-        <h1>{t("welcome")}</h1>
-        <button onClick={() => {i18n.changeLanguage("fr")
-
-          theme()
-        }}
-          className="block accent-accent"
-          >FR</button>
-        <button onClick={() => {i18n.changeLanguage("en")
-           theme1()
-        }}>EN</button>
-      </div> */}
+    <TopBar/>
+     <Toaster/>
 
     <RouterProvider router={router}/>
     </>

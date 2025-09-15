@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Link } from "react-router-dom"
 
 export function ForgetPasswordForm({
   className,
@@ -32,9 +33,9 @@ export function ForgetPasswordForm({
       </div>
       <div className="text-center text-sm">
       <p>Don't have an account yet?</p>
-        <a href="/signup" className="text-primary ">
+        <Link to="/signup" className="text-primary ">
         Sign up and join us today!
-        </a>
+        </Link>
       </div>
      
     </form>

@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Link } from "react-router-dom"
 
 export function LoginForm({
   className,
@@ -25,12 +26,12 @@ export function LoginForm({
         <div className="grid gap-3">
           <div className="flex items-center">
             <Label htmlFor="password">Password</Label>
-            <a
-              href="/forget-password"
+            <Link
+              to="/forget-password"
               className="ml-auto text-primary text-sm underline-offset-4 underline"
             >
               Forgot your password?
-            </a>
+            </Link>
           </div>
           <Input id="password" type="password" required />
         </div>
@@ -41,9 +42,9 @@ export function LoginForm({
       </div>
       <div className="text-center text-sm">
       <p>Don't have an account yet?</p>
-        <a href="/signup" className="text-primary ">
+        <Link to="/signup" className="text-primary ">
         Sign up and join us today!
-        </a>
+        </Link>
       </div>
      
     </form>

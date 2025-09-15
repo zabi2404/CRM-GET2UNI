@@ -1,10 +1,16 @@
 import { create } from "zustand";
 
-export const useStore = create((set) => ({
-  count: 0, // state
+export const useTheme = create(() => ({
+ theme:localStorage.getItem('theme'),
 
-  // actions
-  increment: () => set((state) => ({ count: state.count + 1 })),
-  decrement: () => set((state) => ({ count: state.count - 1 })),
-  incrementByAmount: (amount) => set((state) => ({ count: state.count + amount })),
+ setTheme:(value:string)=>{
+   
+  localStorage.setItem('theme',value)
+       if(value === 'light'){
+            document.documentElement.classList.remove('dark')
+            return
+        }   
+        document.documentElement.classList.add(value)
+
+ }
 }));
