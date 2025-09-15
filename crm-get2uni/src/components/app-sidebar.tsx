@@ -1,6 +1,6 @@
 import * as React from "react"
-import { GalleryVerticalEnd, Home } from "lucide-react"
-
+import { Home, User, Users, Star, DollarSign, BarChart2, Bell, MessageSquare, BookOpen, LogOut } from "lucide-react"
+import { NavLink } from "react-router-dom"
 import {
   Sidebar,
   SidebarContent,
@@ -14,65 +14,80 @@ import {
   SidebarMenuSubItem,
   SidebarRail,
 } from "@/components/ui/sidebar"
+import { Link } from "react-router-dom"
 
-// This is sample data.
 const data = {
   navMain: [
-    {
-      title: "Getting Started",
-      url: "#",
-  icon:Home
-    },
-  
+    { title: "dashboard", url: "/", icon: Home },
+    { title: "student", url: "/student", icon: User },
+    { title: "agent", url: "/agent", icon: Users },
+    { title: "ambassador", url: "/ambassador", icon: Star },
+    { title: "commission", url: "/commission", icon: DollarSign },
+    { title: "report", url: "/report", icon: BarChart2 },
+    { title: "notification", url: "/notification", icon: Bell },
+    { title: "message", url: "/message", icon: MessageSquare },
+    { title: "university", url: "/university", icon: BookOpen },
+    { title: "logout", url: "/login", icon: LogOut },
   ],
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const [activeLink, setActiveLink] = React.useState("/dashboard") // track active link
+
   return (
     <Sidebar {...props}>
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton size="lg" asChild>
-              <a href="#">
-                <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
-                  <GalleryVerticalEnd className="size-4" />
-                </div>
-                <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-medium">Documentation</span>
-                  <span className="">v1.0.0</span>
-                </div>
-              </a>
-            </SidebarMenuButton>
+            <img src="../../public/download.png" className="w-32 mx-auto" alt="Logo" />
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
+
       <SidebarContent>
         <SidebarGroup>
           <SidebarMenu>
-            {data.navMain.map((item) => (
-              <SidebarMenuItem key={item.title}>
-                <SidebarMenuButton asChild>
-                  <a href={item.url} className="font-medium">
-                    {item.title}
-                  </a>
-                </SidebarMenuButton>
-                {item.items?.length ? (
-                  <SidebarMenuSub>
-                    {item.items.map((item) => (
-                      <SidebarMenuSubItem key={item.title}>
-                        <SidebarMenuSubButton asChild isActive={item.isActive}>
-                          <a href={item.url}>{item.title}</a>
-                        </SidebarMenuSubButton>
-                      </SidebarMenuSubItem>
-                    ))}
-                  </SidebarMenuSub>
-                ) : null}
-              </SidebarMenuItem>
-            ))}
+            {data.navMain.map((item) => {
+              const Icon = item.icon
+              const isActive = activeLink === item.url
+
+              return (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton
+                    asChild
+                    isActive={isActive}
+                    onClick={() => setActiveLink(item.url)}
+                  >
+                    
+                    <Link to={item.url} className="flex items-center gap-2 font-medium">
+                      {Icon && <Icon className="w-5 h-5" />}
+                      {item.title}
+                    </Link>
+                  </SidebarMenuButton>
+
+                  {/* Render submenus if they exist */}
+                  {/* {item.sub?.length ? (
+                    <SidebarMenuSub>
+                      {item.sub.map((sub) => (
+                        <SidebarMenuSubItem key={sub.title}>
+                          <SidebarMenuSubButton
+                            asChild
+                            isActive={activeLink === sub.url}
+                            onClick={() => setActiveLink(sub.url)}
+                          >
+                            <a href={sub.url}>{sub.title}</a>
+                          </SidebarMenuSubButton>
+                        </SidebarMenuSubItem>
+                      ))}
+                    </SidebarMenuSub>
+                  ) : null} */}
+                </SidebarMenuItem>
+              )
+            })}
           </SidebarMenu>
         </SidebarGroup>
       </SidebarContent>
+
       <SidebarRail />
     </Sidebar>
   )
