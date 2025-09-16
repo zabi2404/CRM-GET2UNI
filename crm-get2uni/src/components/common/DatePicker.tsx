@@ -17,7 +17,7 @@ export function DatePicker() {
   const [date, setDate] = useState<Date | undefined>(undefined)
  const { t } = useTranslation();
   return (
-    <div className="flex flex-col space-y-2 w-full">
+    <div className="flex  flex-col space-y-2 w-full">
       <label className="text-sm font-medium">{t('auth.dob')}</label>
       <Popover>
         <PopoverTrigger asChild>

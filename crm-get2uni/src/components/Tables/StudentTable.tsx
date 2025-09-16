@@ -13,7 +13,7 @@ import {
     useReactTable,
     VisibilityState,
 } from "@tanstack/react-table"
-import { ArrowUpDown, ChevronDown, Menu, MoreHorizontal, Search } from "lucide-react"
+import { ArrowUpDown, ChevronDown, Menu, MoreHorizontal, Plus, Search } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
@@ -288,9 +288,10 @@ export function DataTableDemo() {
 
     return (
         <div className="w-full">
-            <div className="flex items-center py-4 gap-2">
+            <div className="flex items-center justify-between py-4 gap-2">
 
-                <Input
+               <div className="flex items-center gap-2">
+               <Input
                     placeholder="Search..."
                     value={(table.getColumn("StudentName")?.getFilterValue() as string) ?? ""}
                     onChange={(event) =>
@@ -414,8 +415,14 @@ export function DataTableDemo() {
                     </DropdownMenuContent>
                 </DropdownMenu>
 
+               </div>
 
-
+                <Button 
+                to="/add-student"
+                > 
+        <Plus />
+Add New Student
+        </Button>
             </div>
 
             <div className="w-full h-[620px] overflow-x-auto rounded-md border">

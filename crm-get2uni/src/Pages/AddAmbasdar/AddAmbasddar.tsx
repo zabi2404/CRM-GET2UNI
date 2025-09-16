@@ -1,10 +1,28 @@
-import React from 'react';
+import { ProgressDemo } from '@/components/common/ProgressBar';
 
-const AddAmbasddar = () => {
+
+import { useTranslation } from 'react-i18next';
+import { AmbassddorBasicInfo } from './AmbassddorBasicInfo';
+import EnviornmentDetail from './EnviornmentDetail';
+
+
+ const AddAmbasddar = () => {
+
+    const { t } = useTranslation();
     return (
-        <div>
-            
-        </div>
+        <>
+          
+
+            <div className='border rounded-sm px-6 py-7  m-8'>
+                {/* <BasicInfo /> */}
+                <AmbassddorBasicInfo/>
+              
+            </div>
+            <EnviornmentDetail/>
+              
+
+
+        </>
     );
 }
 

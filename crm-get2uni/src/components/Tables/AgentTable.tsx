@@ -13,7 +13,7 @@ import {
     useReactTable,
     VisibilityState,
 } from "@tanstack/react-table"
-import { ArrowUpDown, ChevronDown, Menu, MoreHorizontal, Search } from "lucide-react"
+import { ArrowUpDown, ChevronDown, Menu, MoreHorizontal, Plus, Search } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
@@ -288,7 +288,7 @@ export function AgentTable() {
 
     return (
         <div className="w-full">
-            <div className="flex items-center py-4 gap-2">
+            <div className="flex items-center justify-between py-4 gap-2">
 
                 <Input
                     placeholder="Search..."
@@ -299,6 +299,13 @@ export function AgentTable() {
                     className="max-w-[200px]"
                 />
 
+
+        <Button 
+        to="/add-agent"
+        > 
+        <Plus />
+Add New Agent
+        </Button>
             
 
 
