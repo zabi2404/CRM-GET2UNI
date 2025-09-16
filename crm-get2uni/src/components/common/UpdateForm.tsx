@@ -2,36 +2,26 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { TypeSelect } from "./common/TypeSelect"
-import { DatePicker } from "./common/DatePicker"
-import { PhoneInput } from "./common/PhoneInput"
+import { PhoneInput } from "../common/PhoneInput"
 import { Link } from "react-router-dom"
 import { useTranslation } from "react-i18next"
 
-export function SignUpForm({
+export function UpdateForm({
   className,
   ...props
 }: React.ComponentProps<"form">) {
   const { t } = useTranslation();
   return (
     <form className={cn("flex flex-col gap-6     ", className)} {...props}>
-      <div className="flex flex-col items-center  text-center">
-        <h1 className="text-2xl font-bold">{t("auth.signup")}</h1>
+      <div className="flex flex-col text-start">
+        <h1 className="text-2xl font-bold text-headingColor dark:text-white">Setting</h1>
         <p className="text-muted-foreground text-sm text-balance">
-          {t('auth.createAccount')}
+        Profile Settings
         </p>
       </div>
-      <div className="grid gap-2">
+      <div className="grid gap-4">
 
-      <div className="grid gap-3">
-          <Label >{t('auth.type')}</Label>
-          <TypeSelect
-            value1="Transfer"
-            value2="Change of Status"
-            value3="International"
-            value4="Second Masters"
-          />
-        </div>
+     
 
         <div className="grid gap-3">
           <Label htmlFor="FirstName">{t('auth.firstName')}</Label>
@@ -50,10 +40,7 @@ export function SignUpForm({
         </div>
 
     
-        <div className="grid gap-3">
-
-          <DatePicker />
-        </div>
+       
         <div className="grid gap-3">
           <Label htmlFor="email">Email Address</Label>
           <Input id="email"
@@ -73,17 +60,12 @@ export function SignUpForm({
         </div>
 
 
-        <Button type="submit" className="w-full cursor-pointer">
-          {t('auth.next')}
+        <Button type="submit" className="w-fit cursor-pointer">
+          Save & Update
         </Button>
 
       </div>
-      <div className="text-center text-sm">
-        <p>{t('auth.alreadyAccount')}</p>
-        <Link to="/login" className="text-primary hover:underline">
-          {t('auth.login')}
-        </Link>
-      </div>
+   
 
     </form>
   )

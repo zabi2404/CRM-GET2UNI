@@ -1,10 +1,34 @@
-import React from 'react';
+import { UpdateForm } from '@/components/common/UpdateForm';
+import { Button } from '@/components/ui/button';
+import React, { useRef } from 'react';
 
 const Setting = () => {
+
+    const input = useRef<null|HTMLInputElement>(null)
     return (
-        <div>
+      <>
+      
+      <div className='grid grid-cols-[60%_40%]  px-8'>
+
+      <UpdateForm/>
+      <div className='flex items-center justify-center flex-col gap-4'>
+       <div className='max-w-[300px] rounded-sm overflow-hidden object-cover'>
+        <img src="/b2e6927ed540da897e8cd5465aac6a30.jpg" alt="" />
+       </div>
+       <input ref={input} type="file" className='hidden'/>
+       <Button className="w-fit cursor-pointer"
+       onClick={()=>{
+        if(input.current){
+            input.current.click()
             
-        </div>
+        }
+       }}
+       >
+         Upload Profile
+        </Button>
+      </div>
+      </div>
+      </>
     );
 }
 
