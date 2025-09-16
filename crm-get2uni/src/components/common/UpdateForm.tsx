@@ -14,9 +14,9 @@ export function UpdateForm({
   return (
     <form className={cn("flex flex-col gap-6     ", className)} {...props}>
       <div className="flex flex-col text-start">
-        <h1 className="text-2xl font-bold text-headingColor dark:text-white">Setting</h1>
+        <h1 className="text-2xl font-bold text-headingColor dark:text-white">{t('settings.title')}</h1>
         <p className="text-muted-foreground text-sm text-balance">
-        Profile Settings
+       {t('settings.profileSettings')}
         </p>
       </div>
       <div className="grid gap-4">
@@ -42,10 +42,10 @@ export function UpdateForm({
     
        
         <div className="grid gap-3">
-          <Label htmlFor="email">Email Address</Label>
+          <Label htmlFor="email">{t('settings.emailAddress')}</Label>
           <Input id="email"
 
-            type="email" placeholder="m@example.com" required />
+            type="email" placeholder={t('settings.placeholderEmail')} required />
         </div>
         <div className="grid gap-3">
           <Label htmlFor="email">{t('auth.whatsapp')}</Label>
@@ -61,7 +61,7 @@ export function UpdateForm({
 
 
         <Button type="submit" className="w-fit cursor-pointer">
-          Save & Update
+          {t('settings.saveUpdate')}
         </Button>
 
       </div>

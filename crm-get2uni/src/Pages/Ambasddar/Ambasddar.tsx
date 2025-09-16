@@ -1,10 +1,9 @@
-import React from 'react';
+import { AmbasddorTable } from '@/components/Tables/AmbasddorTable';
+
 
 const Ambasddar = () => {
     return (
-        <div>
-            
-        </div>
+      <AmbasddorTable/>
     );
 }
 

@@ -1,10 +1,12 @@
+import { AgentTable } from '@/components/Tables/AgentTable';
 import React from 'react';
 
 const Agent = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+        
+        <AgentTable/>
+        </>
     );
 }
 

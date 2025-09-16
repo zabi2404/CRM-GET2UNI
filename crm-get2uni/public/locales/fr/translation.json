@@ -24,5 +24,13 @@
     "forgotYourPassword": "Mot de passe oublié",
     "forgotPasswordDescription": "Pas de problème ! Entrez votre adresse e-mail ci-dessous et nous vous enverrons les instructions pour réinitialiser votre mot de passe.",
     "sendResetInstruction": "Envoyer les instructions de réinitialisation"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "profileSettings": "Paramètres du profil",
+    "saveUpdate": "Enregistrer et mettre à jour",
+    "uploadProfile": "Télécharger le profil",
+    "emailAddress": "Adresse e-mail",
+    "placeholderEmail": "m@exemple.com"
   }
 }

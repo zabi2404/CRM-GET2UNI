@@ -1,10 +1,11 @@
+import { UniversityTable } from '@/components/Tables/UniversityTable';
 import React from 'react';
 
 const University = () => {
     return (
-        <div>
-            
-        </div>
+       <>
+       <UniversityTable/>
+       </>
     );
 }
 

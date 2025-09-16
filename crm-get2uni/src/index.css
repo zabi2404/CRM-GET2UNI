@@ -107,7 +107,7 @@
   --sidebar-foreground: #1F2937;
   --sidebar-primary: #008080;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #004466;
+  --sidebar-accent: #008080;
   --sidebar-accent-foreground: #FFFFFF;
   --sidebar-border: #E5E7EB;
   --sidebar-ring: #008080;
@@ -178,3 +178,33 @@
     @apply bg-background text-foreground;
   }
 }
+body{
+  
+}
+
+/* Global scrollbar style */
+::-webkit-scrollbar {
+  width: 4px; /* scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* track (background) */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #008080; /* scrollbar thumb */
+  border-radius: 10px; /* rounded edges */
+}
+
+/* body *::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+body *::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+body *::-webkit-scrollbar-thumb {
+  background-color: #008080 !important;
+  border-radius: 999px;
+  border: 2px solid transparent; /* avoids bleeding */
+

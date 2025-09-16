@@ -9,7 +9,7 @@ const TopBar = () => {
     // 
     return (
         <>
-            <div className="flex justify-end p-2 gap-4 bg-secondary-foreground items-center">
+            <div className="flex justify-end p-2 gap-4 bg-white z-12 items-center ">
                 
                 <div className="w-[100px]">
                     

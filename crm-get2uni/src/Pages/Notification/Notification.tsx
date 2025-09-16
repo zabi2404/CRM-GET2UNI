@@ -1,10 +1,10 @@
-import React from 'react';
+import { NotificationTable } from '@/components/Tables/NotificationTable';
 
 const Notification = () => {
     return (
-        <div>
-            
-        </div>
+     <>
+     <NotificationTable/>
+     </>
     );
 }
 

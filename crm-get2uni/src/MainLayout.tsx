@@ -11,9 +11,17 @@ export default function MainLayout() {
    <SideBar />
    <div className="flex flex-1 flex-col">
 
-   <TopBar/>
+   {/* <TopBar/> */}
+
+
    <Header/>
+
+   <div className="md:pt-25 px-8
+   xsm:pt-50
+   ">
+
         <Outlet />
+   </div>
    </div>
 
      
