@@ -10,88 +10,92 @@ import { SidebarProvider } from "./components/ui/sidebar";
 
 export const router = createBrowserRouter([
     {
+        // This is the main application layout for authenticated users
         path: "/",
-        element: 
-        <SidebarProvider>
-        <MainLayout />
-        </SidebarProvider>
-        ,
+        element: (
+            <SidebarProvider>
+                <MainLayout />
+            </SidebarProvider>
+        ),
         children: [
             {
-                path: "/",
-                element: <Dashboard />
+                index: true, // This is the dashboard at "/"
+                element: <Dashboard />,
             },
             {
                 path: "student",
-                element: <Student />
+                element: <Student />,
             },
             {
                 path: "add-student",
-                element: <AddStudent />
+                element: <AddStudent />,
             },
             {
                 path: "agent",
-                element: <Agent />
+                element: <Agent />,
             },
             {
                 path: "add-agent",
-                element: <AddAgents />
+                element: <AddAgents />,
             },
             {
                 path: "ambassador",
-                element: <Ambasddar />
+                element: <Ambasddar />,
             },
             {
                 path: "add-ambassador",
-                element: <AddAmbasddar />
+                element: <AddAmbasddar />,
             },
             {
                 path: "commission",
-                element: <Commission />
+                element: <Commission />,
             },
             {
                 path: "report",
-                element: <Report />
+                element: <Report />,
             },
             {
                 path: "leads",
-                element: <Leads />
+                element: <Leads />,
             },
             {
                 path: "notification",
-                element: <Notification />
+                element: <Notification />,
             },
             {
                 path: "message",
-                element: <Message />
+                element: <Message />,
             },
             {
                 path: "university",
-                element: <University />
+                element: <University />,
             },
             {
                 path: "setting",
-                element: <Setting />
+                element: <Setting />,
             },
         ],
     },
     {
-        path: "/",
+        // This is a separate, top-level layout for authentication
         element: <AuthLayout />,
         children: [
             {
                 path: "login",
-                element: <Login />
+                element: <Login />,
             },
             {
                 path: "signup",
-                element: <SignUp />
+                element: <SignUp />,
             },
             {
                 path: "forget-password",
-                element: <ForgetPassword />
+                element: <ForgetPassword />,
             },
         ],
     },
-    { path: "*", element: <NotFound /> },
+    {
+        path: "*",
+        element: <NotFound />
+    }
 ]);
