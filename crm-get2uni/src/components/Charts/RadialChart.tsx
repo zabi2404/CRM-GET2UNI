@@ -33,14 +33,14 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-export function ChartRadialStacked() {
+export function ChartRadialStacked({title}:any) {
   const totalVisitors = chartData[0].desktop + chartData[0].mobile
 
   return (
-    <Card className="flex flex-col">
-      <CardHeader className="items-center pb-0">
-        <CardTitle>Radial Chart - Stacked</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+    <Card className="flex flex-col min-h-[365px] w-[100%]">
+      <CardHeader className="items-center justify-center pb-0">
+        <CardTitle>{title}</CardTitle>
+       
       </CardHeader>
       <CardContent className="flex flex-1 items-center pb-0">
         <ChartContainer
@@ -100,14 +100,6 @@ export function ChartRadialStacked() {
           </RadialBarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col gap-2 text-sm">
-        <div className="flex items-center gap-2 leading-none font-medium">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-        </div>
-        <div className="text-muted-foreground leading-none">
-          Showing total visitors for the last 6 months
-        </div>
-      </CardFooter>
     </Card>
   )
 }

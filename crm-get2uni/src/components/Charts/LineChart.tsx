@@ -27,6 +27,9 @@ const chartData = [
   { month: "April", agents: 73, ambassador: 190, Direct: 60 },
   { month: "May", agents: 209, ambassador: 130, Direct: 110 },
   { month: "June", agents: 214, ambassador: 140, Direct: 100 },
+  { month: "July", agents: 214, ambassador: 140, Direct: 100 },
+  { month: "August", agents: 214, ambassador: 140, Direct: 100 },
+  { month: "September", agents: 237, ambassador: 120, Direct: 90 },
 ]
 
 const chartConfig = {
@@ -46,13 +49,13 @@ const chartConfig = {
 
 export function ChartLineMultiple() {
   return (
-    <Card>
+    <Card className="h-[350px] w-full">
       <CardHeader>
-        <CardTitle>Line Chart - Multiple</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>Students onboarded channels</CardTitle>
+        <CardDescription>January - September 2025</CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig}>
+        <ChartContainer className="h-[250px] w-full" config={chartConfig}>
           <LineChart
             accessibilityLayer
             data={chartData}
@@ -94,18 +97,6 @@ export function ChartLineMultiple() {
           </LineChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter>
-        <div className="flex w-full items-start gap-2 text-sm">
-          <div className="grid gap-2">
-            <div className="flex items-center gap-2 leading-none font-medium">
-              Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-            </div>
-            <div className="text-muted-foreground flex items-center gap-2 leading-none">
-              Showing total visitors for the last 6 months
-            </div>
-          </div>
-        </div>
-      </CardFooter>
     </Card>
   )
 }

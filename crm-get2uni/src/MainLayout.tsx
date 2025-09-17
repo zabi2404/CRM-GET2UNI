@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 
 export default function MainLayout() {
   return (
-    <div className="grid grid-cols-[auto_1fr] w-full h-screen">
+    <div className="grid grid-cols-[auto_1fr] w-full ">
       
       <div className="col-span-1 row-span-2">
         <SideBar />
@@ -15,7 +15,7 @@ export default function MainLayout() {
         <Header />
       </div>
 
-      <main className=" md:pt-25 px-8  xsm:pt-50 overflow-y-auto">
+      <main className=" md:pt-25 px-8  xsm:pt-50 w-full">
         <Outlet />
       </main>
       </div>
