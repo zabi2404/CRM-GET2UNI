@@ -27,7 +27,7 @@ const Header = () => {
 
                 <div className="flex justify-between p-4">
                     <div>
-                        <h1 className="text-subheading2 text-headingColor dark:text-white">Welcome Admin</h1>
+                        <h1 className="text-subheading2 font-semibold text-headingColor dark:text-white">Welcome Admin</h1>
                         <p className="">Admin Dashboard</p>
                     </div>
 

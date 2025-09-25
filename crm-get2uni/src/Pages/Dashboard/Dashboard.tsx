@@ -5,6 +5,8 @@ import { RecentActivityTable } from "@/components/Tables/RecentActivityTable";
 import Line from "@/components/common/Line";
 import { Button } from "@/components/ui/button";
 import { Plus, User } from "lucide-react";
+import StudentOverviewCard from "@/components/common/StudentOverviewCard";
+import SmallCard from "@/components/common/SmallCard";
 
 
 const Dashboard = () => {
@@ -14,15 +16,15 @@ const Dashboard = () => {
             <div className="grid xl:grid-cols-[2fr_1fr] gap-4 mb-4
             xsm:grid-cols-1
             ">
-                <div className="border p-4 rounded-md">
-                    <h1>Students Overview</h1>
-                    <div className="border m-4 rounded-md p-4">
+                <div className="border p-4 rounded-md ">
+                    <h1 className="text-subheading2 font-medium mb-4">Students Overview</h1>
+                    <div className="border mb-4 rounded-md p-6">
                         <div>
                             <h1>Total Students</h1>
                         </div>
                         <div className="flex items-center justify-between">
                             <div>
-                                <h1>145</h1>
+                                <h1 className=" font-medium text-[48px] ">145</h1>
                                 <div className="flex">
                                     <p>25%</p>
                                     <p>from Last Month</p>
@@ -36,114 +38,48 @@ const Dashboard = () => {
                         </div>
                     </div>
 
-                    <div className="border m-4 rounded-md p-4">
+                    <div className="border  rounded-md p-6">
                     <div>
                         <h1>
                         Applications
                         </h1>
                     </div>
                     <div className="flex">
-                        <div>
-                            <h1 className="text-subheading">0</h1>
-                           <li>Approved</li>
+                        <div className="mr-30">
+                            <h1 className="text-[36px] font-500 text-textBlack mb-2">0</h1>
+                          <li className="text-[12px] text-green-400">Approved</li>
                         </div>
-                        <div className="flex">
-                            <div className="flex"> 
-                                <div><Line/></div>
-                                <div className="flex flex-col justify-between">
-                                    <h1 className="text-subheading">0</h1>
-                                    <li>In Reviews</li>
-                                </div>
-                            </div>
-                            {/* <div>
-                                <div><Line/></div>
-                                <div>
-                                    <h1>0</h1>
-                                    <li>Pending</li>
-                                </div>
-                            </div>
-                            <div>
-                                <div><Line/></div>
-                                <div>
-                                    <h1>0</h1>
-                                    <li>Rejected</li>
-                                </div>
-                            </div>
-                            <div>
-                                <div><Line/></div>
-                                <div>
-                                    <h1>0</h1>
-                                    <li></li>
-                                </div>
-                            </div> */}
+                        <div className="flex flex-1 justify-evenly ">
+                           <SmallCard
+                           title="In rewiew"
+                           count={4}
+                           color="orange"
+                           />
+                            <SmallCard
+                            title="Pending"
+                            count={45}
+                            color="green"
+                            />
+                             <SmallCard
+                             title="Rejected"
+                             count={19}
+                             color="purple"
+                             />
+                           
 
                         </div>
                     </div>
                     </div>
-                    <div>
 
-                    </div>
                 </div>
 
-                <div className="border p-4 rounded-md">
-                    <h1>Students Overview</h1>
-                    <div className="border rounded-md p-4 mb-4">
-                        <div className="flex justify-between">
-                                <div className="flex items-center gap-2">
-                                <div className="bg-primary p-2 w-fit rounded-sm text-white"><User /></div>
-                            <h1>Total Agents</h1>
-                                </div>
-                                <div >
-                                    <Button variant={"outline"}>
-                                    <Plus />
-                                        Add
-                                    </Button>
-                                </div>
-                        </div>
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h1>145</h1>
-                                <div className="flex">
-                                    <p>25%</p>
-                                    <p>from Last Month</p>
-                                </div>
-                            </div>
-                            <div className="flex justify-end ">
-                                <img src="/download (1).png" 
-                                 className="w-[48px] h-[78px]"
-                                alt="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="border rounded-md p-4">
-                        <div className="flex justify-between">
-                                <div className="flex items-center gap-2">
-                                <div className="bg-primary p-2 w-fit rounded-sm text-white"><User /></div>
-                            <h1>Total Agents</h1>
-                                </div>
-                                <div >
-                                    <Button variant={"outline"}>
-                                    <Plus />
-                                        Add
-                                    </Button>
-                                </div>
-                        </div>
-                        <div className="flex items-center justify-between">
-                            <div>
-                                <h1>145</h1>
-                                <div className="flex">
-                                    <p>25%</p>
-                                    <p>from Last Month</p>
-                                </div>
-                            </div>
-                            <div className="flex justify-end ">
-                                <img src="/download (1).png" 
-                                 className="w-[48px] h-[78px]"
-                                alt="" />
-                            </div>
-                        </div>
-                    </div>
+                <div className="border p-4 rounded-md flex flex-col gap-4 w-full">
+                  <StudentOverviewCard/>
+                  <StudentOverviewCard/>
+                    
                 </div>
+
+
             </div>
 
 
