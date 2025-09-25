@@ -7,7 +7,7 @@ import { TypeSelect } from "@/components/common/TypeSelect"
 import AddStudentHeader from "./AddStudentHeader"
 import { DatePicker } from "@/components/common/DatePicker"
 
-export default function EnrollmentDetails({
+export default function StartTerm({
     className,
     ...props
 }: React.ComponentProps<"form">) {
