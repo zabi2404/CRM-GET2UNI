@@ -11,7 +11,9 @@ const Dashboard = () => {
     return (
         <>
 
-            <div className="grid grid-cols-[2fr_1fr] gap-4 mb-4">
+            <div className="grid xl:grid-cols-[2fr_1fr] gap-4 mb-4
+            xsm:grid-cols-1
+            ">
                 <div className="border p-4 rounded-md">
                     <h1>Students Overview</h1>
                     <div className="border m-4 rounded-md p-4">
@@ -145,9 +147,15 @@ const Dashboard = () => {
             </div>
 
 
-            <div className="flex gap-4 ">
+            <div className="flex gap-4 
+            xl:flex-row
+            xsm:flex-col
+            ">
                 <ChartLineMultiple />
-                <div className="flex flex-col gap-4">
+                <div className="flex width-full gap-4
+                xl:flex-col
+                xsm:flex-row
+                ">
                     <OnboardCard
                         title="Agent Onboard"
                         description="45"
@@ -164,19 +172,35 @@ const Dashboard = () => {
                 </div>
             </div>
 
-            <div className="flex gap-4 mt-4 items-center justify-between">
+            <div className="flex gap-4 mt-4 items-center  flex-wrap
+            xl:justify-between
+            
+            ">
 
-                <ChartRadialStacked
+                <div className=" flex min-w-[280px] w-full
+                 sm:w-[100%] 
+                 md:w-[380px] 
+                 xl:w-[32%] 
+                 max-[887px]:!w-[380px]">
+                    <ChartRadialStacked
                     title="Ambassadors Overview"
                 />
+                </div>
+                <div className=" flex min-w-[280px] w-full sm:w-[100%] md:w-[380px] xl:w-[32%] max-[887px]:!w-[380px]">
+
                 <ChartRadialStacked
                     title="Application Conversion"
                 />
+                </div>
+                <div className=" flex min-w-[280px] w-full sm:w-[100%] md:w-[380px] xl:w-[32%] max-[887px]:!w-[380px]">
+
                 <ChartRadialStacked
                     title='Agent Overview'
                 />
+                </div>
 
             </div>
+
             <div className="mt-4 border p-4 rounded-md">
                 <h1>Recent Activities</h1>
                 <div className="m-4">
