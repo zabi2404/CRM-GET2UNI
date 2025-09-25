@@ -37,10 +37,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const location = useLocation();
 
 
-React.useEffect(() => {
-  setActiveLink(location.pathname);
-}, [location.pathname]);
-return (
+  React.useEffect(() => {
+    setActiveLink(location.pathname);
+  }, [location.pathname]);
+  return (
 
     <Sidebar {...props}>
       <SidebarHeader>
@@ -65,9 +65,21 @@ return (
                     isActive={isActive}
                     onClick={() => setActiveLink(item.url)}
                   >
-                    
+
                     <Link to={item.url} className="flex items-center gap-2 font-medium">
-                      {Icon && <Icon className="w-5 h-5" />}
+                      {item.icon ? (
+                        item.title === "notification" ? (
+                          <>
+                            <item.icon className="w-5 h-5" />
+                            <span className={`absolute ${!isActive ? "text-primary" : 'text-white'}   -top-0 left-5 h-4 w-4 flex items-center justify-center text-[10px] font-medium`}>
+                              99+
+                            </span>
+                          </>
+                        ) : (
+                          <item.icon className="w-5 h-5" />
+                        )
+                      ) : null}
+
                       {item.title}
                     </Link>
                   </SidebarMenuButton>

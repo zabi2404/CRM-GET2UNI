@@ -3,7 +3,10 @@ import AddStudentHeader from '../AddStudent/AddStudentHeader'
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { CountrySelect } from '@/components/common/CountrySelectInput';
+import { useNavigate } from 'react-router-dom';
 function EnviornmentDetail() {
+
+    const navigate = useNavigate();
     return (
         <>
 
@@ -19,7 +22,11 @@ function EnviornmentDetail() {
                 </div>
 
                 <div className="flex justify-between mt-4">
-                    <Button type="submit" variant={"outline"} className="w-fit cursor-pointer">
+                    <Button type="submit" variant={"outline"} className="w-fit cursor-pointer"
+                    onClick={()=>{
+                        navigate('/')
+                    }}
+                    >
                         Cancel
                     </Button>
 
