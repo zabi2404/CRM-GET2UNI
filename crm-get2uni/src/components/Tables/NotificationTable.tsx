@@ -27,6 +27,7 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Input } from "@/components/ui/input"
+import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "../ui/pagination"
 import {
     Table,
     TableBody,
@@ -303,7 +304,7 @@ export function NotificationTable() {
 
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                        <Button variant="outline" className="">
+                        <Button variant="outline" className="hover:bg-transparent hover:text-black cursor-pointer hover:border-primary">
                             <div className="w-[200px] flex justify-between overflow-hidden">
 
                                 {selectedType}
@@ -315,7 +316,7 @@ export function NotificationTable() {
                         {["international", "change of status", "transfer"].map((type) => (
                             <DropdownMenuItem
                                 key={type}
-                                className="capitalize"
+                                className="capitalize cursor-pointer" 
                                 onClick={() => {
                                     setSelectedType(type) // 🔹 change button label
                                     table.getColumn("Type")?.setFilterValue(type) // 🔹 apply filter
@@ -383,32 +384,70 @@ export function NotificationTable() {
                     </TableBody>
                 </Table>
             </div>
+  <div>
+                <div className="flex items-center w-full justify-between space-x-2 py-4">
+                    <div className="text-muted-foreground  text-nowrap text-sm">
+                        {table.getFilteredSelectedRowModel().rows.length} of{" "}
+                        {table.getFilteredRowModel().rows.length} row(s) selected.
+                    </div>
+                    <div className="flex ">
 
-            <div className="flex items-center justify-end space-x-2 py-4">
-                <div className="text-muted-foreground flex-1 text-sm">
-                    {table.getFilteredSelectedRowModel().rows.length} of{" "}
-                    {table.getFilteredRowModel().rows.length} row(s) selected.
-                </div>
-                <div className="space-x-2">
-                    <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => table.previousPage()}
-                        disabled={!table.getCanPreviousPage()}
-                    >
-                        Previous
-                    </Button>
-                    <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => table.nextPage()}
-                        disabled={!table.getCanNextPage()}
-                    >
-                        Next
-                    </Button>
+                        <Pagination>
+                            <PaginationContent>
+                                <PaginationItem>
+                                    <PaginationPrevious
+                                        href="#"
+                                        onClick={(e) => {
+                                            e.preventDefault()
+                                            if (table.getCanPreviousPage()) {
+                                                table.previousPage()
+                                            }
+                                        }}
+                                        className={!table.getCanPreviousPage() ? "pointer-events-none opacity-50" : ""}
+                                    />
+
+                                </PaginationItem>
+
+                              
+                                {Array.from(
+                                    { length: table.getPageCount() },
+                                    (_, i) => i + 1
+                                ).map((page) => (
+                                    <PaginationItem key={page}>
+                                        <PaginationLink
+                                            href="#"
+                                            isActive={table.getState().pagination.pageIndex + 1 === page}
+                                            onClick={() => table.setPageIndex(page - 1)}
+                                        >
+                                            {page}
+                                        </PaginationLink>
+                                    </PaginationItem>
+                                ))}
+
+                               
+                                {table.getPageCount() > 5 && (
+                                    <PaginationItem>
+                                        <PaginationEllipsis />
+                                    </PaginationItem>
+                                )}
+
+                                <PaginationItem>
+                                    <PaginationNext
+                                        href="#"
+                                        onClick={(e) => {
+                                            e.preventDefault()
+                                            if (table.getCanNextPage()) {
+                                                table.nextPage()
+                                            }
+                                        }}
+                                        className={!table.getCanNextPage() ? "pointer-events-none opacity-50" : ""}
+                                    />
+                                </PaginationItem>
+                            </PaginationContent>
+                        </Pagination>
+                    </div>
                 </div>
             </div>
-
         </div>
     )
 }

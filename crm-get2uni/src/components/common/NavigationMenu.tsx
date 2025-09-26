@@ -34,7 +34,9 @@ import {
         <SelectContent>
           <SelectGroup>
             {items.map((item, i) => (
-              <SelectItem key={i} value={item.path}>
+              <SelectItem
+              className="cursor-pointer"
+              key={i} value={item.path}>
                 {item.label}
               </SelectItem>
             ))}

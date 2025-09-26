@@ -3,6 +3,7 @@ import { ChartPieLabelList } from '@/components/Charts/pieChart'
 import { CommissionTable } from '@/components/Tables/CommissionTable'
 import CheckboxForm from './CheckboxForm'
 import { TypeSelect } from '@/components/common/TypeSelect'
+import { DropDown } from '@/components/common/DropDown'
 
 
 function CommissionTab() {
@@ -25,7 +26,7 @@ function CommissionTab() {
     title="Paid"
     />
    <div className='w-[150px]'>
-   <TypeSelect
+   <DropDown
     value1='Agent'
     value2='Ambassdor'
     placeHolder='Type'

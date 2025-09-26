@@ -32,7 +32,7 @@
       }}
       defaultValue={defaultValue}>
         <SelectTrigger className=" w-fit">
-          <SelectValue placeholder={placeHolder? placeHolder : "Select"}/>
+          <SelectValue className="hover:text-black" placeholder={placeHolder? placeHolder : "Select"}/>
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>

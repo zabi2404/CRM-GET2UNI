@@ -35,6 +35,8 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
+import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "../ui/pagination"
+
 import { Link } from "react-router-dom"
 
 const data: Payment[] = [
@@ -346,30 +348,70 @@ export function CommissionTable() {
                 </Table>
             </div>
 
-            <div className="flex items-center justify-end space-x-2 py-4">
-                <div className="text-muted-foreground flex-1 text-sm">
-                    {table.getFilteredSelectedRowModel().rows.length} of{" "}
-                    {table.getFilteredRowModel().rows.length} row(s) selected.
-                </div>
-                <div className="space-x-2">
-                    <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => table.previousPage()}
-                        disabled={!table.getCanPreviousPage()}
-                    >
-                        Previous
-                    </Button>
-                    <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => table.nextPage()}
-                        disabled={!table.getCanNextPage()}
-                    >
-                        Next
-                    </Button>
-                </div>
-            </div>
+          <div>
+                         <div className="flex items-center w-full justify-between space-x-2 py-4">
+                             <div className="text-muted-foreground  text-nowrap text-sm">
+                                 {table.getFilteredSelectedRowModel().rows.length} of{" "}
+                                 {table.getFilteredRowModel().rows.length} row(s) selected.
+                             </div>
+                             <div className="flex ">
+         
+                                 <Pagination>
+                                     <PaginationContent>
+                                         <PaginationItem>
+                                             <PaginationPrevious
+                                                 href="#"
+                                                 onClick={(e) => {
+                                                     e.preventDefault()
+                                                     if (table.getCanPreviousPage()) {
+                                                         table.previousPage()
+                                                     }
+                                                 }}
+                                                 className={!table.getCanPreviousPage() ? "pointer-events-none opacity-50" : ""}
+                                             />
+         
+                                         </PaginationItem>
+         
+                                       
+                                         {Array.from(
+                                             { length: table.getPageCount() },
+                                             (_, i) => i + 1
+                                         ).map((page) => (
+                                             <PaginationItem key={page}>
+                                                 <PaginationLink
+                                                     href="#"
+                                                     isActive={table.getState().pagination.pageIndex + 1 === page}
+                                                     onClick={() => table.setPageIndex(page - 1)}
+                                                 >
+                                                     {page}
+                                                 </PaginationLink>
+                                             </PaginationItem>
+                                         ))}
+         
+                                        
+                                         {table.getPageCount() > 5 && (
+                                             <PaginationItem>
+                                                 <PaginationEllipsis />
+                                             </PaginationItem>
+                                         )}
+         
+                                         <PaginationItem>
+                                             <PaginationNext
+                                                 href="#"
+                                                 onClick={(e) => {
+                                                     e.preventDefault()
+                                                     if (table.getCanNextPage()) {
+                                                         table.nextPage()
+                                                     }
+                                                 }}
+                                                 className={!table.getCanNextPage() ? "pointer-events-none opacity-50" : ""}
+                                             />
+                                         </PaginationItem>
+                                     </PaginationContent>
+                                 </Pagination>
+                             </div>
+                         </div>
+                     </div>
 
         </div>
     )

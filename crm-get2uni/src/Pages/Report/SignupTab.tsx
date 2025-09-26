@@ -3,6 +3,7 @@ import { ChartPieLabelList } from '@/components/Charts/pieChart'
 import CheckboxForm from './CheckboxForm'
 import { TypeSelect } from '@/components/common/TypeSelect'
 import { SignupTable } from '@/components/Tables/SignupTable'
+import { DropDown } from '@/components/common/DropDown'
 
 
 function SignupTab() {
@@ -23,7 +24,7 @@ function SignupTab() {
     />
     
    <div className='w-[150px]'>
-   <TypeSelect
+   <DropDown
     value1='Agent'
     value2='Ambassdor'
     placeHolder='Type'

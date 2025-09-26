@@ -37,7 +37,9 @@
         <SelectContent>
           <SelectGroup>
             {items.map((item, i) => (
-              <SelectItem key={i} value={item!}>
+              <SelectItem key={i} value={item!}
+              
+              className="cursor-pointer">
                 {item}
               </SelectItem>
             ))}

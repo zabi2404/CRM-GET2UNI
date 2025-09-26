@@ -36,6 +36,7 @@ import {
     TableRow,
 } from "@/components/ui/table"
 import { Link } from "react-router-dom"
+import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "../ui/pagination"
 
 const data: Payment[] = [
 
@@ -290,139 +291,139 @@ export function DataTableDemo() {
         <div className="w-full">
             <div className="flex items-center justify-between py-4 gap-2">
 
-               <div className="flex items-center gap-2">
-               <Input
-                    placeholder="Search..."
-                    value={(table.getColumn("StudentName")?.getFilterValue() as string) ?? ""}
-                    onChange={(event) =>
-                        table.getColumn("StudentName")?.setFilterValue(event.target.value)
-                    }
-                    className="max-w-[200px]"
-                />
+                <div className="flex items-center gap-2">
+                    <Input
+                        placeholder="Search..."
+                        value={(table.getColumn("StudentName")?.getFilterValue() as string) ?? ""}
+                        onChange={(event) =>
+                            table.getColumn("StudentName")?.setFilterValue(event.target.value)
+                        }
+                        className="max-w-[200px]"
+                    />
 
-                <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                        <Button variant="outline" className="">
-                            <div className="w-14 overflow-hidden">
-                                {status}
-                            </div>
-                            <ChevronDown />
-                        </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="center">
-                        {["pending", "processing", "success", "failed"].map((statusValue) => (
+                    <DropdownMenu >
+                        <DropdownMenuTrigger asChild>
+                            <Button variant="outline" className="hover:bg-transparent hover:text-black cursor-pointer hover:border-primary">
+                                <div className="w-14 overflow-hidden">
+                                    {status}
+                                </div>
+                                <ChevronDown />
+                            </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="center">
+                            {["pending", "processing", "success", "failed"].map((statusValue) => (
+                                <DropdownMenuItem
+                                    key={statusValue}
+                                    className="capitalize  cursor-pointer"
+                                    onClick={() => {
+                                        setStatus(statusValue);
+                                        table.getColumn("ApplicationStatus")?.setFilterValue(statusValue);
+                                    }}
+                                >
+                                    {statusValue}
+                                </DropdownMenuItem>
+                            ))}
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+
+
+                    <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                            <Button variant="outline" className="hover:bg-transparent hover:text-black cursor-pointer hover:border-primary">
+                                <div className="w-18 overflow-hidden">
+                                    {selectedUniversity}
+                                </div>
+                                <ChevronDown />
+                            </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="center">
+                            {["Harvard University", "Oxford University", "Stanford University", "Cambridge University"].map((uni) => (
+                                <DropdownMenuItem
+                                    key={uni}
+                                    className="capitalize cursor-pointer"
+                                    onClick={() => {
+                                        setSelectedUniversity(uni) // update button label
+                                        table.getColumn("AssignedUniversity")?.setFilterValue(uni) // apply filter
+                                    }}
+                                >
+                                    {uni}
+                                </DropdownMenuItem>
+                            ))}
+
+                            <DropdownMenuSeparator />
                             <DropdownMenuItem
-                                key={statusValue}
-                                className="capitalize"
                                 onClick={() => {
-                                    setStatus(statusValue);
-                                    table.getColumn("ApplicationStatus")?.setFilterValue(statusValue);
+                                    setSelectedUniversity("University") // reset label
+                                    table.getColumn("AssignedUniversity")?.setFilterValue("") // reset filter
                                 }}
                             >
-                                {statusValue}
+                                All
                             </DropdownMenuItem>
-                        ))}
-                    </DropdownMenuContent>
-                </DropdownMenu>
+                        </DropdownMenuContent>
+                    </DropdownMenu>
 
 
-                <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                        <Button variant="outline" className="">
-                            <div className="w-14 overflow-hidden">
-                                {selectedUniversity}
-                            </div>
-                            <ChevronDown />
-                        </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="center">
-                        {["Harvard University", "Oxford University", "Stanford University", "Cambridge University"].map((uni) => (
-                            <DropdownMenuItem
-                                key={uni}
-                                className="capitalize"
-                                onClick={() => {
-                                    setSelectedUniversity(uni) // update button label
-                                    table.getColumn("AssignedUniversity")?.setFilterValue(uni) // apply filter
-                                }}
-                            >
-                                {uni}
-                            </DropdownMenuItem>
-                        ))}
-
-                        <DropdownMenuSeparator />
-                        <DropdownMenuItem
-                            onClick={() => {
-                                setSelectedUniversity("University") // reset label
-                                table.getColumn("AssignedUniversity")?.setFilterValue("") // reset filter
-                            }}
-                        >
-                            All
-                        </DropdownMenuItem>
-                    </DropdownMenuContent>
-                </DropdownMenu>
+                    <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                            <Button variant="outline" className="hover:bg-transparent hover:text-black cursor-pointer hover:border-primary">
+                                <div className="w-14 overflow-hidden">
+                                    {selectedChannel}
+                                </div>
+                                <ChevronDown />
+                            </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="center">
+                            {["agent", "ambassador", "direct"].map((channel) => (
+                                <DropdownMenuItem
+                                    key={channel}
+                                    className="capitalize cursor-pointer"
+                                    onClick={() => {
+                                        setSelectedChannel(channel)
+                                        table.getColumn("RecuritmentChannel")?.setFilterValue(channel)
+                                    }}
+                                >
+                                    {channel}
+                                </DropdownMenuItem>
+                            ))}
 
 
-                <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                        <Button variant="outline" className="">
-                            <div className="w-14 overflow-hidden">
-                                {selectedChannel}
-                            </div>
-                            <ChevronDown />
-                        </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="center">
-                        {["agent", "ambassador", "direct"].map((channel) => (
-                            <DropdownMenuItem
-                                key={channel}
-                                className="capitalize"
-                                onClick={() => {
-                                    setSelectedChannel(channel)
-                                    table.getColumn("RecuritmentChannel")?.setFilterValue(channel)
-                                }}
-                            >
-                                {channel}
-                            </DropdownMenuItem>
-                        ))}
+                        </DropdownMenuContent>
+                    </DropdownMenu>
 
+                    <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                            <Button variant="outline" className="hover:bg-transparent hover:text-black cursor-pointer hover:border-primary">
+                                <div className="w-14 overflow-hidden cursor-pointer">
 
-                    </DropdownMenuContent>
-                </DropdownMenu>
+                                    {selectedType}
+                                </div>
+                                <ChevronDown />
+                            </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="center">
+                            {["international", "change of status", "transfer"].map((type) => (
+                                <DropdownMenuItem
+                                    key={type}
+                                    className="capitalize cursor-pointer"
+                                    onClick={() => {
+                                        setSelectedType(type) // 🔹 change button label
+                                        table.getColumn("Type")?.setFilterValue(type) // 🔹 apply filter
+                                    }}
+                                >
+                                    {type}
+                                </DropdownMenuItem>
+                            ))}
+                        </DropdownMenuContent>
+                    </DropdownMenu>
 
-                <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                        <Button variant="outline" className="">
-                            <div className="w-14 overflow-hidden">
+                </div>
 
-                                {selectedType}
-                            </div>
-                            <ChevronDown />
-                        </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="center">
-                        {["international", "change of status", "transfer"].map((type) => (
-                            <DropdownMenuItem
-                                key={type}
-                                className="capitalize"
-                                onClick={() => {
-                                    setSelectedType(type) // 🔹 change button label
-                                    table.getColumn("Type")?.setFilterValue(type) // 🔹 apply filter
-                                }}
-                            >
-                                {type}
-                            </DropdownMenuItem>
-                        ))}
-                    </DropdownMenuContent>
-                </DropdownMenu>
-
-               </div>
-
-                <Button 
-                to="/add-student"
-                > 
-        <Plus />
-Add New Student
-        </Button>
+                <Button
+                    to="/add-student"
+                >
+                    <Plus />
+                    Add New Student
+                </Button>
             </div>
 
             <div className="w-full h-[620px] overflow-x-auto rounded-md border">
@@ -477,32 +478,70 @@ Add New Student
                     </TableBody>
                 </Table>
             </div>
+            <div>
+                <div className="flex items-center w-full justify-between space-x-2 py-4">
+                    <div className="text-muted-foreground  text-nowrap text-sm">
+                        {table.getFilteredSelectedRowModel().rows.length} of{" "}
+                        {table.getFilteredRowModel().rows.length} row(s) selected.
+                    </div>
+                    <div className="flex ">
 
-            <div className="flex items-center justify-end space-x-2 py-4">
-                <div className="text-muted-foreground flex-1 text-sm">
-                    {table.getFilteredSelectedRowModel().rows.length} of{" "}
-                    {table.getFilteredRowModel().rows.length} row(s) selected.
-                </div>
-                <div className="space-x-2">
-                    <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => table.previousPage()}
-                        disabled={!table.getCanPreviousPage()}
-                    >
-                        Previous
-                    </Button>
-                    <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => table.nextPage()}
-                        disabled={!table.getCanNextPage()}
-                    >
-                        Next
-                    </Button>
+                        <Pagination>
+                            <PaginationContent>
+                                <PaginationItem>
+                                    <PaginationPrevious
+                                        href="#"
+                                        onClick={(e) => {
+                                            e.preventDefault()
+                                            if (table.getCanPreviousPage()) {
+                                                table.previousPage()
+                                            }
+                                        }}
+                                        className={!table.getCanPreviousPage() ? "pointer-events-none opacity-50" : ""}
+                                    />
+
+                                </PaginationItem>
+
+                              
+                                {Array.from(
+                                    { length: table.getPageCount() },
+                                    (_, i) => i + 1
+                                ).map((page) => (
+                                    <PaginationItem key={page}>
+                                        <PaginationLink
+                                            href="#"
+                                            isActive={table.getState().pagination.pageIndex + 1 === page}
+                                            onClick={() => table.setPageIndex(page - 1)}
+                                        >
+                                            {page}
+                                        </PaginationLink>
+                                    </PaginationItem>
+                                ))}
+
+                               
+                                {table.getPageCount() > 5 && (
+                                    <PaginationItem>
+                                        <PaginationEllipsis />
+                                    </PaginationItem>
+                                )}
+
+                                <PaginationItem>
+                                    <PaginationNext
+                                        href="#"
+                                        onClick={(e) => {
+                                            e.preventDefault()
+                                            if (table.getCanNextPage()) {
+                                                table.nextPage()
+                                            }
+                                        }}
+                                        className={!table.getCanNextPage() ? "pointer-events-none opacity-50" : ""}
+                                    />
+                                </PaginationItem>
+                            </PaginationContent>
+                        </Pagination>
+                    </div>
                 </div>
             </div>
-
         </div>
     )
 }
