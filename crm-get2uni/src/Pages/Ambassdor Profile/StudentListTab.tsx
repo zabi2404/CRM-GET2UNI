@@ -36,129 +36,129 @@ import {
     TableRow,
 } from "@/components/ui/table"
 import { Link } from "react-router-dom"
-import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "../ui/pagination"
+import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "../../components/ui/pagination"
 
 const data: Payment[] = [
 
     {
         id: "bhqecj4p",
         StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
+        Course: "pending",
+        CurrentStatus: "direct",
         AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
+        University: "Request Document Email",
         AssignedGet2UniStaff: ''
     },
     {
         id: "bhqecj4p",
         StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
+        Course: "pending",
+        CurrentStatus: "direct",
         AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
+        University: "Request Document Email",
         AssignedGet2UniStaff: ''
     }, {
         id: "bhqecj4p",
         StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
+        Course: "pending",
+        CurrentStatus: "direct",
         AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
+        University: "Request Document Email",
         AssignedGet2UniStaff: ''
     }, {
         id: "bhqecj4p",
         StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
+        Course: "pending",
+        CurrentStatus: "direct",
         AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
+        University: "Request Document Email",
         AssignedGet2UniStaff: ''
     }, {
         id: "bhqecj4p",
         StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
+        Course: "pending",
+        CurrentStatus: "direct",
         AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
+        University: "Request Document Email",
         AssignedGet2UniStaff: ''
     }, {
         id: "bhqecj4p",
         StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
+        Course: "pending",
+        CurrentStatus: "direct",
         AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
+        University: "Request Document Email",
         AssignedGet2UniStaff: ''
     }, {
         id: "bhqecj4p",
         StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
+        Course: "pending",
+        CurrentStatus: "direct",
         AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
+        University: "Request Document Email",
         AssignedGet2UniStaff: ''
     },
     {
         id: "bhqecj4p",
         StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
+        Course: "pending",
+        CurrentStatus: "direct",
         AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
+        University: "Request Document Email",
         AssignedGet2UniStaff: ''
     },
     {
         id: "bhqecj4p",
         StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
+        Course: "pending",
+        CurrentStatus: "direct",
         AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
+        University: "Request Document Email",
         AssignedGet2UniStaff: ''
     },
     {
         id: "bhqecj4p",
         StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
+        Course: "pending",
+        CurrentStatus: "direct",
         AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
+        University: "Request Document Email",
         AssignedGet2UniStaff: ''
     },
     {
         id: "bhqecj4p",
         StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
+        Course: "pending",
+        CurrentStatus: "direct",
         AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
+        University: "Request Document Email",
         AssignedGet2UniStaff: ''
     },
     {
         id: "bhqecj4p",
         StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
+        Course: "pending",
+        CurrentStatus: "direct",
         AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
+        University: "Request Document Email",
         AssignedGet2UniStaff: ''
     },
     {
         id: "bhqecj4p",
         StudentName: 'janajna',
-        ApplicationStatus: "success",
-        RecuritmentChannel: "direct",
+        Course: "success",
+        CurrentStatus: "direct",
         AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
+        University: "Request Document Email",
         AssignedGet2UniStaff: ''
     },
     {
         id: "bhqecj4p",
         StudentName: 'janajna',
-        ApplicationStatus: "success",
-        RecuritmentChannel: "direct",
+        Course: "success",
+        CurrentStatus: "direct",
         AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
+        University: "Request Document Email",
         AssignedGet2UniStaff: ''
     },
 
@@ -168,10 +168,10 @@ const data: Payment[] = [
 export type Payment = {
     id: string
     StudentName: string
-    ApplicationStatus: "pending" | "processing" | "success" | "failed"
-    RecuritmentChannel: "direct" | 'agent' | 'ambassador'
+    Course: "pending" | "processing" | "success" | "failed"
+    CurrentStatus: "direct" | 'agent' | 'ambassador'
     AssignedUniversity: string,
-    LastActivity: string,
+    University: string,
     AssignedGet2UniStaff: string
 }
 
@@ -193,38 +193,24 @@ export const columns: ColumnDef<Payment>[] = [
         },
     },
     {
-        accessorKey: "RecuritmentChannel",
-        header: "Recuritment Channel",
+        accessorKey: "CurrentStatus",
+        header: "Current Status",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("RecuritmentChannel")}</div>
+            <div className="capitalize">{row.getValue("CurrentStatus")}</div>
         ),
     },
     {
-        accessorKey: "ApplicationStatus",
-        header: "Application Status",
+        accessorKey: "Course",
+        header: "Course",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("ApplicationStatus")}</div>
+            <div className="capitalize">{row.getValue("Course")}</div>
         ),
     },
     {
-        accessorKey: "LastActivity",
-        header: "Last Activity",
+        accessorKey: "University",
+        header: "University",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("LastActivity")}</div>
-        ),
-    },
-    {
-        accessorKey: "AssignedUniversity",
-        header: "Assigned University",
-        cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("AssignedUniversity")}</div>
-        ),
-    },
-    {
-        accessorKey: "AssignedGet2UniStaff",
-        header: "Assigned Get2Uni Staff",
-        cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("status")}</div>
+            <div className="capitalize">{row.getValue("University")}</div>
         ),
     },
 
@@ -253,7 +239,7 @@ export const columns: ColumnDef<Payment>[] = [
 
 ]
 
-export function DataTableDemo() {
+export function StudentListTab() {
     const [sorting, setSorting] = React.useState<SortingState>([])
     const [selectedUniversity, setSelectedUniversity] = React.useState<string>("University")
     const [selectedChannel, setSelectedChannel] = React.useState<string>("Channel")
@@ -289,143 +275,7 @@ export function DataTableDemo() {
 
     return (
         <div className="w-full">
-            <div className="flex items-center justify-between py-4 gap-2">
-
-                <div className="flex items-center gap-2">
-                    <Input
-                        placeholder="Search..."
-                        value={(table.getColumn("StudentName")?.getFilterValue() as string) ?? ""}
-                        onChange={(event) =>
-                            table.getColumn("StudentName")?.setFilterValue(event.target.value)
-                        }
-                        className="max-w-[200px]"
-                    />
-
-                    <DropdownMenu >
-                        <DropdownMenuTrigger asChild>
-                            <Button variant="outline" className="hover:bg-transparent hover:text-black cursor-pointer hover:border-primary">
-                                <div className="w-14 overflow-hidden">
-                                    {status}
-                                </div>
-                                <ChevronDown />
-                            </Button>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent align="center">
-                            {["pending", "processing", "success", "failed"].map((statusValue) => (
-                                <DropdownMenuItem
-                                    key={statusValue}
-                                    className="capitalize  cursor-pointer"
-                                    onClick={() => {
-                                        setStatus(statusValue);
-                                        table.getColumn("ApplicationStatus")?.setFilterValue(statusValue);
-                                    }}
-                                >
-                                    {statusValue}
-                                </DropdownMenuItem>
-                            ))}
-                        </DropdownMenuContent>
-                    </DropdownMenu>
-
-
-                    <DropdownMenu>
-                        <DropdownMenuTrigger asChild>
-                            <Button variant="outline" className="hover:bg-transparent hover:text-black cursor-pointer hover:border-primary">
-                                <div className="w-18 overflow-hidden">
-                                    {selectedUniversity}
-                                </div>
-                                <ChevronDown />
-                            </Button>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent align="center">
-                            {["Harvard University", "Oxford University", "Stanford University", "Cambridge University"].map((uni) => (
-                                <DropdownMenuItem
-                                    key={uni}
-                                    className="capitalize cursor-pointer"
-                                    onClick={() => {
-                                        setSelectedUniversity(uni) // update button label
-                                        table.getColumn("AssignedUniversity")?.setFilterValue(uni) // apply filter
-                                    }}
-                                >
-                                    {uni}
-                                </DropdownMenuItem>
-                            ))}
-
-                            <DropdownMenuSeparator />
-                            <DropdownMenuItem
-                                onClick={() => {
-                                    setSelectedUniversity("University") // reset label
-                                    table.getColumn("AssignedUniversity")?.setFilterValue("") // reset filter
-                                }}
-                            >
-                                All
-                            </DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
-
-
-                    <DropdownMenu>
-                        <DropdownMenuTrigger asChild>
-                            <Button variant="outline" className="hover:bg-transparent hover:text-black cursor-pointer hover:border-primary">
-                                <div className="w-14 overflow-hidden">
-                                    {selectedChannel}
-                                </div>
-                                <ChevronDown />
-                            </Button>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent align="center">
-                            {["agent", "ambassador", "direct"].map((channel) => (
-                                <DropdownMenuItem
-                                    key={channel}
-                                    className="capitalize cursor-pointer"
-                                    onClick={() => {
-                                        setSelectedChannel(channel)
-                                        table.getColumn("RecuritmentChannel")?.setFilterValue(channel)
-                                    }}
-                                >
-                                    {channel}
-                                </DropdownMenuItem>
-                            ))}
-
-
-                        </DropdownMenuContent>
-                    </DropdownMenu>
-
-                    <DropdownMenu>
-                        <DropdownMenuTrigger asChild>
-                            <Button variant="outline" className="hover:bg-transparent hover:text-black cursor-pointer hover:border-primary">
-                                <div className="w-14 overflow-hidden cursor-pointer">
-
-                                    {selectedType}
-                                </div>
-                                <ChevronDown />
-                            </Button>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent align="center">
-                            {["international", "change of status", "transfer"].map((type) => (
-                                <DropdownMenuItem
-                                    key={type}
-                                    className="capitalize cursor-pointer"
-                                    onClick={() => {
-                                        setSelectedType(type) // 🔹 change button label
-                                        table.getColumn("Type")?.setFilterValue(type) // 🔹 apply filter
-                                    }}
-                                >
-                                    {type}
-                                </DropdownMenuItem>
-                            ))}
-                        </DropdownMenuContent>
-                    </DropdownMenu>
-
-                </div>
-
-                <Button
-                    to="/add-student"
-                >
-                    <Plus />
-                    Add New Student
-                </Button>
-            </div>
-
+          
             <div className="w-full h-[620px] overflow-x-auto rounded-md border">
                 <Table className="min-w-[1040px] w-full">
                     <TableHeader>
@@ -480,7 +330,7 @@ export function DataTableDemo() {
             </div>
             <div>
                 <div className="flex items-center w-full justify-end space-x-2 py-4">
-                   
+                
                     <div className="flex ">
 
                         <Pagination>

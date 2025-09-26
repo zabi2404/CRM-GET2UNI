@@ -7,6 +7,8 @@ import {
     Login, SignUp, ForgetPassword, NotFound
 } from "./constant/Routes";
 import { SidebarProvider } from "./components/ui/sidebar";
+import AmbassddorProfile from "./Pages/Ambassdor Profile/AmbassddorProfile";
+import AgentProfile from "./Pages/Agent Profile/AgentProfile";
 
 export const router = createBrowserRouter([
     {
@@ -39,12 +41,22 @@ export const router = createBrowserRouter([
                 element: <AddAgents />,
             },
             {
+                path:"agent/:id",
+                element:<AgentProfile/>
+
+            },
+            {
                 path: "ambassador",
                 element: <Ambasddar />,
             },
             {
                 path: "add-ambassador",
                 element: <AddAmbasddar />,
+            },
+            {
+                path:"ambassador/:id",
+                element:<AmbassddorProfile/>
+
             },
             {
                 path: "commission",

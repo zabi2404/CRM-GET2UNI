@@ -10,6 +10,9 @@ import { Calendar } from "@/components/ui/calendar";
 import type { DateRange } from "react-day-picker";
 import { DatePicker } from "@/components/common/DatePicker2";
 import HeaderDashboard from "./HeaderDashboard";
+import { Dialog } from "@/components/ui/dialog";
+import { Dialouge } from "@/components/common/Dialouge";
+import { StudentProfileModal } from "@/components/common/StudentProfileModal";
 
 
 
@@ -17,6 +20,8 @@ const Dashboard = () => {
 
     return (
         <>
+       
+        <StudentProfileModal/>
         <HeaderDashboard/>
             <StudentOverviewSection />
             <RadialCardSection />
