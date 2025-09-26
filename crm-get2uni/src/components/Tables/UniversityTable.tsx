@@ -1,4 +1,4 @@
-"use client"
+
 
 import * as React from "react"
 import {
@@ -43,124 +43,124 @@ const data: Payment[] = [
 
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
+        Logo: 'zohaib',
         ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        UniversityName: "direct",
+        StudentsPipeline: "university 1",
+        StudentsBoarded: "Request Document Email",
+        AmbassadorLink: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
+        Logo: 'zohaib',
         ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        UniversityName: "direct",
+        StudentsPipeline: "university 1",
+        StudentsBoarded: "Request Document Email",
+        AmbassadorLink: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
+        Logo: 'zohaib',
         ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        UniversityName: "direct",
+        StudentsPipeline: "university 1",
+        StudentsBoarded: "Request Document Email",
+        AmbassadorLink: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
+        Logo: 'zohaib',
         ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        UniversityName: "direct",
+        StudentsPipeline: "university 1",
+        StudentsBoarded: "Request Document Email",
+        AmbassadorLink: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
+        Logo: 'zohaib',
         ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        UniversityName: "direct",
+        StudentsPipeline: "university 1",
+        StudentsBoarded: "Request Document Email",
+        AmbassadorLink: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
+        Logo: 'zohaib',
         ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        UniversityName: "direct",
+        StudentsPipeline: "university 1",
+        StudentsBoarded: "Request Document Email",
+        AmbassadorLink: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
+        Logo: 'zohaib',
         ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        UniversityName: "direct",
+        StudentsPipeline: "university 1",
+        StudentsBoarded: "Request Document Email",
+        AmbassadorLink: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
+        Logo: 'zohaib',
         ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        UniversityName: "direct",
+        StudentsPipeline: "university 1",
+        StudentsBoarded: "Request Document Email",
+        AmbassadorLink: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
+        Logo: 'zohaib',
         ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        UniversityName: "direct",
+        StudentsPipeline: "university 1",
+        StudentsBoarded: "Request Document Email",
+        AmbassadorLink: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
+        Logo: 'zohaib',
         ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        UniversityName: "direct",
+        StudentsPipeline: "university 1",
+        StudentsBoarded: "Request Document Email",
+        AmbassadorLink: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
+        Logo: 'zohaib',
         ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        UniversityName: "direct",
+        StudentsPipeline: "university 1",
+        StudentsBoarded: "Request Document Email",
+        AmbassadorLink: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
+        Logo: 'zohaib',
         ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        UniversityName: "direct",
+        StudentsPipeline: "university 1",
+        StudentsBoarded: "Request Document Email",
+        AmbassadorLink: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'janajna',
+        Logo: 'janajna',
         ApplicationStatus: "success",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        UniversityName: "direct",
+        StudentsPipeline: "university 1",
+        StudentsBoarded: "Request Document Email",
+        AmbassadorLink: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'janajna',
+        Logo: 'janajna',
         ApplicationStatus: "success",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        UniversityName: "direct",
+        StudentsPipeline: "university 1",
+        StudentsBoarded: "Request Document Email",
+        AmbassadorLink: ''
     },
 
 
@@ -168,21 +168,21 @@ const data: Payment[] = [
 
 export type Payment = {
     id: string
-    StudentName: string
+    Logo: string
     ApplicationStatus: "pending" | "processing" | "success" | "failed"
-    RecuritmentChannel: "direct" | 'agent' | 'ambassador'
-    AssignedUniversity: string,
-    LastActivity: string,
-    AssignedGet2UniStaff: string
+    UniversityName: "direct" | 'agent' | 'ambassador'
+    StudentsPipeline: string,
+    StudentsBoarded: string,
+    AmbassadorLink: string
 }
 
 export const columns: ColumnDef<Payment>[] = [
 
     {
-        accessorKey: "StudentName",
-        header: "Student Name",
+        accessorKey: "Logo",
+        header: "logo",
         cell: ({ row }) => {
-            const name = row.getValue("StudentName") as string
+            const name = row.getValue("Logo") as string
             return (
                 <Link
                     to={`/students/${row.original.id}`}
@@ -194,10 +194,10 @@ export const columns: ColumnDef<Payment>[] = [
         },
     },
     {
-        accessorKey: "RecuritmentChannel",
-        header: "Recuritment Channel",
+        accessorKey: "UniversityName",
+        header: "University Name",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("RecuritmentChannel")}</div>
+            <div className="capitalize">{row.getValue("UniversityName")}</div>
         ),
     },
     {
@@ -208,26 +208,33 @@ export const columns: ColumnDef<Payment>[] = [
         ),
     },
     {
-        accessorKey: "LastActivity",
-        header: "Last Activity",
+        accessorKey: "StudentsBoarded",
+        header: "Students on-Boarded",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("LastActivity")}</div>
+            <div className="capitalize">{row.getValue("StudentsBoarded")}</div>
         ),
     },
     {
-        accessorKey: "AssignedUniversity",
-        header: "Assigned University",
+        accessorKey: "StudentsPipeline",
+        header: "Students in Pipeline",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("AssignedUniversity")}</div>
+            <div className="capitalize">{row.getValue("StudentsPipeline")}</div>
         ),
     },
     {
-        accessorKey: "AssignedGet2UniStaff",
-        header: "Assigned Get2Uni Staff",
+        accessorKey: "AmbassadorLink",
+        header: "Ambassador Link",
         cell: ({ row }) => (
             <div className="capitalize">{row.getValue("status")}</div>
         ),
     },
+   {
+        accessorKey: "StudentReference",
+        header: "Student Sign-up Iframe",
+        cell: ({ row }) => (
+            <div className="capitalize">{row.getValue("status")}</div>
+        ),
+    },   
 
     {
         id: "actions",
@@ -291,9 +298,9 @@ export function UniversityTable() {
 
                 <Input
                     placeholder="Search..."
-                    value={(table.getColumn("StudentName")?.getFilterValue() as string) ?? ""}
+                    value={(table.getColumn("Logo")?.getFilterValue() as string) ?? ""}
                     onChange={(event) =>
-                        table.getColumn("StudentName")?.setFilterValue(event.target.value)
+                        table.getColumn("Logo")?.setFilterValue(event.target.value)
                     }
                     className="max-w-[200px]"
                 />
@@ -357,11 +364,8 @@ export function UniversityTable() {
             </div>
 
            <div>
-                          <div className="flex items-center w-full justify-between space-x-2 py-4">
-                              <div className="text-muted-foreground  text-nowrap text-sm">
-                                  {table.getFilteredSelectedRowModel().rows.length} of{" "}
-                                  {table.getFilteredRowModel().rows.length} row(s) selected.
-                              </div>
+                          <div className="flex items-center w-full justify-end space-x-2 py-4">
+                             
                               <div className="flex ">
           
                                   <Pagination>

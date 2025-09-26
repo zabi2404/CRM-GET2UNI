@@ -43,124 +43,124 @@ const data: Payment[] = [
 
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        AgentName: 'zohaib',
+        CommissionEarned: "pending",
+        TotalRecruited: "direct",
+        PendingPayouts: "university 1",
+        AgentType: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        AgentName: 'zohaib',
+        CommissionEarned: "pending",
+        TotalRecruited: "direct",
+        PendingPayouts: "university 1",
+        AgentType: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        AgentName: 'zohaib',
+        CommissionEarned: "pending",
+        TotalRecruited: "direct",
+        PendingPayouts: "university 1",
+        AgentType: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        AgentName: 'zohaib',
+        CommissionEarned: "pending",
+        TotalRecruited: "direct",
+        PendingPayouts: "university 1",
+        AgentType: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        AgentName: 'zohaib',
+        CommissionEarned: "pending",
+        TotalRecruited: "direct",
+        PendingPayouts: "university 1",
+        AgentType: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        AgentName: 'zohaib',
+        CommissionEarned: "pending",
+        TotalRecruited: "direct",
+        PendingPayouts: "university 1",
+        AgentType: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        AgentName: 'zohaib',
+        CommissionEarned: "pending",
+        TotalRecruited: "direct",
+        PendingPayouts: "university 1",
+        AgentType: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        AgentName: 'zohaib',
+        CommissionEarned: "pending",
+        TotalRecruited: "direct",
+        PendingPayouts: "university 1",
+        AgentType: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        AgentName: 'zohaib',
+        CommissionEarned: "pending",
+        TotalRecruited: "direct",
+        PendingPayouts: "university 1",
+        AgentType: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        AgentName: 'zohaib',
+        CommissionEarned: "pending",
+        TotalRecruited: "direct",
+        PendingPayouts: "university 1",
+        AgentType: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        AgentName: 'zohaib',
+        CommissionEarned: "pending",
+        TotalRecruited: "direct",
+        PendingPayouts: "university 1",
+        AgentType: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        AgentName: 'zohaib',
+        CommissionEarned: "pending",
+        TotalRecruited: "direct",
+        PendingPayouts: "university 1",
+        AgentType: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'janajna',
-        ApplicationStatus: "success",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        AgentName: 'janajna',
+        CommissionEarned: "success",
+        TotalRecruited: "direct",
+        PendingPayouts: "university 1",
+        AgentType: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'janajna',
-        ApplicationStatus: "success",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        AgentName: 'janajna',
+        CommissionEarned: "success",
+        TotalRecruited: "direct",
+        PendingPayouts: "university 1",
+        AgentType: "Request Document Email",
+        Status: ''
     },
 
 
@@ -168,24 +168,24 @@ const data: Payment[] = [
 
 export type Payment = {
     id: string
-    StudentName: string
-    ApplicationStatus: "pending" | "processing" | "success" | "failed"
-    RecuritmentChannel: "direct" | 'agent' | 'ambassador'
-    AssignedUniversity: string,
-    LastActivity: string,
-    AssignedGet2UniStaff: string
+    AgentName: string
+    CommissionEarned: "pending" | "processing" | "success" | "failed"
+    TotalRecruited: "direct" | 'agent' | 'ambassador'
+    PendingPayouts: string,
+    AgentType: string,
+    Status: string
 }
 
 export const columns: ColumnDef<Payment>[] = [
 
     {
-        accessorKey: "StudentName",
-        header: "Student Name",
+        accessorKey: "AgentName",
+        header: "Agent Name",
         cell: ({ row }) => {
-            const name = row.getValue("StudentName") as string
+            const name = row.getValue("AgentName") as string
             return (
                 <Link
-                    to={`/students/${row.original.id}`}
+                    to={`/Agents/${row.original.id}`}
                     className=" underline  capitalize"
                 >
                     {name}
@@ -194,36 +194,36 @@ export const columns: ColumnDef<Payment>[] = [
         },
     },
     {
-        accessorKey: "RecuritmentChannel",
-        header: "Recuritment Channel",
+        accessorKey: "TotalRecruited",
+        header: "Total Recruited",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("RecuritmentChannel")}</div>
+            <div className="capitalize">{row.getValue("TotalRecruited")}</div>
         ),
     },
     {
-        accessorKey: "ApplicationStatus",
-        header: "Application Status",
+        accessorKey: "CommissionEarned",
+        header: "Commission Earned",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("ApplicationStatus")}</div>
+            <div className="capitalize">{row.getValue("CommissionEarned")}</div>
         ),
     },
     {
-        accessorKey: "LastActivity",
-        header: "Last Activity",
+        accessorKey: "AgentType",
+        header: "Agent Type",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("LastActivity")}</div>
+            <div className="capitalize">{row.getValue("AgentType")}</div>
         ),
     },
     {
-        accessorKey: "AssignedUniversity",
-        header: "Assigned University",
+        accessorKey: "PendingPayouts",
+        header: "Pending Payouts",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("AssignedUniversity")}</div>
+            <div className="capitalize">{row.getValue("PendingPayouts")}</div>
         ),
     },
     {
-        accessorKey: "AssignedGet2UniStaff",
-        header: "Assigned Get2Uni Staff",
+        accessorKey: "Status",
+        header: "Status",
         cell: ({ row }) => (
             <div className="capitalize">{row.getValue("status")}</div>
         ),
@@ -256,12 +256,6 @@ export const columns: ColumnDef<Payment>[] = [
 
 export function AgentTable() {
     const [sorting, setSorting] = React.useState<SortingState>([])
-    const [selectedUniversity, setSelectedUniversity] = React.useState<string>("University")
-    const [selectedChannel, setSelectedChannel] = React.useState<string>("Channel")
-    const [status, setStatus] = React.useState<string>("Status")
-
-    const [selectedType, setSelectedType] = React.useState<string>("Type")
-
     const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
         []
     )
@@ -294,21 +288,21 @@ export function AgentTable() {
 
                 <Input
                     placeholder="Search..."
-                    value={(table.getColumn("StudentName")?.getFilterValue() as string) ?? ""}
+                    value={(table.getColumn("AgentName")?.getFilterValue() as string) ?? ""}
                     onChange={(event) =>
-                        table.getColumn("StudentName")?.setFilterValue(event.target.value)
+                        table.getColumn("AgentName")?.setFilterValue(event.target.value)
                     }
                     className="max-w-[200px]"
                 />
 
 
-        <Button 
-        to="/add-agent"
-        > 
-        <Plus />
-Add New Agent
-        </Button>
-            
+                <Button
+                    to="/add-agent"
+                >
+                    <Plus />
+                    Add New Agent
+                </Button>
+
 
 
             </div>
@@ -358,7 +352,7 @@ Add New Agent
                                     colSpan={columns.length}
                                     className="h-24 text-center"
                                 >
-                                    No Student data found
+                                    No Agent data found
                                 </TableCell>
                             </TableRow>
                         )}
@@ -366,12 +360,9 @@ Add New Agent
                 </Table>
             </div>
 
-           <div>
-                <div className="flex items-center w-full justify-between space-x-2 py-4">
-                    <div className="text-muted-foreground  text-nowrap text-sm">
-                        {table.getFilteredSelectedRowModel().rows.length} of{" "}
-                        {table.getFilteredRowModel().rows.length} row(s) selected.
-                    </div>
+            <div>
+                <div className="flex items-center w-full justify-end space-x-2 py-4">
+                   
                     <div className="flex ">
 
                         <Pagination>
@@ -390,7 +381,7 @@ Add New Agent
 
                                 </PaginationItem>
 
-                              
+
                                 {Array.from(
                                     { length: table.getPageCount() },
                                     (_, i) => i + 1
@@ -406,7 +397,7 @@ Add New Agent
                                     </PaginationItem>
                                 ))}
 
-                               
+
                                 {table.getPageCount() > 5 && (
                                     <PaginationItem>
                                         <PaginationEllipsis />

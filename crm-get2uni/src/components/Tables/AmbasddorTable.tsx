@@ -43,124 +43,124 @@ const data: Payment[] = [
 
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
+        AmbassadorName: 'zohaib',
+        Amount: "pending",
+        StudentReference: "direct",
+        University: "university 1",
         LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
+        AmbassadorName: 'zohaib',
+        Amount: "pending",
+        StudentReference: "direct",
+        University: "university 1",
         LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
+        AmbassadorName: 'zohaib',
+        Amount: "pending",
+        StudentReference: "direct",
+        University: "university 1",
         LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
+        AmbassadorName: 'zohaib',
+        Amount: "pending",
+        StudentReference: "direct",
+        University: "university 1",
         LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
+        AmbassadorName: 'zohaib',
+        Amount: "pending",
+        StudentReference: "direct",
+        University: "university 1",
         LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
+        AmbassadorName: 'zohaib',
+        Amount: "pending",
+        StudentReference: "direct",
+        University: "university 1",
         LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
+        AmbassadorName: 'zohaib',
+        Amount: "pending",
+        StudentReference: "direct",
+        University: "university 1",
         LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
+        AmbassadorName: 'zohaib',
+        Amount: "pending",
+        StudentReference: "direct",
+        University: "university 1",
         LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
+        AmbassadorName: 'zohaib',
+        Amount: "pending",
+        StudentReference: "direct",
+        University: "university 1",
         LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
+        AmbassadorName: 'zohaib',
+        Amount: "pending",
+        StudentReference: "direct",
+        University: "university 1",
         LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
+        AmbassadorName: 'zohaib',
+        Amount: "pending",
+        StudentReference: "direct",
+        University: "university 1",
         LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
+        AmbassadorName: 'zohaib',
+        Amount: "pending",
+        StudentReference: "direct",
+        University: "university 1",
         LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'janajna',
-        ApplicationStatus: "success",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
+        AmbassadorName: 'janajna',
+        Amount: "success",
+        StudentReference: "direct",
+        University: "university 1",
         LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'janajna',
-        ApplicationStatus: "success",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
+        AmbassadorName: 'janajna',
+        Amount: "success",
+        StudentReference: "direct",
+        University: "university 1",
         LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        Status: ''
     },
 
 
@@ -168,24 +168,24 @@ const data: Payment[] = [
 
 export type Payment = {
     id: string
-    StudentName: string
-    ApplicationStatus: "pending" | "processing" | "success" | "failed"
-    RecuritmentChannel: "direct" | 'agent' | 'ambassador'
-    AssignedUniversity: string,
+    AmbassadorName: string
+    Amount: "pending" | "processing" | "success" | "failed"
+    StudentReference: "direct" | 'agent' | 'ambassador'
+    University: string,
     LastActivity: string,
-    AssignedGet2UniStaff: string
+    Status: string
 }
 
 export const columns: ColumnDef<Payment>[] = [
 
     {
-        accessorKey: "StudentName",
-        header: "Student Name",
+        accessorKey: "AmbassadorName",
+        header: "Ambassador Name",
         cell: ({ row }) => {
-            const name = row.getValue("StudentName") as string
+            const name = row.getValue("AmbassadorName") as string
             return (
                 <Link
-                    to={`/students/${row.original.id}`}
+                    to={`/Ambassadors/${row.original.id}`}
                     className=" underline  capitalize"
                 >
                     {name}
@@ -194,36 +194,30 @@ export const columns: ColumnDef<Payment>[] = [
         },
     },
     {
-        accessorKey: "RecuritmentChannel",
-        header: "Recuritment Channel",
+        accessorKey: "StudentReference",
+        header: "Student Reference",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("RecuritmentChannel")}</div>
+            <div className="capitalize">{row.getValue("StudentReference")}</div>
         ),
     },
     {
-        accessorKey: "ApplicationStatus",
-        header: "Application Status",
+        accessorKey: "Amount",
+        header: "Amount",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("ApplicationStatus")}</div>
+            <div className="capitalize">{row.getValue("Amount")}</div>
+        ),
+    },
+   
+    {
+        accessorKey: "University",
+        header: "University",
+        cell: ({ row }) => (
+            <div className="capitalize">{row.getValue("University")}</div>
         ),
     },
     {
-        accessorKey: "LastActivity",
-        header: "Last Activity",
-        cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("LastActivity")}</div>
-        ),
-    },
-    {
-        accessorKey: "AssignedUniversity",
-        header: "Assigned University",
-        cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("AssignedUniversity")}</div>
-        ),
-    },
-    {
-        accessorKey: "AssignedGet2UniStaff",
-        header: "Assigned Get2Uni Staff",
+        accessorKey: "Status",
+        header: "Status",
         cell: ({ row }) => (
             <div className="capitalize">{row.getValue("status")}</div>
         ),
@@ -291,9 +285,9 @@ export function AmbasddorTable() {
                <div className="flex items-center gap-2">
                <Input
                     placeholder="Search..."
-                    value={(table.getColumn("StudentName")?.getFilterValue() as string) ?? ""}
+                    value={(table.getColumn("AmbassadorName")?.getFilterValue() as string) ?? ""}
                     onChange={(event) =>
-                        table.getColumn("StudentName")?.setFilterValue(event.target.value)
+                        table.getColumn("AmbassadorName")?.setFilterValue(event.target.value)
                     }
                     className="max-w-[200px]"
                 />
@@ -317,7 +311,7 @@ export function AmbasddorTable() {
                                     className="capitalize cursor-pointer" 
                                     onClick={() => {
                                         setSelectedUniversity(uni) // update button label
-                                        table.getColumn("AssignedUniversity")?.setFilterValue(uni) // apply filter
+                                        table.getColumn("University")?.setFilterValue(uni) // apply filter
                                     }}
                                 >
                                     {uni}
@@ -328,7 +322,7 @@ export function AmbasddorTable() {
                             <DropdownMenuItem
                                 onClick={() => {
                                     setSelectedUniversity("University") // reset label
-                                    table.getColumn("AssignedUniversity")?.setFilterValue("") // reset filter
+                                    table.getColumn("University")?.setFilterValue("") // reset filter
                                 }}
                             >
                                 All
@@ -392,7 +386,7 @@ Add New Ambassaddor
                                     colSpan={columns.length}
                                     className="h-24 text-center"
                                 >
-                                    No Student data found
+                                    No Ambassador data found
                                 </TableCell>
                             </TableRow>
                         )}
@@ -400,11 +394,8 @@ Add New Ambassaddor
                 </Table>
             </div>
   <div>
-                <div className="flex items-center w-full justify-between space-x-2 py-4">
-                    <div className="text-muted-foreground  text-nowrap text-sm">
-                        {table.getFilteredSelectedRowModel().rows.length} of{" "}
-                        {table.getFilteredRowModel().rows.length} row(s) selected.
-                    </div>
+                <div className="flex items-center w-full justify-end space-x-2 py-4">
+                  
                     <div className="flex ">
 
                         <Pagination>

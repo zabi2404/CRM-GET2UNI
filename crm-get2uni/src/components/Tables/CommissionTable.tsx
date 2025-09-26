@@ -43,124 +43,124 @@ const data: Payment[] = [
 
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'janajna',
-        ApplicationStatus: "success",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'janajna',
+        StudentName: "success",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'janajna',
-        ApplicationStatus: "success",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'janajna',
+        StudentName: "success",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
 
 
@@ -168,21 +168,21 @@ const data: Payment[] = [
 
 export type Payment = {
     id: string
-    StudentName: string
-    ApplicationStatus: "pending" | "processing" | "success" | "failed"
-    RecuritmentChannel: "direct" | 'agent' | 'ambassador'
-    AssignedUniversity: string,
-    LastActivity: string,
-    AssignedGet2UniStaff: string
+    DateTime: string
+    StudentName: "pending" | "processing" | "success" | "failed"
+    Beneficiary: "direct" | 'agent' | 'ambassador'
+    ActionBy: string,
+    Amount: string,
+    Status: string
 }
 
 export const columns: ColumnDef<Payment>[] = [
 
     {
-        accessorKey: "StudentName",
-        header: "Student Name",
+        accessorKey: "DateTime",
+        header: "Date ",
         cell: ({ row }) => {
-            const name = row.getValue("StudentName") as string
+            const name = row.getValue("DateTime") as string
             return (
                 <Link
                     to={`/students/${row.original.id}`}
@@ -193,63 +193,46 @@ export const columns: ColumnDef<Payment>[] = [
             )
         },
     },
+   
+    
     {
-        accessorKey: "RecuritmentChannel",
-        header: "Recuritment Channel",
+        accessorKey: "Amount",
+        header: "Amount",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("RecuritmentChannel")}</div>
+            <div className="capitalize">{row.getValue("Amount")}</div>
+        ),
+    }, {
+        accessorKey: "Beneficiary",
+        header: "Beneficiary",
+        cell: ({ row }) => (
+            <div className="capitalize">{row.getValue("Beneficiary")}</div>
         ),
     },
+   
+    
     {
-        accessorKey: "ApplicationStatus",
-        header: "Application Status",
-        cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("ApplicationStatus")}</div>
-        ),
-    },
-    {
-        accessorKey: "LastActivity",
-        header: "Last Activity",
-        cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("LastActivity")}</div>
-        ),
-    },
-    {
-        accessorKey: "AssignedUniversity",
-        header: "Assigned University",
-        cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("AssignedUniversity")}</div>
-        ),
-    },
-    {
-        accessorKey: "AssignedGet2UniStaff",
-        header: "Assigned Get2Uni Staff",
+        accessorKey: "Status",
+        header: "Status",
         cell: ({ row }) => (
             <div className="capitalize">{row.getValue("status")}</div>
         ),
     },
-
     {
-        id: "actions",
-        header: <Menu className="size-4" />,
-        enableHiding: false,
-        cell: ({ row }) => {
-            return (
-                <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                        <Button variant="ghost" className="h-8 w-8 p-0 hover:bg-transparent hover:text-black cursor-pointer">
-                            <span className="sr-only">Open menu</span>
-                            <MoreHorizontal className="rotate-90" />
-                        </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
-                        <DropdownMenuItem >View</DropdownMenuItem>
-                    </DropdownMenuContent>
-                </DropdownMenu>
-            )
-        },
-    }
+        accessorKey: "ActionBy",
+        header: "Action By",
+        cell: ({ row }) => (
+            <div className="capitalize">{row.getValue("ActionBy")}</div>
+        ),
+    },
+ 
 
+ {
+        accessorKey: "Reason",
+        header: "Reason (if Rejected)",
+        cell: ({ row }) => (
+            <div className="capitalize">{row.getValue("status")}</div>
+        ),
+    },
 
 
 ]
@@ -349,11 +332,8 @@ export function CommissionTable() {
             </div>
 
           <div>
-                         <div className="flex items-center w-full justify-between space-x-2 py-4">
-                             <div className="text-muted-foreground  text-nowrap text-sm">
-                                 {table.getFilteredSelectedRowModel().rows.length} of{" "}
-                                 {table.getFilteredRowModel().rows.length} row(s) selected.
-                             </div>
+                         <div className="flex items-center w-full justify-end space-x-2 py-4">
+                            
                              <div className="flex ">
          
                                  <Pagination>

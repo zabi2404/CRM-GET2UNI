@@ -36,130 +36,131 @@ import {
     TableRow,
 } from "@/components/ui/table"
 import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "../ui/pagination"
+
 import { Link } from "react-router-dom"
 
 const data: Payment[] = [
 
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        DateTimeAgentAmbassadorName: "direct",
+        Type: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        DateTimeAgentAmbassadorName: "direct",
+        Type: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        DateTimeAgentAmbassadorName: "direct",
+        Type: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        DateTimeAgentAmbassadorName: "direct",
+        Type: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        DateTimeAgentAmbassadorName: "direct",
+        Type: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        DateTimeAgentAmbassadorName: "direct",
+        Type: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        DateTimeAgentAmbassadorName: "direct",
+        Type: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        DateTimeAgentAmbassadorName: "direct",
+        Type: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        DateTimeAgentAmbassadorName: "direct",
+        Type: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        DateTimeAgentAmbassadorName: "direct",
+        Type: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        DateTimeAgentAmbassadorName: "direct",
+        Type: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        DateTimeAgentAmbassadorName: "direct",
+        Type: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'janajna',
-        ApplicationStatus: "success",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'janajna',
+        StudentName: "success",
+        DateTimeAgentAmbassadorName: "direct",
+        Type: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'janajna',
-        ApplicationStatus: "success",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'janajna',
+        StudentName: "success",
+        DateTimeAgentAmbassadorName: "direct",
+        Type: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
 
 
@@ -167,21 +168,21 @@ const data: Payment[] = [
 
 export type Payment = {
     id: string
-    StudentName: string
-    ApplicationStatus: "pending" | "processing" | "success" | "failed"
-    RecuritmentChannel: "direct" | 'agent' | 'ambassador'
-    AssignedUniversity: string,
-    LastActivity: string,
-    AssignedGet2UniStaff: string
+    DateTime: string
+    StudentName: "pending" | "processing" | "success" | "failed"
+    DateTimeAgentAmbassadorName: "direct" | 'agent' | 'ambassador'
+    Type: string,
+    Amount: string,
+    Status: string
 }
 
 export const columns: ColumnDef<Payment>[] = [
 
     {
-        accessorKey: "StudentName",
-        header: "Student Name",
+        accessorKey: "DateTime",
+        header: "Date & Time",
         cell: ({ row }) => {
-            const name = row.getValue("StudentName") as string
+            const name = row.getValue("DateTime") as string
             return (
                 <Link
                     to={`/students/${row.original.id}`}
@@ -193,36 +194,43 @@ export const columns: ColumnDef<Payment>[] = [
         },
     },
     {
-        accessorKey: "RecuritmentChannel",
-        header: "Recuritment Channel",
+        accessorKey: "DateTimeAgentAmbassadorName",
+        header: "Agent / Ambassador name",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("RecuritmentChannel")}</div>
+            <div className="capitalize">{row.getValue("DateTimeAgentAmbassadorName")}</div>
         ),
     },
     {
-        accessorKey: "ApplicationStatus",
-        header: "Application Status",
+        accessorKey: "StudentName",
+        header: "Student Name",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("ApplicationStatus")}</div>
+            <div className="capitalize">{row.getValue("StudentName")}</div>
         ),
     },
     {
-        accessorKey: "LastActivity",
-        header: "Last Activity",
+        accessorKey: "Amount",
+        header: "Amount",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("LastActivity")}</div>
+            <div className="capitalize">{row.getValue("Amount")}</div>
         ),
     },
     {
-        accessorKey: "AssignedUniversity",
-        header: "Assigned University",
+        accessorKey: "Type",
+        header: "Type",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("AssignedUniversity")}</div>
+            <div className="capitalize">{row.getValue("Type")}</div>
         ),
     },
     {
-        accessorKey: "AssignedGet2UniStaff",
-        header: "Assigned Get2Uni Staff",
+        accessorKey: "Status",
+        header: "Status",
+        cell: ({ row }) => (
+            <div className="capitalize">{row.getValue("status")}</div>
+        ),
+    },
+     {
+        accessorKey: "Reason",
+        header: "Reason (if Rejected)",
         cell: ({ row }) => (
             <div className="capitalize">{row.getValue("status")}</div>
         ),
@@ -255,11 +263,7 @@ export const columns: ColumnDef<Payment>[] = [
 
 export function PayoutReqTable() {
     const [sorting, setSorting] = React.useState<SortingState>([])
-    const [selectedUniversity, setSelectedUniversity] = React.useState<string>("University")
-    const [selectedChannel, setSelectedChannel] = React.useState<string>("Channel")
-    const [status, setStatus] = React.useState<string>("Status")
-
-    const [selectedType, setSelectedType] = React.useState<string>("Type")
+    
 
     const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
         []
@@ -291,40 +295,9 @@ export function PayoutReqTable() {
         <div className="w-full">
             <div className="flex items-center  py-4 gap-2">
 
-                <Input
-                    placeholder="Search..."
-                    value={(table.getColumn("StudentName")?.getFilterValue() as string) ?? ""}
-                    onChange={(event) =>
-                        table.getColumn("StudentName")?.setFilterValue(event.target.value)
-                    }
-                    className="max-w-[200px]"
-                />
+              
 
-   <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                        <Button variant="outline" className="hover:bg-transparent hover:text-black cursor-pointer hover:border-primary">
-                            <div className="w-14 overflow-hidden">
-                                {status}
-                            </div>
-                            <ChevronDown />
-                        </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="center">
-                        {["pending", "processing", "success", "failed"].map((statusValue) => (
-                            <DropdownMenuItem
-                                key={statusValue}
-                                className="capitalize cursor-pointer"
-                                onClick={() => {
-                                    setStatus(statusValue);
-                                    table.getColumn("ApplicationStatus")?.setFilterValue(statusValue);
-                                }}
-                            >
-                                {statusValue}
-                            </DropdownMenuItem>
-                        ))}
-                    </DropdownMenuContent>
-                </DropdownMenu>
-            
+   
 
 
             </div>
@@ -382,70 +355,67 @@ export function PayoutReqTable() {
                 </Table>
             </div>
 
-         <div>
-                <div className="flex items-center w-full justify-between space-x-2 py-4">
-                    <div className="text-muted-foreground  text-nowrap text-sm">
-                        {table.getFilteredSelectedRowModel().rows.length} of{" "}
-                        {table.getFilteredRowModel().rows.length} row(s) selected.
-                    </div>
-                    <div className="flex ">
-
-                        <Pagination>
-                            <PaginationContent>
-                                <PaginationItem>
-                                    <PaginationPrevious
-                                        href="#"
-                                        onClick={(e) => {
-                                            e.preventDefault()
-                                            if (table.getCanPreviousPage()) {
-                                                table.previousPage()
-                                            }
-                                        }}
-                                        className={!table.getCanPreviousPage() ? "pointer-events-none opacity-50" : ""}
-                                    />
-
-                                </PaginationItem>
-
-                              
-                                {Array.from(
-                                    { length: table.getPageCount() },
-                                    (_, i) => i + 1
-                                ).map((page) => (
-                                    <PaginationItem key={page}>
-                                        <PaginationLink
-                                            href="#"
-                                            isActive={table.getState().pagination.pageIndex + 1 === page}
-                                            onClick={() => table.setPageIndex(page - 1)}
-                                        >
-                                            {page}
-                                        </PaginationLink>
-                                    </PaginationItem>
-                                ))}
-
-                               
-                                {table.getPageCount() > 5 && (
-                                    <PaginationItem>
-                                        <PaginationEllipsis />
-                                    </PaginationItem>
-                                )}
-
-                                <PaginationItem>
-                                    <PaginationNext
-                                        href="#"
-                                        onClick={(e) => {
-                                            e.preventDefault()
-                                            if (table.getCanNextPage()) {
-                                                table.nextPage()
-                                            }
-                                        }}
-                                        className={!table.getCanNextPage() ? "pointer-events-none opacity-50" : ""}
-                                    />
-                                </PaginationItem>
-                            </PaginationContent>
-                        </Pagination>
-                    </div>
-                </div>
-            </div>
+          <div>
+                         <div className="flex items-center w-full justify-end space-x-2 py-4">
+                            
+                             <div className="flex ">
+         
+                                 <Pagination>
+                                     <PaginationContent>
+                                         <PaginationItem>
+                                             <PaginationPrevious
+                                                 href="#"
+                                                 onClick={(e) => {
+                                                     e.preventDefault()
+                                                     if (table.getCanPreviousPage()) {
+                                                         table.previousPage()
+                                                     }
+                                                 }}
+                                                 className={!table.getCanPreviousPage() ? "pointer-events-none opacity-50" : ""}
+                                             />
+         
+                                         </PaginationItem>
+         
+                                       
+                                         {Array.from(
+                                             { length: table.getPageCount() },
+                                             (_, i) => i + 1
+                                         ).map((page) => (
+                                             <PaginationItem key={page}>
+                                                 <PaginationLink
+                                                     href="#"
+                                                     isActive={table.getState().pagination.pageIndex + 1 === page}
+                                                     onClick={() => table.setPageIndex(page - 1)}
+                                                 >
+                                                     {page}
+                                                 </PaginationLink>
+                                             </PaginationItem>
+                                         ))}
+         
+                                        
+                                         {table.getPageCount() > 5 && (
+                                             <PaginationItem>
+                                                 <PaginationEllipsis />
+                                             </PaginationItem>
+                                         )}
+         
+                                         <PaginationItem>
+                                             <PaginationNext
+                                                 href="#"
+                                                 onClick={(e) => {
+                                                     e.preventDefault()
+                                                     if (table.getCanNextPage()) {
+                                                         table.nextPage()
+                                                     }
+                                                 }}
+                                                 className={!table.getCanNextPage() ? "pointer-events-none opacity-50" : ""}
+                                             />
+                                         </PaginationItem>
+                                     </PaginationContent>
+                                 </Pagination>
+                             </div>
+                         </div>
+                     </div>
 
         </div>
     )
