@@ -49,10 +49,18 @@ const chartConfig = {
 
 export function ChartLineMultiple() {
   return (
-    <Card className="h-[350px] w-full">
+    <Card className="h-[385px] w-full">
       <CardHeader>
         <CardTitle>Students onboarded channels</CardTitle>
         <CardDescription>January - September 2025</CardDescription>
+        <CardDescription >
+           <div className="flex  gap-2">
+         <li className="mr-4 text-[12px] ">Agents</li>
+          <li className="mr-4 text-[12px] ">Ambassadors</li>
+           <li className="mr-4 text-[12px] ">Direct</li>
+       </div>
+        </CardDescription>
+
       </CardHeader>
       <CardContent>
         <ChartContainer className="h-[250px] w-full" config={chartConfig}>

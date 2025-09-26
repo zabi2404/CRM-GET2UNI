@@ -41,124 +41,114 @@ const data: Payment[] = [
 
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
+        EventDescription: 'zohaib',
+        DateTime: "pending",
+        UsersInvolved: "direct",
+        Source: "university 1",
         LastActivity: "Request Document Email",
         AssignedGet2UniStaff: ''
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
+        EventDescription: 'zohaib',
+        DateTime: "pending",
+        UsersInvolved: "direct",
+        Source: "university 1",
         LastActivity: "Request Document Email",
         AssignedGet2UniStaff: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
+        EventDescription: 'zohaib',
+        DateTime: "pending",
+        UsersInvolved: "direct",
+        Source: "university 1",
         LastActivity: "Request Document Email",
         AssignedGet2UniStaff: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
+        EventDescription: 'zohaib',
+        DateTime: "pending",
+        UsersInvolved: "direct",
+        Source: "university 1",
         LastActivity: "Request Document Email",
         AssignedGet2UniStaff: ''
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        EventDescription: 'zohaib',
+        DateTime: "pending",
+        UsersInvolved: "direct",
+        Source: "university 1",
+        
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        EventDescription: 'zohaib',
+        DateTime: "pending",
+        UsersInvolved: "direct",
+        Source: "university 1",
+        
     }, {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        EventDescription: 'zohaib',
+        DateTime: "pending",
+        UsersInvolved: "direct",
+        Source: "university 1",
+        
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        EventDescription: 'zohaib',
+        DateTime: "pending",
+        UsersInvolved: "direct",
+        Source: "university 1",
+        
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        EventDescription: 'zohaib',
+        DateTime: "pending",
+        UsersInvolved: "direct",
+        Source: "university 1",
+        
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        EventDescription: 'zohaib',
+        DateTime: "pending",
+        UsersInvolved: "direct",
+        Source: "university 1",
+        
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        EventDescription: 'zohaib',
+        DateTime: "pending",
+        UsersInvolved: "direct",
+        Source: "university 1",
+        
     },
     {
         id: "bhqecj4p",
-        StudentName: 'zohaib',
-        ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        EventDescription: 'zohaib',
+        DateTime: "pending",
+        UsersInvolved: "direct",
+        Source: "university 1",
+        
     },
     {
         id: "bhqecj4p",
-        StudentName: 'janajna',
-        ApplicationStatus: "success",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        EventDescription: 'janajna',
+        DateTime: "success",
+        UsersInvolved: "direct",
+        Source: "university 1",
+        
     },
     {
         id: "bhqecj4p",
-        StudentName: 'janajna',
-        ApplicationStatus: "success",
-        RecuritmentChannel: "direct",
-        AssignedUniversity: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        EventDescription: 'janajna',
+        DateTime: "success",
+        UsersInvolved: "direct",
+        Source: "university 1",
+        
     },
 
 
@@ -166,21 +156,20 @@ const data: Payment[] = [
 
 export type Payment = {
     id: string
-    StudentName: string
-    ApplicationStatus: "pending" | "processing" | "success" | "failed"
-    RecuritmentChannel: "direct" | 'agent' | 'ambassador'
-    AssignedUniversity: string,
-    LastActivity: string,
-    AssignedGet2UniStaff: string
+    EventDescription: string
+    DateTime: string
+    UsersInvolved: "direct" | 'agent' | 'ambassador'
+    Source: string,
+    
 }
 
 export const columns: ColumnDef<Payment>[] = [
 
     {
-        accessorKey: "StudentName",
-        header: "Student Name",
+        accessorKey: "EventDescription",
+        header: "Event Description",
         cell: ({ row }) => {
-            const name = row.getValue("StudentName") as string
+            const name = row.getValue("EventDescription") as string
             return (
                 <Link
                     to={`/students/${row.original.id}`}
@@ -192,61 +181,27 @@ export const columns: ColumnDef<Payment>[] = [
         },
     },
     {
-        accessorKey: "RecuritmentChannel",
-        header: "Recuritment Channel",
+        accessorKey: "DateTime",
+        header: "Date/Time",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("RecuritmentChannel")}</div>
+            <div className="capitalize">{row.getValue("DateTime")}</div>
         ),
     },
     {
-        accessorKey: "ApplicationStatus",
-        header: "Application Status",
+        accessorKey: "UsersInvolved",
+        header: "User(s) Involved",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("ApplicationStatus")}</div>
+            <div className="capitalize">{row.getValue("UsersInvolved")}</div>
         ),
     },
+  
     {
-        accessorKey: "LastActivity",
-        header: "Last Activity",
+        accessorKey: "Source",
+        header: "Source",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("LastActivity")}</div>
+            <div className="capitalize">{row.getValue("Source")}</div>
         ),
     },
-    {
-        accessorKey: "AssignedUniversity",
-        header: "Assigned University",
-        cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("AssignedUniversity")}</div>
-        ),
-    },
-    {
-        accessorKey: "AssignedGet2UniStaff",
-        header: "Assigned Get2Uni Staff",
-        cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("status")}</div>
-        ),
-    },
-
-    {
-        id: "actions",
-        header: <Menu className="size-4" />,
-        enableHiding: false,
-        cell: ({ row }) => {
-            return (
-                <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                        <Button variant="ghost" className="h-8 w-8 p-0 hover:bg-transparent hover:text-black cursor-pointer">
-                            <span className="sr-only">Open menu</span>
-                            <MoreHorizontal className="rotate-90" />
-                        </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
-                        <DropdownMenuItem >View</DropdownMenuItem>
-                    </DropdownMenuContent>
-                </DropdownMenu>
-            )
-        },
-    }
 
 
 

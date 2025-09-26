@@ -33,14 +33,33 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-export function ChartRadialStacked({title}:any) {
+
+type ChartRadialStackedProps ={
+  title: string;
+  subTitle1: string;
+  subTitle2: string;
+  value1: string;
+  value2: string;
+  heading: string;
+}
+
+export function ChartRadialStacked({title , subTitle1, subTitle2, value1, value2, heading}:ChartRadialStackedProps) {
   const totalVisitors = chartData[0].desktop + chartData[0].mobile
 
   return (
     <Card className="flex flex-col min-h-[365px] w-[100%]">
       <CardHeader className="items-center justify-center pb-0">
         <CardTitle>{title}</CardTitle>
-       
+       <div  className="flex flex-row gap-20 justify-center items-center">
+       <div>
+         <li className="text-[12px] ">{subTitle1}</li>
+         <p className="text-[16px]">{value1}</p>
+       </div>
+        <div>
+         <li className="text-[12px]">{subTitle2}</li>
+         <p className="text-[16px]">{value2}</p>
+       </div>
+       </div>
       </CardHeader>
       <CardContent className="flex flex-1 items-center pb-0">
         <ChartContainer
@@ -75,7 +94,7 @@ export function ChartRadialStacked({title}:any) {
                           y={(viewBox.cy || 0) + 4}
                           className="fill-muted-foreground"
                         >
-                          Visitors
+                          {heading}
                         </tspan>
                       </text>
                     )

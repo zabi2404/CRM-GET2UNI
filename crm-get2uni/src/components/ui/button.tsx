@@ -38,7 +38,7 @@ const buttonVariants = cva(
 type ButtonProps = React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
-    to?: string // ✅ allow navigation prop
+    to?: string 
   }
 
 function Button({ className, variant, size, asChild = false, to, ...props }: ButtonProps) {

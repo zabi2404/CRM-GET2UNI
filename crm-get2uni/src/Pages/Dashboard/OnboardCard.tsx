@@ -1,3 +1,4 @@
+import GrowthBadge2 from "@/components/common/GrowthBadge2"
 
 
 type OnboardCardProps = {
@@ -15,12 +16,12 @@ function OnboardCard({title,description}:OnboardCardProps) {
     <h1 className="font-semibold">
         {title}
     </h1>
-    <p>
+    <p className="text-[22px] font-[500]">
         {description}
     </p>
         </div>
         <div className="flex justify-end">
-        <p>25%</p>
+        <GrowthBadge2 value="12%"/>
         </div>
     </div>
    </>

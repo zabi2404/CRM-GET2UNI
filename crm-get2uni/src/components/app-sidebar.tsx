@@ -71,7 +71,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                         item.title === "notification" ? (
                           <>
                             <item.icon className="w-5 h-5" />
-                            <span className={`absolute ${!isActive ? "text-primary" : 'text-white'}   -top-0 left-5 h-4 w-4 flex items-center justify-center text-[10px] font-medium`}>
+                            <span className={`absolute ${!isActive ? "text-primary" : 'text-white'} hover:text-white  -top-0 left-5 h-4 w-4 flex items-center justify-center text-[10px] font-medium`}>
                               99+
                             </span>
                           </>
