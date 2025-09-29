@@ -48,16 +48,16 @@ const AddStudent = () => {
     const { t } = useTranslation();
     return (
         <>
-            <div className='flex justify-center items-center'>
+            <div className='flex justify-center items-center mb-4'>
                 <ProgressDemo value={progress} />
 
             </div>
 
-            <div className='border rounded-sm px-6 py-7  m-8'>
+            <div className='border rounded-sm px-3  sm:px-6 py-7  sm:m-8'>
                 {/* <BasicInfo /> */}
                 {array[value]}
                 {/* <StatusDetail/> */}
-                <div className="flex justify-between mt-4">
+                <div className="flex justify-between mt-4 flex-wrap gap-2">
                     <Button type="submit" variant={"outline"} className="w-fit cursor-pointer"
                         onClick={handlePrev}
                     >

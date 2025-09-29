@@ -185,7 +185,8 @@ body{
 
 /* Global scrollbar style */
 ::-webkit-scrollbar {
-  width: 4px; /* scrollbar width */
+  width: 4px;   /* vertical scrollbar */
+  height: 4px;  /* horizontal scrollbar */
 }
 
 ::-webkit-scrollbar-track {

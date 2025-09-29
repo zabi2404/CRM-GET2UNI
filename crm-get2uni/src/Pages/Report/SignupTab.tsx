@@ -11,7 +11,7 @@ function SignupTab() {
   <>
 
 
-    <div className='flex gap-4 m-4'>
+    <div className='flex gap-4 md:m-4 flex-wrap' >
 
     <CheckboxForm
     title="Student"
@@ -31,7 +31,10 @@ function SignupTab() {
     />
    </div>
     </div>
-  <div className='grid  gap-4 grid-cols-[30%_auto]'>
+  <div className='grid  gap-4
+   xl:grid-cols-[30%_auto]
+   xsm:grid-cols-1
+   '>
   <ChartPieLabelList/>
   <ChartBarStacked/>
   </div>

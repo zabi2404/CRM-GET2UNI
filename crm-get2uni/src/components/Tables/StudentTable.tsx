@@ -289,16 +289,24 @@ export function DataTableDemo() {
 
     return (
         <div className="w-full">
-            <div className="flex items-center justify-between py-4 gap-2">
+            <div className="flex items-start  py-4 gap-2 flex-col
+        
 
-                <div className="flex items-center gap-2">
+            ">
+
+                <div className="flex items-center gap-2 
+                xsm:flex-wrap
+                xl:flex-nowrap
+                ">
                     <Input
                         placeholder="Search..."
                         value={(table.getColumn("StudentName")?.getFilterValue() as string) ?? ""}
                         onChange={(event) =>
                             table.getColumn("StudentName")?.setFilterValue(event.target.value)
                         }
-                        className="max-w-[200px]"
+                        className="min-w-[200px] 
+                        max-w-[250px]
+                        "
                     />
 
                     <DropdownMenu >

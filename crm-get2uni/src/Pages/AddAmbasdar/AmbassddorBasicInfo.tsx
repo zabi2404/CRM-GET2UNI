@@ -29,7 +29,10 @@ export function AmbassddorBasicInfo({
                 />
                 <div className="grid gap-3">
 
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                        xsm:flex-col
+                    md:flex-row
+                    ">
 
                         <div className="grid gap-3 w-full">
                             <Label htmlFor="FirstName">{t('auth.firstName')}</Label>
@@ -48,7 +51,10 @@ export function AmbassddorBasicInfo({
                     </div>
 
 
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                        xsm:flex-col
+                    md:flex-row
+                    ">
 
 
                         <div className="grid gap-3 w-full">
@@ -66,7 +72,10 @@ export function AmbassddorBasicInfo({
                         </div>
                     </div>
 
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                        xsm:flex-col
+                    md:flex-row
+                    ">
 
 
                         <div className="grid gap-3 w-full">
@@ -84,7 +93,10 @@ export function AmbassddorBasicInfo({
 
                     </div>
 
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                        xsm:flex-col
+                    md:flex-row
+                    ">
 
 
                         <div className="grid gap-3 w-full">
@@ -103,7 +115,10 @@ export function AmbassddorBasicInfo({
                     </div>
 
 
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                        xsm:flex-col
+                    md:flex-row
+                    ">
 
 
                         <div className="grid gap-3 w-full">
@@ -118,7 +133,10 @@ export function AmbassddorBasicInfo({
                         </div>
                     </div>
 
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                        xsm:flex-col
+                    md:flex-row
+                    ">
 
 
                         <div className="grid gap-3 w-full">
@@ -134,7 +152,7 @@ export function AmbassddorBasicInfo({
                     </div>
                     <div className="flex flex-1 gap-3">
 
-                        <div className="grid gap-3 w-[50%]">
+                        <div className="grid gap-3 w-full md:w-[50%]">
 
                             <DatePicker />
                         </div>

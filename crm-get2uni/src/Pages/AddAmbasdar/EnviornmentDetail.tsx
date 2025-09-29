@@ -11,7 +11,7 @@ function EnviornmentDetail() {
         <>
 
 
-            <div className='border rounded-sm px-6 py-7  m-8'>
+            <div className='border rounded-sm px-3 mt-4 sm:px-6 py-7  sm:m-8'>
 
                 <AddStudentHeader
                     heading='Environment details'

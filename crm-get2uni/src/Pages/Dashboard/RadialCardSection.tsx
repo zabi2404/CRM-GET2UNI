@@ -6,10 +6,10 @@ function RadialCardSection() {
   <>
    <div className="flex gap-4 mb-4 items-center  flex-wrap
             xl:justify-between
-            
+            sm:justify-center
             ">
 
-                <div className=" flex min-w-[280px] w-full
+                <div className=" flex min-w-[250px] w-full
                  sm:w-[100%] 
                  md:w-[380px] 
                  xl:w-[32%] 
@@ -23,7 +23,7 @@ function RadialCardSection() {
                     value2='$50'
                 />
                 </div>
-                <div className=" flex min-w-[280px] w-full sm:w-[100%] md:w-[380px] xl:w-[32%] max-[887px]:!w-[380px]">
+                <div className=" flex min-w-[250px] w-full sm:w-[100%] md:w-[380px] xl:w-[32%] max-[887px]:!w-[380px]">
 
                 <ChartRadialStacked
                     title="Application Conversion"
@@ -34,7 +34,7 @@ function RadialCardSection() {
                     value2='54'
                 />
                 </div>
-                <div className=" flex min-w-[280px] w-full sm:w-[100%] md:w-[380px] xl:w-[32%] max-[887px]:!w-[380px]">
+                <div className=" flex min-w-[250px] w-full sm:w-[100%] md:w-[380px] xl:w-[32%] max-[887px]:!w-[380px]">
 
                 <ChartRadialStacked
                     title='Agent Overview'

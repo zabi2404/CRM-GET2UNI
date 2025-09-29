@@ -11,7 +11,9 @@ function OnboardCard({title,description}:OnboardCardProps) {
   return (
    <>
 
-    <div className="border rounded-sm p-4 w-[400px] min-w-[276px]">
+    <div className="border rounded-sm p-4 w-full min-w-[250px]
+   
+    ">
         <div>
     <h1 className="font-semibold">
         {title}

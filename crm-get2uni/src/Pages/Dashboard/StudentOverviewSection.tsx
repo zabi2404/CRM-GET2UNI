@@ -36,12 +36,18 @@ function StudentOverviewSection() {
                         Applications
                         </h1>
                     </div>
-                    <div className="flex">
-                        <div className="mr-30">
-                            <h1 className="text-[36px] font-500 text-textBlack mb-2">0</h1>
+                    <div className="flex
+                    max-[506px]:flex-col
+                    ">
+                        <div className="mr-30
+                        max-[506px]:mr-0 max-[506px]:text-center max-[506px]:flex max-[506px]:flex-col justify-center items-center
+                        ">
+                            <h1 className="text-[36px] font-500 text-textBlack mb-2
+                            
+                            ">0</h1>
                           <li className="text-[12px] text-green-400">Approved</li>
                         </div>
-                        <div className="flex flex-1 justify-evenly ">
+                        <div className="flex flex-1 justify-evenly flex-wrap">
                            <SmallCard
                            title="In rewiew"
                            count={4}

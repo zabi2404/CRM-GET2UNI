@@ -25,7 +25,10 @@ export function BasicInfo({
               />
                 <div className="grid gap-3">
 
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex  flex-1 gap-3
+                    xsm:flex-col
+                    md:flex-row
+                    ">
                         <div className="grid gap-3 w-full">
                             <Label >{t('auth.type')}</Label>
                             <TypeSelect
@@ -37,7 +40,10 @@ export function BasicInfo({
 
 
                         </div>
-                        <div className="grid gap-3 w-full">
+                        <div className="grid gap-3 w-full 
+                          xsm:flex-col
+                    md:flex-row
+                        ">
                             <Label htmlFor="FirstName">{t('auth.firstName')}</Label>
                             <Input id="FirstName"
 
@@ -46,7 +52,10 @@ export function BasicInfo({
                     </div>
 
 
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                      xsm:flex-col
+                    md:flex-row
+                    ">
                         <div className="grid gap-3 w-full">
                             <Label htmlFor="LastName">{t('auth.lastName')}</Label>
                             <Input id="LastName"
@@ -54,7 +63,10 @@ export function BasicInfo({
                                 type="text" required />
                         </div>
 
-                        <div className="grid gap-3 w-full">
+                        <div className="grid gap-3 w-full
+                          xsm:flex-col
+                    md:flex-row
+                        ">
                             <Label htmlFor="email">Email Address</Label>
                             <Input id="email"
 
@@ -63,7 +75,10 @@ export function BasicInfo({
 
                     </div>
 
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                      xsm:flex-col
+                    md:flex-row
+                    ">
                         <div className="grid gap-3 w-full">
                             <Label htmlFor="email">{t('auth.whatsapp')}</Label>
 
@@ -77,7 +92,10 @@ export function BasicInfo({
                         </div>
                     </div>
 
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                      xsm:flex-col
+                    md:flex-row
+                    ">
                         <div className="grid gap-3 w-full">
                             <Label htmlFor="LastName">Address Line 1</Label>
                             <Input id="LastName"
@@ -95,7 +113,10 @@ export function BasicInfo({
                     </div>
                     
 
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                      xsm:flex-col
+                    md:flex-row
+                    ">
                         <div className="grid gap-3 w-full">
                             <Label htmlFor="LastName">County</Label>
                             <Input id="LastName"
@@ -112,7 +133,10 @@ export function BasicInfo({
 
                     </div>
 
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                      xsm:flex-col
+                    md:flex-row
+                    ">
                         <div className="grid gap-3 w-full">
                             <Label htmlFor="LastName">Country</Label>
                             <CountrySelect />
@@ -126,7 +150,10 @@ export function BasicInfo({
                         </div>
 
                     </div>
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                      xsm:flex-col
+                    md:flex-row
+                    ">
                     <div className="grid gap-3 w-full">
                             <Label htmlFor="LastName">Country</Label>
                             <CountrySelect />

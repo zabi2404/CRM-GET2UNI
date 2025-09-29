@@ -5,10 +5,10 @@ import { Input } from '@/components/ui/input'
 function HeaderDashboard() {
   return (
 <>
-    <div className="flex items-center gap-4 mb-4">
+    <div className="flex items-center gap-4 mb-4 flex-wrap">
                 <Input
                     placeholder="Search..."
-                    className="max-w-[300px]"
+                    className="max-w-[300px] min-w-[180px]"
                 />
                 <DropDown
                     value1="Pending"

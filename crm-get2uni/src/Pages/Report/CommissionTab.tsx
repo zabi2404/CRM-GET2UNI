@@ -11,7 +11,7 @@ function CommissionTab() {
   <>
 
 
-    <div className='flex gap-4 m-4'>
+    <div className='flex gap-4 sm:m-4 flex-wrap'>
 
     <CheckboxForm
     title="Pending"
@@ -33,7 +33,9 @@ function CommissionTab() {
     />
    </div>
     </div>
-  <div className='grid  gap-4 grid-cols-[30%_auto]'>
+  <div className='grid  gap-4 xl:grid-cols-[30%_auto]
+  xsm:grid-cols-1
+  '>
   <ChartPieLabelList/>
   <ChartBarStacked/>
   </div>

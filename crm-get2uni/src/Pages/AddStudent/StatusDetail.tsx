@@ -24,7 +24,10 @@ export default function StatusDetail({
               />
                 <div className="grid gap-3">
 
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                        xsm:flex-col
+                    md:flex-row
+                    ">
                         <div className="grid gap-3 w-full">
                             <Label >{t('auth.type')}</Label>
                             <TypeSelect

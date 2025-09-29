@@ -35,7 +35,7 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
-import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "../ui/pagination"
+import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "../../components/ui/pagination"
 
 import { Link } from "react-router-dom"
 
@@ -43,114 +43,124 @@ const data: Payment[] = [
 
     {
         id: "bhqecj4p",
-        EventDescription: 'zohaib',
-        DateTime: "pending",
-        UsersInvolved: "direct",
-        Source: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        EventDescription: 'zohaib',
-        DateTime: "pending",
-        UsersInvolved: "direct",
-        Source: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        EventDescription: 'zohaib',
-        DateTime: "pending",
-        UsersInvolved: "direct",
-        Source: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        EventDescription: 'zohaib',
-        DateTime: "pending",
-        UsersInvolved: "direct",
-        Source: "university 1",
-        LastActivity: "Request Document Email",
-        AssignedGet2UniStaff: ''
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        EventDescription: 'zohaib',
-        DateTime: "pending",
-        UsersInvolved: "direct",
-        Source: "university 1",
-        
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        EventDescription: 'zohaib',
-        DateTime: "pending",
-        UsersInvolved: "direct",
-        Source: "university 1",
-        
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     }, {
         id: "bhqecj4p",
-        EventDescription: 'zohaib',
-        DateTime: "pending",
-        UsersInvolved: "direct",
-        Source: "university 1",
-        
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        EventDescription: 'zohaib',
-        DateTime: "pending",
-        UsersInvolved: "direct",
-        Source: "university 1",
-        
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        EventDescription: 'zohaib',
-        DateTime: "pending",
-        UsersInvolved: "direct",
-        Source: "university 1",
-        
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        EventDescription: 'zohaib',
-        DateTime: "pending",
-        UsersInvolved: "direct",
-        Source: "university 1",
-        
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        EventDescription: 'zohaib',
-        DateTime: "pending",
-        UsersInvolved: "direct",
-        Source: "university 1",
-        
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        EventDescription: 'zohaib',
-        DateTime: "pending",
-        UsersInvolved: "direct",
-        Source: "university 1",
-        
+        DateTime: 'zohaib',
+        StudentName: "pending",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        EventDescription: 'janajna',
-        DateTime: "success",
-        UsersInvolved: "direct",
-        Source: "university 1",
-        
+        DateTime: 'janajna',
+        StudentName: "success",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
     {
         id: "bhqecj4p",
-        EventDescription: 'janajna',
-        DateTime: "success",
-        UsersInvolved: "direct",
-        Source: "university 1",
-        
+        DateTime: 'janajna',
+        StudentName: "success",
+        Beneficiary: "direct",
+        ActionBy: "university 1",
+        Amount: "Request Document Email",
+        Status: ''
     },
 
 
@@ -158,20 +168,21 @@ const data: Payment[] = [
 
 export type Payment = {
     id: string
-    EventDescription: string
     DateTime: string
-    UsersInvolved: "direct" | 'agent' | 'ambassador'
-    Source: string,
-    
+    StudentName: "pending" | "processing" | "success" | "failed"
+    Beneficiary: "direct" | 'agent' | 'ambassador'
+    ActionBy: string,
+    Amount: string,
+    Status: string
 }
 
 export const columns: ColumnDef<Payment>[] = [
 
     {
-        accessorKey: "EventDescription",
-        header: "Event Description",
+        accessorKey: "DateTime",
+        header: "Date ",
         cell: ({ row }) => {
-            const name = row.getValue("EventDescription") as string
+            const name = row.getValue("DateTime") as string
             return (
                 <Link
                     to={`/students/${row.original.id}`}
@@ -182,36 +193,53 @@ export const columns: ColumnDef<Payment>[] = [
             )
         },
     },
+
+
     {
-        accessorKey: "DateTime",
-        header: "Date/Time",
+        accessorKey: "Amount",
+        header: "Amount",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("DateTime")}</div>
+            <div className="capitalize">{row.getValue("Amount")}</div>
         ),
-    },
-    {
-        accessorKey: "UsersInvolved",
-        header: "User(s) Involved",
+    }, {
+        accessorKey: "Beneficiary",
+        header: "Beneficiary",
         cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("UsersInvolved")}</div>
-        ),
-    },
-  
-    {
-        accessorKey: "Source",
-        header: "Source",
-        cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("Source")}</div>
+            <div className="capitalize">{row.getValue("Beneficiary")}</div>
         ),
     },
 
+
+    {
+        accessorKey: "Status",
+        header: "Status",
+        cell: ({ row }) => (
+            <div className="capitalize">{row.getValue("status")}</div>
+        ),
+    },
+    {
+        accessorKey: "ActionBy",
+        header: "Action By",
+        cell: ({ row }) => (
+            <div className="capitalize">{row.getValue("ActionBy")}</div>
+        ),
+    },
+
+
+    {
+        accessorKey: "Reason",
+        header: "Reason (if Rejected)",
+        cell: ({ row }) => (
+            <div className="capitalize">{row.getValue("status")}</div>
+        ),
+    },
 
 
 ]
 
-export function RecentActivityTable() {
+export function StudentCommissionTab() {
     const [sorting, setSorting] = React.useState<SortingState>([])
-
+    const [status, setStatus] = React.useState<string>("Status")
 
     const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
         []
@@ -241,7 +269,9 @@ export function RecentActivityTable() {
 
     return (
         <div className="w-full">
-          
+            <div className="flex items-center  py-4 gap-2">
+
+            </div>
 
             <div className="w-full h-[620px] overflow-x-auto rounded-md border">
                 <Table className="min-w-[1040px] w-full">
@@ -297,8 +327,8 @@ export function RecentActivityTable() {
             </div>
 
             <div>
-                <div className="flex items-center w-full justify-between space-x-2 py-4">
-                   
+                <div className="flex items-center w-full justify-end space-x-2 py-4">
+
                     <div className="flex ">
 
                         <Pagination>
@@ -317,7 +347,7 @@ export function RecentActivityTable() {
 
                                 </PaginationItem>
 
-                              
+
                                 {Array.from(
                                     { length: table.getPageCount() },
                                     (_, i) => i + 1
@@ -333,7 +363,7 @@ export function RecentActivityTable() {
                                     </PaginationItem>
                                 ))}
 
-                               
+
                                 {table.getPageCount() > 5 && (
                                     <PaginationItem>
                                         <PaginationEllipsis />

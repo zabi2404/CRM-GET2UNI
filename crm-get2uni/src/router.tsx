@@ -9,6 +9,8 @@ import {
 import { SidebarProvider } from "./components/ui/sidebar";
 import AmbassddorProfile from "./Pages/Ambassdor Profile/AmbassddorProfile";
 import AgentProfile from "./Pages/Agent Profile/AgentProfile";
+import StudentProfile from "./Pages/StudentProfile/StudentProfile";
+import Testign from "./Testing";
 
 export const router = createBrowserRouter([
     {
@@ -31,6 +33,10 @@ export const router = createBrowserRouter([
             {
                 path: "add-student",
                 element: <AddStudent />,
+            },
+            {
+                path:"student/:id",
+                element:<StudentProfile/>
             },
             {
                 path: "agent",
@@ -86,6 +92,10 @@ export const router = createBrowserRouter([
                 path: "setting",
                 element: <Setting />,
             },
+            {
+                path:'testing',
+                element:<Testign/>
+            }
         ],
     },
     {

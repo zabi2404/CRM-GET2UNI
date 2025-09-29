@@ -6,9 +6,9 @@ const Report = () => {
     return (
         <Tabs defaultValue="Commission" className="">
             <TabsList className="">
-                <TabsTrigger className="px-8 cursor-pointer" value="Commission">Commission</TabsTrigger>
-                <TabsTrigger className="px-8 cursor-pointer" value="Signups">Signups</TabsTrigger>
-                <TabsTrigger className="px-8 cursor-pointer" value="Reffered">Reffered Signups</TabsTrigger>
+                <TabsTrigger className="xsm:text-[12px] sm:text-[14px] cursor-pointer" value="Commission">Commission</TabsTrigger>
+                <TabsTrigger className="xsm:text-[12px] sm:text-[14px] cursor-pointer" value="Signups">Signups</TabsTrigger>
+                <TabsTrigger className="xsm:text-[12px] sm:text-[14px] cursor-pointer" value="Reffered">Reffered Signups</TabsTrigger>
 
             </TabsList>
             <TabsContent value="Commission">

@@ -38,6 +38,7 @@ import {
 import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "../ui/pagination"
 
 import { Link } from "react-router-dom"
+import { AddUniversityModal } from "../common/AddUniversityModal"
 
 const data: Payment[] = [
 
@@ -294,7 +295,7 @@ export function UniversityTable() {
 
     return (
         <div className="w-full">
-            <div className="flex items-center py-4 gap-2">
+            <div className="flex items-center justify-between py-4 gap-2 flex-wrap"  >
 
                 <Input
                     placeholder="Search..."
@@ -305,7 +306,7 @@ export function UniversityTable() {
                     className="max-w-[200px]"
                 />
 
-            
+            <AddUniversityModal/>
 
 
             </div>

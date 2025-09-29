@@ -9,11 +9,13 @@ export default function MainLayout() {
 
           <Header />
       </div>
-      <div className="grid grid-cols-[auto_1fr]">
+      <div className="flex">
         <div>
-        <SideBar />
+       <div className="">
+     <SideBar />
+       </div>
         </div>
-        <div className=" md:pt-25 px-8  xsm:pt-50 w-full">
+        <div className=" md:pt-25 px-8  xsm:pt-50 w-full  flex-1   min-w-0" >
           <Outlet />
         
         </div>
@@ -21,6 +23,22 @@ export default function MainLayout() {
     </div>
   );
 }
+
+//  <div className="flex flex-col">
+//       <div>
+
+//           <Header />
+//       </div>
+//       <div className="grid grid-cols-[auto_1fr]">
+//         <div>
+//         <SideBar />
+//         </div>
+//         <div className=" md:pt-25 px-8  xsm:pt-50 w-full">
+//           <Outlet />
+        
+//         </div>
+//       </div>
+//     </div>
 
 
 

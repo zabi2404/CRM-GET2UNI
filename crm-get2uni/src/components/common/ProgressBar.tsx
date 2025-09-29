@@ -3,7 +3,13 @@ import * as React from "react"
 
 import { Progress } from "@/components/ui/progress"
 
-export function ProgressDemo({value}:any) {
+type progressProps = {
+  value: number,
+  height?:string
+  width?:string
+}
+
+export function ProgressDemo({value,height,width}:progressProps) {
   const [progress, setProgress] = React.useState(13)
 
   React.useEffect(() => {
@@ -11,7 +17,12 @@ export function ProgressDemo({value}:any) {
     return () => clearTimeout(timer)
   }, [])
 
-  return <Progress value={value} className="w-[40%] h-4" />
+  return <Progress value={value} className="w-[40%] h-4"
+  style={{height:height||"16px",
+width:width||"40%"
+
+  }}
+  />
 }
 
 

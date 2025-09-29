@@ -26,7 +26,10 @@ export function AgentBasicInfo({
               />
                 <div className="grid gap-3">
 
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                        xsm:flex-col
+                    md:flex-row
+                    ">
                         <div className="grid gap-3 w-full">
                             <Label >{t('auth.type')}</Label>
                             <TypeSelect
@@ -47,7 +50,10 @@ export function AgentBasicInfo({
                     </div>
 
 
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                        xsm:flex-col
+                    md:flex-row
+                    ">
                         <div className="grid gap-3 w-full">
                             <Label htmlFor="LastName">{t('auth.lastName')}</Label>
                             <Input id="LastName"
@@ -64,7 +70,10 @@ export function AgentBasicInfo({
 
                     </div>
 
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                        xsm:flex-col
+                    md:flex-row
+                    ">
                         <div className="grid gap-3 w-full">
                             <Label htmlFor="email">{t('auth.whatsapp')}</Label>
 
@@ -78,7 +87,10 @@ export function AgentBasicInfo({
                         </div>
                     </div>
 
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                        xsm:flex-col
+                    md:flex-row
+                    ">
                         <div className="grid gap-3 w-full">
                             <Label htmlFor="LastName">Address Line 1</Label>
                             <Input id="LastName"
@@ -96,7 +108,10 @@ export function AgentBasicInfo({
                     </div>
                     
 
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                        xsm:flex-col
+                    md:flex-row
+                    ">
                         <div className="grid gap-3 w-full">
                             <Label htmlFor="LastName">County</Label>
                             <Input id="LastName"
@@ -113,7 +128,10 @@ export function AgentBasicInfo({
 
                     </div>
 
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                        xsm:flex-col
+                    md:flex-row
+                    ">
                         <div className="grid gap-3 w-full">
                             <Label htmlFor="LastName">Country</Label>
                             <CountrySelect />
@@ -127,7 +145,10 @@ export function AgentBasicInfo({
                         </div>
 
                     </div>
-                    <div className="flex flex-1 gap-3">
+                    <div className="flex flex-1 gap-3
+                        xsm:flex-col
+                    md:flex-row
+                    ">
                     <div className="grid gap-3 w-full">
                             <Label htmlFor="LastName">Country</Label>
                             <CountrySelect />
