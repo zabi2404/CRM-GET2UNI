@@ -4,7 +4,6 @@ import RadialCardSection from "./RadialCardSection";
 import RecentActivitySection from "./RecentActivitySection";
 
 import HeaderDashboard from "./HeaderDashboard";
-import { Dialouge } from "@/components/common/Dialouge";
 import { StudentProfileModal } from "@/components/common/StudentProfileModal";
 import { AddDocumentModal } from "@/components/common/AddDocumentModal";
 
@@ -16,7 +15,7 @@ const Dashboard = () => {
         <>
        
         <AddDocumentModal/>
-       <Dialouge/>
+       
         <StudentProfileModal/>
         <HeaderDashboard/>
             <StudentOverviewSection />

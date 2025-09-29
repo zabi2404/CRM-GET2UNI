@@ -37,6 +37,7 @@ import {
 } from "@/components/ui/table"
 import { Link } from "react-router-dom"
 import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "../ui/pagination"
+import { Dialouge } from "../common/Dialouge"
 
 const data: Payment[] = [
 
@@ -289,7 +290,7 @@ export function DataTableDemo() {
 
     return (
         <div className="w-full">
-            <div className="flex items-start  py-4 gap-2 flex-col
+            <div className="flex items-start  py-4 gap-2 flex-wrap justify-between
         
 
             ">
@@ -426,12 +427,17 @@ export function DataTableDemo() {
 
                 </div>
 
+                <div className="flex gap-4">
+                       <Dialouge/>     
                 <Button
                     to="/add-student"
                 >
                     <Plus />
                     Add New Student
                 </Button>
+
+                </div>
+
             </div>
 
             <div className="w-full h-[620px] overflow-x-auto rounded-md border">

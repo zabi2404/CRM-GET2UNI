@@ -21,7 +21,7 @@ export function StudentProfileModal() {
         <DialogTrigger asChild>
           <Button variant="outline">Open Dialog</Button>
         </DialogTrigger>
-        <DialogContent className="w-full max-w-full max-h-full min-h-[600px] overflow-y-auto">
+        <DialogContent className=" max-w-[1200px]  max-h-full min-h-[600px] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>Student Profile</DialogTitle>
 

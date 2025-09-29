@@ -1,5 +1,4 @@
 import { Settings } from "lucide-react";
-import { TypeSelect } from "../common/TypeSelect";
 import { useNavigate } from "react-router-dom";
 import { SidebarTrigger } from "../ui/sidebar";
 import { NavigationMenu } from "../common/NavigationMenu";

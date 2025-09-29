@@ -19,7 +19,7 @@ export function AddDocumentModal() {
         <DialogTrigger asChild>
           <Button >Add</Button>
         </DialogTrigger>
-        <DialogContent className="w-[300px]">
+        <DialogContent className="w-[400px]">
           <DialogHeader>
             <DialogTitle>Edit Document</DialogTitle>
            

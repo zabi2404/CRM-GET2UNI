@@ -210,3 +210,9 @@ body *::-webkit-scrollbar-thumb {
   border-radius: 999px;
   border: 2px solid transparent; /* avoids bleeding */
 
+
+
+
+body[data-scroll-locked] {
+  pointer-events: auto !important;
+}

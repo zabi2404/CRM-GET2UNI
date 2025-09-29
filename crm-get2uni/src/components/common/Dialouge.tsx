@@ -12,13 +12,16 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { TypeSelect } from "./TypeSelect"
+import { FileUp } from "lucide-react"
 
 export function Dialouge() {
   return (
     <Dialog>
       <form>
         <DialogTrigger asChild>
-          <Button variant="outline">Open Dialog</Button>
+          <Button className="cursor-pointer">
+            <FileUp />
+            Mass Upload</Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
@@ -28,7 +31,7 @@ export function Dialouge() {
           <div className="grid gap-4">
             <div className="grid gap-3">
               <Label htmlFor="name-1">Upload Document</Label>
-              <Input id="name-1" type="file" name="name" />
+              <Input className="cursor-pointer" id="name-1" type="file" name="name" />
             </div>
             <div className="grid gap-3">
               <Label htmlFor="username-1">Template Type</Label>
