@@ -1,7 +1,6 @@
 import { ChartBarStacked } from '@/components/Charts/BarChart'
 import { ChartPieLabelList } from '@/components/Charts/pieChart'
 import CheckboxForm from './CheckboxForm'
-import { TypeSelect } from '@/components/common/TypeSelect'
 import { ReffredSignupTable } from '@/components/Tables/ReffredSignupTable'
 
 

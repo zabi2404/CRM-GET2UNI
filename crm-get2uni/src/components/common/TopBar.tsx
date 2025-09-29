@@ -1,6 +1,6 @@
 import { useTheme } from "@/Zustand/themeSwitcherStore";
-import { TypeSelect } from "./TypeSelect";
 import { useLanguage } from "@/Zustand/LanguageSwitcherStore";
+import { DropDown } from "./DropDown";
 
 const TopBar = () => {
     const {theme,setTheme} = useTheme();
@@ -13,7 +13,7 @@ const TopBar = () => {
                 
                 <div className="w-[100px]">
                     
-                <TypeSelect
+                <DropDown
                  placeHolder="Language"
                     value1='English'
                     value2='French'
@@ -25,7 +25,7 @@ const TopBar = () => {
                 />
                 </div>
                 <div className="w-[100px]">
-                <TypeSelect
+                <DropDown
                 placeHolder="Theme"
                     value1='Light'
                     value2='Dark'
