@@ -8,7 +8,7 @@ import { CountrySelect } from "@/components/common/CountrySelectInput"
 
 import AddStudentHeader from "../AddStudent/AddStudentHeader"
 
-function AmbassdorProfileTab({
+function AgentProfileTab({
     className,
     ...props
 }: React.ComponentProps<"form">) {
@@ -18,12 +18,13 @@ function AmbassdorProfileTab({
         <>
             <div className="shadow-lg rounded-md flex flex-col gap-12 p-4 w-full">
                 <AddStudentHeader
-                    title="Ambassador Profile"
+                    title="Agent Profile"
                     heading="Basic Information"
 
                 />
 
                 <div className="flex justify-center items-center">
+                    
                     <form className={cn("flex flex-col gap-6   max-w-[1099px]   ", className)} {...props}>
 
                         <div className="flex flex-col gap-4">
@@ -175,4 +176,4 @@ function AmbassdorProfileTab({
     )
 }
 
-export default AmbassdorProfileTab
+export default AgentProfileTab
