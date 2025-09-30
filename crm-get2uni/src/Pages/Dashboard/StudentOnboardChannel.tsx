@@ -1,5 +1,4 @@
 import { ChartLineMultiple } from '@/components/Charts/LineChart'
-import React from 'react'
 import OnboardCard from './OnboardCard'
 
 function StudentOnboardChannel() {

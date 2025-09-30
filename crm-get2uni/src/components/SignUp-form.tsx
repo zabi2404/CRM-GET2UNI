@@ -2,11 +2,11 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { TypeSelect } from "./common/TypeSelect"
 import { DatePicker } from "./common/DatePicker"
 import { PhoneInput } from "./common/PhoneInput"
 import { Link } from "react-router-dom"
 import { useTranslation } from "react-i18next"
+import { DropDown } from "./common/DropDown"
 
 export function SignUpForm({
   className,
@@ -25,11 +25,12 @@ export function SignUpForm({
 
       <div className="grid gap-3">
           <Label >{t('auth.type')}</Label>
-          <TypeSelect
+          <DropDown
             value1="Transfer"
             value2="Change of Status"
             value3="International"
             value4="Second Masters"
+            width="100%"
           />
         </div>
 

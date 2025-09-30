@@ -1,18 +1,14 @@
 "use client"
 
-import { TrendingUp } from "lucide-react"
 import { Label, PolarRadiusAxis, RadialBar, RadialBarChart } from "recharts"
 
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
 import {
-  ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
@@ -49,15 +45,15 @@ export function ChartRadialStacked({title , subTitle1, subTitle2, value1, value2
   return (
     <Card className="flex flex-col min-h-[365px] w-[100%]">
       <CardHeader className="items-center justify-center pb-0">
-        <CardTitle>{title}</CardTitle>
+        <CardTitle className="text-foreground ">{title}</CardTitle>
        <div  className="flex flex-row gap-20 justify-center items-center">
        <div>
-         <li className="text-[12px] ">{subTitle1}</li>
-         <p className="text-[16px]">{value1}</p>
+         <li className="text-body text-secondary-foreground">{subTitle1}</li>
+         <p className="">{value1}</p>
        </div>
         <div>
-         <li className="text-[12px]">{subTitle2}</li>
-         <p className="text-[16px]">{value2}</p>
+         <li className="text-body text-secondary-foreground">{subTitle2}</li>
+         <p className="">{value2}</p>
        </div>
        </div>
       </CardHeader>

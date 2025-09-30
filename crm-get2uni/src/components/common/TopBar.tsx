@@ -9,7 +9,7 @@ const TopBar = () => {
     // 
     return (
         <>
-            <div className="flex justify-end p-2 gap-4 bg-white z-12 items-center ">
+            <div className="fixed top-0 left-0 md:left-68 right-0  flex justify-end p-2 gap-4 bg-background z-12 items-center ">
                 
                 <div className="w-[100px]">
                     

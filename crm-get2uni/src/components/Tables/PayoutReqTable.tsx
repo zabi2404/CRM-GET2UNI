@@ -36,7 +36,7 @@ import {
     TableRow,
 } from "@/components/ui/table"
 import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "../ui/pagination"
-
+import { DatePicker } from '@/components/common/DatePicker2'
 import { Link } from "react-router-dom"
 
 const data: Payment[] = [
@@ -228,7 +228,7 @@ export const columns: ColumnDef<Payment>[] = [
             <div className="capitalize">{row.getValue("status")}</div>
         ),
     },
-     {
+    {
         accessorKey: "Reason",
         header: "Reason (if Rejected)",
         cell: ({ row }) => (
@@ -263,7 +263,8 @@ export const columns: ColumnDef<Payment>[] = [
 
 export function PayoutReqTable() {
     const [sorting, setSorting] = React.useState<SortingState>([])
-    
+
+    const [status, setStatus] = React.useState<string>("Status")
 
     const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
         []
@@ -295,9 +296,61 @@ export function PayoutReqTable() {
         <div className="w-full">
             <div className="flex items-center  py-4 gap-2">
 
-              
+             <Input
+                                placeholder="Search..."
+                                value={(table.getColumn("Logo")?.getFilterValue() as string) ?? ""}
+                                onChange={(event) =>
+                                    table.getColumn("Logo")?.setFilterValue(event.target.value)
+                                }
+                                className="max-w-[286px]"
+                            />
 
-   
+                <DropdownMenu modal={false}>
+                    <DropdownMenuTrigger asChild>
+                        <Button
+                            variant="outline"
+                            className="hover:bg-transparent hover:text-foreground cursor-pointer hover:border-primary"
+                        >
+                            <div className="w-14 overflow-hidden">{status}</div>
+                            <ChevronDown />
+                        </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="center">
+                        {["pending", "processing", "success", "failed"].map((statusValue) => {
+                            let colorClass = ""
+
+                            switch (statusValue) {
+                                case "pending":
+                                    colorClass = "text-yellow-700"
+                                    break
+                                case "processing":
+                                    colorClass = "text-blue-700"
+                                    break
+                                case "success":
+                                    colorClass = "text-success"
+                                    break
+                                case "failed":
+                                    colorClass = "text-failure"
+                                    break
+                            }
+
+                            return (
+                                <DropdownMenuItem
+                                    key={statusValue}
+                                    className={`capitalize cursor-pointer ${colorClass}`}
+                                    onClick={() => {
+                                        setStatus(statusValue)
+                                        table.getColumn("ApplicationStatus")?.setFilterValue(statusValue)
+                                    }}
+                                >
+                                    {statusValue}
+                                </DropdownMenuItem>
+                            )
+                        })}
+                    </DropdownMenuContent>
+                </DropdownMenu>
+
+                <DatePicker />
 
 
             </div>
@@ -355,67 +408,67 @@ export function PayoutReqTable() {
                 </Table>
             </div>
 
-          <div>
-                         <div className="flex items-center w-full justify-end space-x-2 py-4">
-                            
-                             <div className="flex ">
-         
-                                 <Pagination>
-                                     <PaginationContent>
-                                         <PaginationItem>
-                                             <PaginationPrevious
-                                                 href="#"
-                                                 onClick={(e) => {
-                                                     e.preventDefault()
-                                                     if (table.getCanPreviousPage()) {
-                                                         table.previousPage()
-                                                     }
-                                                 }}
-                                                 className={!table.getCanPreviousPage() ? "pointer-events-none opacity-50" : ""}
-                                             />
-         
-                                         </PaginationItem>
-         
-                                       
-                                         {Array.from(
-                                             { length: table.getPageCount() },
-                                             (_, i) => i + 1
-                                         ).map((page) => (
-                                             <PaginationItem key={page}>
-                                                 <PaginationLink
-                                                     href="#"
-                                                     isActive={table.getState().pagination.pageIndex + 1 === page}
-                                                     onClick={() => table.setPageIndex(page - 1)}
-                                                 >
-                                                     {page}
-                                                 </PaginationLink>
-                                             </PaginationItem>
-                                         ))}
-         
-                                        
-                                         {table.getPageCount() > 5 && (
-                                             <PaginationItem>
-                                                 <PaginationEllipsis />
-                                             </PaginationItem>
-                                         )}
-         
-                                         <PaginationItem>
-                                             <PaginationNext
-                                                 href="#"
-                                                 onClick={(e) => {
-                                                     e.preventDefault()
-                                                     if (table.getCanNextPage()) {
-                                                         table.nextPage()
-                                                     }
-                                                 }}
-                                                 className={!table.getCanNextPage() ? "pointer-events-none opacity-50" : ""}
-                                             />
-                                         </PaginationItem>
-                                     </PaginationContent>
-                                 </Pagination>
-                             </div>
-                         </div>
-                     </div>
+            <div>
+                <div className="flex items-center w-full justify-end space-x-2 py-4">
+
+                    <div className="flex ">
+
+                        <Pagination>
+                            <PaginationContent>
+                                <PaginationItem>
+                                    <PaginationPrevious
+                                        href="#"
+                                        onClick={(e) => {
+                                            e.preventDefault()
+                                            if (table.getCanPreviousPage()) {
+                                                table.previousPage()
+                                            }
+                                        }}
+                                        className={!table.getCanPreviousPage() ? "pointer-events-none opacity-50" : ""}
+                                    />
+
+                                </PaginationItem>
+
+
+                                {Array.from(
+                                    { length: table.getPageCount() },
+                                    (_, i) => i + 1
+                                ).map((page) => (
+                                    <PaginationItem key={page}>
+                                        <PaginationLink
+                                            href="#"
+                                            isActive={table.getState().pagination.pageIndex + 1 === page}
+                                            onClick={() => table.setPageIndex(page - 1)}
+                                        >
+                                            {page}
+                                        </PaginationLink>
+                                    </PaginationItem>
+                                ))}
+
+
+                                {table.getPageCount() > 5 && (
+                                    <PaginationItem>
+                                        <PaginationEllipsis />
+                                    </PaginationItem>
+                                )}
+
+                                <PaginationItem>
+                                    <PaginationNext
+                                        href="#"
+                                        onClick={(e) => {
+                                            e.preventDefault()
+                                            if (table.getCanNextPage()) {
+                                                table.nextPage()
+                                            }
+                                        }}
+                                        className={!table.getCanNextPage() ? "pointer-events-none opacity-50" : ""}
+                                    />
+                                </PaginationItem>
+                            </PaginationContent>
+                        </Pagination>
+                    </div>
+                </div>
+            </div>
 
         </div>
     )

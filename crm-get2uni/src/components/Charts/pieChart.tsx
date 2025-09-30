@@ -1,7 +1,7 @@
 "use client"
 
 import { TrendingUp } from "lucide-react"
-import { Pie, PieChart, LabelList, Cell } from "recharts"
+import { Pie, PieChart, LabelList } from "recharts"
 
 import {
   Card,
@@ -49,7 +49,7 @@ export function ChartPieLabelList() {
       <CardContent className="flex-1 pb-0 h-[250px]">
         <ChartContainer
           config={chartConfig}
-          className="[&_.recharts-text]:fill-background mx-auto aspect-square max-h-[250px]"
+          className="dark:[&_.recharts-text]:fill-white [&_.recharts-text]:fill-black  mx-auto aspect-square max-h-[250px]"
         >
           <PieChart>
             <ChartTooltip content={<ChartTooltipContent nameKey="visitors" />} />
@@ -85,7 +85,7 @@ export function ChartPieLabelList() {
         <div className="flex items-center gap-2 leading-none font-medium">
         Total Commission:5<TrendingUp className="h-4 w-4" />
         </div>
-        <div className="text-muted-foreground leading-none">
+        <div className="text-secondary-foreground leading-none">
         Trending down by 0% from the previous period.
 
         </div>

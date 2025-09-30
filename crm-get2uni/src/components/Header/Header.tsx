@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <>
 
-            <div className=" fixed top-0 md:left-68 right-0 z-10 bg-white dark:bg-background
+            <div className=" fixed top-12 md:left-68 right-0 z-10 bg-background dark:bg-background
         xsm:left-0
         ">
                 <div className="flex justify-between px-6 pt-2
@@ -26,12 +26,13 @@ const Header = () => {
 
                 <div className="flex justify-between p-4">
                     <div>
-                        <h1 className="text-subheading2 font-semibold text-headingColor dark:text-white">Welcome Admin</h1>
-                        <p className="">Admin Dashboard</p>
+                        <h1 className="text-lg font-semibold  text-foreground">Welcome Admin</h1>
+                        <p className="text-sm text-secondary-foreground">Admin Dashboard</p>
                     </div>
 
                     <div className="flex  items-center gap-4">
                         <NavigationMenu
+                        
                             placeHolder="Quick Add"
                             items={[
                                 { label: "Add Student", path: "/add-student" },

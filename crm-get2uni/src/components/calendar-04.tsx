@@ -10,11 +10,16 @@ export default function Calendar04() {
     from: new Date(2025, 5, 9),
     to: new Date(2025, 5, 26),
   })
+  const [dropdown, setDropdown] =
+    React.useState<React.ComponentProps<typeof Calendar>["captionLayout"]>(
+      "dropdown"
+    )
 
   return (
     <Calendar
       mode="range"
       defaultMonth={dateRange?.from}
+       captionLayout={dropdown}
       selected={dateRange}
       onSelect={setDateRange}
       className="rounded-lg border shadow-sm"

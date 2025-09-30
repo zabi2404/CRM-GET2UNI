@@ -19,11 +19,11 @@ export function AddUniversityModal() {
   const inputRef = useRef<HTMLInputElement>(null);
   return (
     <Dialog>
-      <form>
+      <form className="">
         <DialogTrigger asChild>
           <Button className="cursor-pointer"><Plus/>Add University</Button>
         </DialogTrigger>
-        <DialogContent className="">
+        <DialogContent className="max-w-[1200px] h-screen overflow-x-auto">
           <DialogHeader>
             <DialogTitle > Add University</DialogTitle>
 

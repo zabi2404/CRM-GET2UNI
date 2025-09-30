@@ -21,20 +21,19 @@ import {
     const navigate = useNavigate()
   
     return (
-      <Select
-    
+      <Select 
         onValueChange={(val) => {
         
           navigate(val) 
         }}
       >
-        <SelectTrigger className="w-full bg-primary ">
-          <span className="text-white">{placeHolder ?? "Navigate"}</span>
+        <SelectTrigger className="w-full bg-primary py-2 px-4">
+          <span className="text-third-foreground">{placeHolder ?? "Navigate"}</span>
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent >
           <SelectGroup>
             {items.map((item, i) => (
-              <SelectItem
+              <SelectItem 
               className="cursor-pointer"
               key={i} value={item.path}>
                 {item.label}

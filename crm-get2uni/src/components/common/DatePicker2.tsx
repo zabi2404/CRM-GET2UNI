@@ -21,6 +21,10 @@ export function DatePicker() {
       ? `${format(dateRange.from, "LLL dd, y")} - ${format(dateRange.to, "LLL dd, y")}`
       : null
 
+       const [dropdown, setDropdown] =
+          useState<React.ComponentProps<typeof Calendar>["captionLayout"]>(
+            "dropdown"
+          )
   return (
     <div className="flex flex-col space-y-2 w-fit">
       <Popover>
@@ -46,6 +50,8 @@ export function DatePicker() {
             selected={dateRange}
             onSelect={setDateRange}
             defaultMonth={dateRange?.from}
+              captionLayout={dropdown}
+              
             className="rounded-lg border shadow-sm"
           />
         </PopoverContent>

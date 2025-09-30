@@ -5,16 +5,21 @@ import { Input } from '@/components/ui/input'
 function HeaderDashboard() {
   return (
 <>
-    <div className="flex items-center gap-4 mb-4 flex-wrap">
+    <div className="flex items-center gap-4 mb-4 flex-wrap ">
                 <Input
                     placeholder="Search..."
                     className="max-w-[300px] min-w-[180px]"
                 />
                 <DropDown
+                placeHolder='Status'
                     value1="Pending"
                     value2="In Review"
                     value3="Approved"
                     value4="Rejected"
+                    color1='text-success'
+                    color2='text-[#f97316]'
+                    color3='text-success'
+                    color4='text-failure'
                 />
               <DatePicker />
 

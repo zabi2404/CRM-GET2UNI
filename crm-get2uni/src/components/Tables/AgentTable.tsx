@@ -2,28 +2,20 @@
 
 import * as React from "react"
 import {
-    ColumnDef,
-    ColumnFiltersState,
     flexRender,
     getCoreRowModel,
     getFilteredRowModel,
     getPaginationRowModel,
     getSortedRowModel,
-    SortingState,
     useReactTable,
-    VisibilityState,
 } from "@tanstack/react-table"
-import { ArrowUpDown, ChevronDown, Menu, MoreHorizontal, Plus, Search } from "lucide-react"
+import {  Menu, MoreHorizontal, Plus } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { Checkbox } from "@/components/ui/checkbox"
 import {
     DropdownMenu,
-    DropdownMenuCheckboxItem,
     DropdownMenuContent,
     DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Input } from "@/components/ui/input"
@@ -185,7 +177,7 @@ export const columns: ColumnDef<Payment>[] = [
             const name = row.getValue("AgentName") as string
             return (
                 <Link
-                    to={`/Agents/${row.original.id}`}
+                    to={`/agent/144`}
                     className=" underline  capitalize"
                 >
                     {name}

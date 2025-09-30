@@ -1,5 +1,4 @@
 import { CircleArrowUp } from 'lucide-react'
-import React from 'react'
 
 function GrowthBadge({ value }: { value: string }) {
     return (
@@ -8,12 +7,16 @@ function GrowthBadge({ value }: { value: string }) {
                 <CircleArrowUp className='size-5 '
                     style={{
                         rotate: '45deg',
-                        color: 'green'
+                        color: '#28A745'
                     }}
                 />
-                <p>{value}</p>
+                <p className='text-body'
+                style={{
+                    color: '#28A745'
+                }}
+                >{value}</p>
             </div>
-            <p>from Last Month</p>
+            <p className='text-body text-secondary-foreground'>from last month</p>
         </div>
     )
 }

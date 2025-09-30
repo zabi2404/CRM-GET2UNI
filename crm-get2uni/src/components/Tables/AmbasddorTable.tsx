@@ -178,7 +178,7 @@ export const columns: ColumnDef<Payment>[] = [
             const name = row.getValue("AmbassadorName") as string
             return (
                 <Link
-                    to={`/Ambassadors/${row.original.id}`}
+                    to={`/ambassador/144`}
                     className=" underline  capitalize"
                 >
                     {name}
@@ -290,7 +290,7 @@ export function AmbasddorTable() {
 
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild >
-                            <Button variant="outline" className="hover:bg-transparent hover:text-black cursor-pointer hover:border-primary">
+                            <Button variant="outline" className="hover:bg-transparent hover:text-foreground cursor-pointer hover:border-primary">
                                 <div className="w-[200px] flex justify-between">
                                     {selectedUniversity}
                                 </div>
@@ -301,7 +301,7 @@ export function AmbasddorTable() {
                             {["Harvard University", "Oxford University", "Stanford University", "Cambridge University"].map((uni) => (
                                 <DropdownMenuItem
                                     key={uni}
-                                    className="capitalize cursor-pointer" 
+                                    className="capitalize cursor-pointer w-[250px] " 
                                     onClick={() => {
                                         setSelectedUniversity(uni) // update button label
                                         table.getColumn("University")?.setFilterValue(uni) // apply filter

@@ -1,18 +1,13 @@
-"use client"
-
-import { TrendingUp } from "lucide-react"
 import { CartesianGrid, Line, LineChart, XAxis } from "recharts"
 
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
 import {
-  ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
@@ -51,13 +46,13 @@ export function ChartLineMultiple() {
   return (
     <Card className="h-[385px] w-full">
       <CardHeader>
-        <CardTitle>Students onboarded channels</CardTitle>
-        <CardDescription>January - September 2025</CardDescription>
+        <CardTitle className="text-foreground font-semibold">Students onboarded channels</CardTitle>
+        <CardDescription className="text-secondary-foreground text-sm">January - September 2025</CardDescription>
         <CardDescription >
            <div className="flex  gap-2">
-         <li className="mr-4 text-[12px] ">Agents</li>
-          <li className="mr-4 text-[12px] ">Ambassadors</li>
-           <li className="mr-4 text-[12px] ">Direct</li>
+         <li className="mr-4 text-body ">Agents</li>
+          <li className="mr-4 text-body ">Ambassadors</li>
+           <li className="mr-4 text-body ">Direct</li>
        </div>
         </CardDescription>
 

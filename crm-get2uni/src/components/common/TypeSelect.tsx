@@ -24,6 +24,7 @@
   
     return (
       <Select
+      
       onValueChange={(val) => {
       
           onChange?.(val)   
@@ -34,7 +35,7 @@
         <SelectTrigger className="w-full">
           <SelectValue placeholder={placeHolder? placeHolder : "Select"}/>
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent >
           <SelectGroup>
             {items.map((item, i) => (
               <SelectItem key={i} value={item!}

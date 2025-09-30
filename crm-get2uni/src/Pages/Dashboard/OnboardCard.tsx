@@ -11,14 +11,14 @@ function OnboardCard({title,description}:OnboardCardProps) {
   return (
    <>
 
-    <div className="border rounded-sm p-4 w-full min-w-[250px]
+    <div className="border rounded-sm p-4 w-full min-w-[250px] bg-card
    
     ">
         <div>
     <h1 className="font-semibold">
         {title}
     </h1>
-    <p className="text-[22px] font-[500]">
+    <p className="text-lg text-secondary-foreground font-[500]">
         {description}
     </p>
         </div>

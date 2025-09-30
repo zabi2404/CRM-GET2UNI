@@ -13,10 +13,10 @@ const Dashboard = () => {
 
     return (
         <>
-       
+{/*        
         <AddDocumentModal/>
        
-        <StudentProfileModal/>
+        <StudentProfileModal/> */}
         <HeaderDashboard/>
             <StudentOverviewSection />
             <RadialCardSection />

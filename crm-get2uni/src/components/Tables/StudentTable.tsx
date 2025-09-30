@@ -2,27 +2,20 @@
 
 import * as React from "react"
 import {
-    ColumnDef,
-    ColumnFiltersState,
     flexRender,
     getCoreRowModel,
     getFilteredRowModel,
     getPaginationRowModel,
     getSortedRowModel,
-    SortingState,
     useReactTable,
-    VisibilityState,
 } from "@tanstack/react-table"
-import { ArrowUpDown, ChevronDown, Menu, MoreHorizontal, Plus, Search } from "lucide-react"
+import { ChevronDown, Menu, MoreHorizontal, Plus } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { Checkbox } from "@/components/ui/checkbox"
 import {
     DropdownMenu,
-    DropdownMenuCheckboxItem,
     DropdownMenuContent,
     DropdownMenuItem,
-    DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
@@ -185,7 +178,7 @@ export const columns: ColumnDef<Payment>[] = [
             const name = row.getValue("StudentName") as string
             return (
                 <Link
-                    to={`/students/${row.original.id}`}
+                    to={`/student/144`}
                     className=" underline  capitalize"
                 >
                     {name}
@@ -310,35 +303,56 @@ export function DataTableDemo() {
                         "
                     />
 
-                    <DropdownMenu >
+                    <DropdownMenu modal={false}>
                         <DropdownMenuTrigger asChild>
-                            <Button variant="outline" className="hover:bg-transparent hover:text-black cursor-pointer hover:border-primary">
-                                <div className="w-14 overflow-hidden">
-                                    {status}
-                                </div>
+                            <Button
+                                variant="outline"
+                                className="hover:bg-transparent hover:text-foreground cursor-pointer hover:border-primary"
+                            >
+                                <div className="w-14 overflow-hidden">{status}</div>
                                 <ChevronDown />
                             </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="center">
-                            {["pending", "processing", "success", "failed"].map((statusValue) => (
-                                <DropdownMenuItem
-                                    key={statusValue}
-                                    className="capitalize  cursor-pointer"
-                                    onClick={() => {
-                                        setStatus(statusValue);
-                                        table.getColumn("ApplicationStatus")?.setFilterValue(statusValue);
-                                    }}
-                                >
-                                    {statusValue}
-                                </DropdownMenuItem>
-                            ))}
+                            {["pending", "processing", "success", "failed"].map((statusValue) => {
+                                let colorClass = ""
+
+                                switch (statusValue) {
+                                    case "pending":
+                                        colorClass = "text-yellow-700"
+                                        break
+                                    case "processing":
+                                        colorClass = "text-blue-700"
+                                        break
+                                    case "success":
+                                        colorClass = "text-success"
+                                        break
+                                    case "failed":
+                                        colorClass = "text-failure"
+                                        break
+                                }
+
+                                return (
+                                    <DropdownMenuItem
+                                        key={statusValue}
+                                        className={`capitalize cursor-pointer ${colorClass}`}
+                                        onClick={() => {
+                                            setStatus(statusValue)
+                                            table.getColumn("ApplicationStatus")?.setFilterValue(statusValue)
+                                        }}
+                                    >
+                                        {statusValue}
+                                    </DropdownMenuItem>
+                                )
+                            })}
                         </DropdownMenuContent>
                     </DropdownMenu>
 
 
-                    <DropdownMenu>
+
+                    <DropdownMenu modal={false}>
                         <DropdownMenuTrigger asChild>
-                            <Button variant="outline" className="hover:bg-transparent hover:text-black cursor-pointer hover:border-primary">
+                            <Button variant="outline" className="hover:bg-transparent hover:text-foreground cursor-pointer hover:border-primary ">
                                 <div className="w-18 overflow-hidden">
                                     {selectedUniversity}
                                 </div>
@@ -372,9 +386,9 @@ export function DataTableDemo() {
                     </DropdownMenu>
 
 
-                    <DropdownMenu>
+                    <DropdownMenu modal={false}>
                         <DropdownMenuTrigger asChild>
-                            <Button variant="outline" className="hover:bg-transparent hover:text-black cursor-pointer hover:border-primary">
+                            <Button variant="outline" className="hover:bg-transparent hover:text-foreground cursor-pointer hover:border-primary">
                                 <div className="w-14 overflow-hidden">
                                     {selectedChannel}
                                 </div>
@@ -399,9 +413,9 @@ export function DataTableDemo() {
                         </DropdownMenuContent>
                     </DropdownMenu>
 
-                    <DropdownMenu>
+                    <DropdownMenu modal={false}>
                         <DropdownMenuTrigger asChild>
-                            <Button variant="outline" className="hover:bg-transparent hover:text-black cursor-pointer hover:border-primary">
+                            <Button variant="outline" className="hover:bg-transparent hover:text-foreground cursor-pointer hover:border-primary">
                                 <div className="w-14 overflow-hidden cursor-pointer">
 
                                     {selectedType}
@@ -428,13 +442,13 @@ export function DataTableDemo() {
                 </div>
 
                 <div className="flex gap-4">
-                       <Dialouge/>     
-                <Button
-                    to="/add-student"
-                >
-                    <Plus />
-                    Add New Student
-                </Button>
+                    <Dialouge />
+                    <Button
+                        to="/add-student"
+                    >
+                        <Plus />
+                        Add New Student
+                    </Button>
 
                 </div>
 
@@ -494,7 +508,7 @@ export function DataTableDemo() {
             </div>
             <div>
                 <div className="flex items-center w-full justify-end space-x-2 py-4">
-                   
+
                     <div className="flex ">
 
                         <Pagination>
@@ -513,7 +527,7 @@ export function DataTableDemo() {
 
                                 </PaginationItem>
 
-                              
+
                                 {Array.from(
                                     { length: table.getPageCount() },
                                     (_, i) => i + 1
@@ -529,7 +543,7 @@ export function DataTableDemo() {
                                     </PaginationItem>
                                 ))}
 
-                               
+
                                 {table.getPageCount() > 5 && (
                                     <PaginationItem>
                                         <PaginationEllipsis />
