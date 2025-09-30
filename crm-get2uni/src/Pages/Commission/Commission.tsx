@@ -1,7 +1,16 @@
 import { PayoutHistoryTable } from "@/components/Tables/PayoutHistoryTable";
 import { PayoutReqTable } from "@/components/Tables/PayoutReqTable";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+// import { useEffect } from "react";
 const Commission = () => {
+
+  // useEffect(() => {
+  //  const params = new URLSearchParams(window.location.search)
+   
+ 
+   
+  // }, [])
+  
     return (
         <Tabs defaultValue="account" className="">
         <TabsList className="">

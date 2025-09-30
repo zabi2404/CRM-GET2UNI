@@ -7,6 +7,7 @@ import {
 
 import { cn } from "@/lib/utils"
 import { Button, buttonVariants } from "@/components/ui/button"
+import { Link } from "react-router-dom"
 
 function Pagination({ className, ...props }: React.ComponentProps<"nav">) {
   return (
@@ -46,10 +47,14 @@ function PaginationLink({
   className,
   isActive,
   size = "icon",
+  to,
   ...props
-}: PaginationLinkProps) {
+}: PaginationLinkProps & { to?: string }) {
+  const Comp = to ? Link : "button"; // 👈 fallback to <button>
+
   return (
-    <a
+    <Comp
+      to={to}
       aria-current={isActive ? "page" : undefined}
       data-slot="pagination-link"
       data-active={isActive}
@@ -65,6 +70,7 @@ function PaginationLink({
   )
 }
 
+
 function PaginationPrevious({
   className,
   ...props
@@ -73,7 +79,7 @@ function PaginationPrevious({
     <PaginationLink
       aria-label="Go to previous page"
       size="default"
-      className={cn("gap-1 px-2.5 sm:pl-2.5", className)}
+      className={cn("gap-1 px-2.5 sm:pl-2.5 cursor-pointer", className)}
       {...props}
     >
       <ChevronLeftIcon />
@@ -90,7 +96,7 @@ function PaginationNext({
     <PaginationLink
       aria-label="Go to next page"
       size="default"
-      className={cn("gap-1 px-2.5 sm:pr-2.5", className)}
+      className={cn("gap-1 px-2.5 sm:pr-2.5 cursor-pointer", className)}
       {...props}
     >
       <span className="hidden sm:block">Next</span>

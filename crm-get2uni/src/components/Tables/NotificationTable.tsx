@@ -2,31 +2,14 @@
 
 import * as React from "react"
 import {
-    ColumnDef,
-    ColumnFiltersState,
     flexRender,
     getCoreRowModel,
     getFilteredRowModel,
     getPaginationRowModel,
     getSortedRowModel,
-    SortingState,
     useReactTable,
-    VisibilityState,
 } from "@tanstack/react-table"
-import { ArrowUpDown, ChevronDown, Menu, MoreHorizontal, Plus, Search } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
-import { Checkbox } from "@/components/ui/checkbox"
-import {
-    DropdownMenu,
-    DropdownMenuCheckboxItem,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
 import {
     Table,
     TableBody,
@@ -38,6 +21,9 @@ import {
 import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "../ui/pagination"
 
 import { Link } from "react-router-dom"
+import { Input } from "../ui/input"
+import { DropDown } from "../common/DropDown"
+import { DatePicker } from "../common/DatePicker2"
 
 const data: Payment[] = [
 
@@ -176,6 +162,7 @@ export type Payment = {
     UserType: string
 }
 
+
 export const columns: ColumnDef<Payment>[] = [
 
     {
@@ -193,23 +180,17 @@ export const columns: ColumnDef<Payment>[] = [
             )
         },
     },
-   
-    
+
+
     {
         accessorKey: "Title",
         header: "Title",
         cell: ({ row }) => (
             <div className="capitalize">{row.getValue("Title")}</div>
         ),
-    }, {
-        accessorKey: "Beneficiary",
-        header: "Beneficiary",
-        cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("Beneficiary")}</div>
-        ),
     },
-   
-    
+
+
     {
         accessorKey: "UserType",
         header: "User & Type",
@@ -220,18 +201,27 @@ export const columns: ColumnDef<Payment>[] = [
     {
         accessorKey: "ActionBy",
         header: "Action Button",
-        cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("ActionBy")}</div>
-        ),
-    },
- 
+        cell: ({ row }) => {
+            const [label, setLabel] = React.useState(false)
+
+            return (
+                <button
+                    className={`cursor-pointer underline ${label ? 'text-success' : 'text-failure'}`}
+                    onClick={() => setLabel(!label)}
+                >
+                    {label ? 'Mark as Unread' : 'Mark as Read'}
+                </button>
+            )
+        },
+    }
+
 
 
 ]
 
 export function NotificationTable() {
     const [sorting, setSorting] = React.useState<SortingState>([])
-    
+
 
     const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
         []
@@ -262,10 +252,26 @@ export function NotificationTable() {
     return (
         <div className="w-full">
             <div className="flex items-center  py-4 gap-2">
+                <Input
+                    placeholder="Search..."
+                    value={(table.getColumn("StudentName")?.getFilterValue() as string) ?? ""}
+                    onChange={(event) =>
+                        table.getColumn("StudentName")?.setFilterValue(event.target.value)
+                    }
+                    className="min-w-[200px] 
+                        max-w-[250px]
+                        "
+                />
 
-              
+                <DropDown
+                    placeHolder='Type'
+                    value1="Student"
+                    value2="Agent"
+                    value3="Ambassdor"
+                    width="200px"
+                />
+                <DatePicker />
 
-   
 
 
             </div>
@@ -278,7 +284,7 @@ export function NotificationTable() {
                                 {headerGroup.headers.map((header) => {
                                     return (
                                         <TableHead
-                                            className="h-[65px]"
+                                            className="h-[65px] w-1/4"
                                             key={header.id}>
                                             {header.isPlaceholder
                                                 ? null
@@ -300,7 +306,7 @@ export function NotificationTable() {
                                     data-state={row.getIsSelected() && "selected"}
                                 >
                                     {row.getVisibleCells().map((cell) => (
-                                        <TableCell className="h-[65px]" key={cell.id}>
+                                        <TableCell className="h-[65px] w-1/4" key={cell.id}>
                                             {flexRender(
                                                 cell.column.columnDef.cell,
                                                 cell.getContext()
@@ -323,67 +329,67 @@ export function NotificationTable() {
                 </Table>
             </div>
 
-          <div>
-                         <div className="flex items-center w-full justify-end space-x-2 py-4">
-                            
-                             <div className="flex ">
-         
-                                 <Pagination>
-                                     <PaginationContent>
-                                         <PaginationItem>
-                                             <PaginationPrevious
-                                                 href="#"
-                                                 onClick={(e) => {
-                                                     e.preventDefault()
-                                                     if (table.getCanPreviousPage()) {
-                                                         table.previousPage()
-                                                     }
-                                                 }}
-                                                 className={!table.getCanPreviousPage() ? "pointer-events-none opacity-50" : ""}
-                                             />
-         
-                                         </PaginationItem>
-         
-                                       
-                                         {Array.from(
-                                             { length: table.getPageCount() },
-                                             (_, i) => i + 1
-                                         ).map((page) => (
-                                             <PaginationItem key={page}>
-                                                 <PaginationLink
-                                                     href="#"
-                                                     isActive={table.getState().pagination.pageIndex + 1 === page}
-                                                     onClick={() => table.setPageIndex(page - 1)}
-                                                 >
-                                                     {page}
-                                                 </PaginationLink>
-                                             </PaginationItem>
-                                         ))}
-         
-                                        
-                                         {table.getPageCount() > 5 && (
-                                             <PaginationItem>
-                                                 <PaginationEllipsis />
-                                             </PaginationItem>
-                                         )}
-         
-                                         <PaginationItem>
-                                             <PaginationNext
-                                                 href="#"
-                                                 onClick={(e) => {
-                                                     e.preventDefault()
-                                                     if (table.getCanNextPage()) {
-                                                         table.nextPage()
-                                                     }
-                                                 }}
-                                                 className={!table.getCanNextPage() ? "pointer-events-none opacity-50" : ""}
-                                             />
-                                         </PaginationItem>
-                                     </PaginationContent>
-                                 </Pagination>
-                             </div>
-                         </div>
-                     </div>
+            <div>
+                <div className="flex items-center w-full justify-end space-x-2 py-4">
+
+                    <div className="flex ">
+
+                        <Pagination>
+                            <PaginationContent>
+                                <PaginationItem>
+                                    <PaginationPrevious
+                                        href="#"
+                                        onClick={(e) => {
+                                            e.preventDefault()
+                                            if (table.getCanPreviousPage()) {
+                                                table.previousPage()
+                                            }
+                                        }}
+                                        className={!table.getCanPreviousPage() ? "pointer-events-none opacity-50" : ""}
+                                    />
+
+                                </PaginationItem>
+
+
+                                {Array.from(
+                                    { length: table.getPageCount() },
+                                    (_, i) => i + 1
+                                ).map((page) => (
+                                    <PaginationItem key={page}>
+                                        <PaginationLink
+                                            href="#"
+                                            isActive={table.getState().pagination.pageIndex + 1 === page}
+                                            onClick={() => table.setPageIndex(page - 1)}
+                                        >
+                                            {page}
+                                        </PaginationLink>
+                                    </PaginationItem>
+                                ))}
+
+
+                                {table.getPageCount() > 5 && (
+                                    <PaginationItem>
+                                        <PaginationEllipsis />
+                                    </PaginationItem>
+                                )}
+
+                                <PaginationItem>
+                                    <PaginationNext
+                                        href="#"
+                                        onClick={(e) => {
+                                            e.preventDefault()
+                                            if (table.getCanNextPage()) {
+                                                table.nextPage()
+                                            }
+                                        }}
+                                        className={!table.getCanNextPage() ? "pointer-events-none opacity-50" : ""}
+                                    />
+                                </PaginationItem>
+                            </PaginationContent>
+                        </Pagination>
+                    </div>
+                </div>
+            </div>
 
         </div>
     )

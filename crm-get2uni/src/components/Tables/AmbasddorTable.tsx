@@ -275,14 +275,14 @@ export function AmbasddorTable() {
         <div className="w-full">
             <div className="flex items-center justify-between py-4 gap-2 flex-wrap">
 
-               <div className="flex items-center gap-2 flex-wrap">
+               <div className="flex items-center gap-2 flex-wrap min-[874px]:min-w-[550px]">
                <Input
                     placeholder="Search..."
                     value={(table.getColumn("AmbassadorName")?.getFilterValue() as string) ?? ""}
                     onChange={(event) =>
                         table.getColumn("AmbassadorName")?.setFilterValue(event.target.value)
                     }
-                    className="max-w-[200px]"
+                    className="max-w-[280px]"
                 />
 
        

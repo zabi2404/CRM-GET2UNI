@@ -534,7 +534,7 @@ export function DataTableDemo() {
                                 ).map((page) => (
                                     <PaginationItem key={page}>
                                         <PaginationLink
-                                            href="#"
+                                            to="#"
                                             isActive={table.getState().pagination.pageIndex + 1 === page}
                                             onClick={() => table.setPageIndex(page - 1)}
                                         >

@@ -286,7 +286,7 @@ export function AgentTable() {
                     onChange={(event) =>
                         table.getColumn("AgentName")?.setFilterValue(event.target.value)
                     }
-                    className="max-w-[200px]"
+                    className="max-w-[280px]"
                 />
 
 
