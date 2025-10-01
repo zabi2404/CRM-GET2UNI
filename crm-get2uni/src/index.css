@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
 @theme {
   --breakpoint-xsm: 320px;
   --breakpoint-sm: 480px;

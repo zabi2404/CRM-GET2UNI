@@ -1,12 +1,11 @@
-import toast, { Toaster } from "react-hot-toast";
+import  { Toaster } from "react-hot-toast";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router";
-import TopBar from "./components/common/TopBar";
 import { useEffect } from "react";
 import { useTheme } from "./Zustand/themeSwitcherStore";
 import i18n from "./i18n";
 import { useLanguage } from "./Zustand/LanguageSwitcherStore";
-import { SidebarProvider } from "./components/ui/sidebar";
+import  { SessionManagment } from "./SessionManagment";
 function App() {
 
   const { theme } = useTheme();
@@ -35,6 +34,7 @@ function App() {
 
      
         <Toaster />
+      
         <RouterProvider router={router} />
      
     </>

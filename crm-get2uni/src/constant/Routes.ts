@@ -1,22 +1,30 @@
-import Dashboard from "../Pages/Dashboard/Dashboard";
-import Student from "@/Pages/Student/Student";
-import NotFound from "@/Pages/Not Found/NotFound";
-import Agent from "@/Pages/Agent/Agent";
-import Report from "@/Pages/Report/Report";
-import Ambasddar from "@/Pages/Ambasddar/Ambasddar";
-import Commission from "@/Pages/Commission/Commission";
-import Message from "@/Pages/Message/Message";
-import Notification from "@/Pages/Notification/Notification";
-import University from "@/Pages/University/University";
-import Setting from "@/Pages/Setting/Setting";
-import Login from "@/Pages/Auth/Login";
-import SignUp from "@/Pages/Auth/SignUp";
-import ForgetPassword from "@/Pages/Auth/Forget-Password";
-import AddStudent from "@/Pages/AddStudent/AddStudent";
-import AddAmbasddar from "@/Pages/AddAmbasdar/AddAmbasddar";
-import AddLead from "@/Pages/AddLead/AddLead";
-import Leads from "@/Pages/Leads/Leads";
-import AddAgents from "@/Pages/AddAgent/AddAgents";
+import { lazy } from "react";
+
+
+
+
+const Dashboard = lazy(()=>(import('../Pages/Dashboard/Dashboard')))
+const Student = lazy(() => import("@/Pages/Student/Student"));
+const NotFound = lazy(() => import("@/Pages/Not Found/NotFound"));
+const Agent = lazy(() => import("@/Pages/Agent/Agent"));
+const Report = lazy(() => import("@/Pages/Report/Report"));
+const Ambasddar = lazy(() => import("@/Pages/Ambasddar/Ambasddar"));
+const Commission = lazy(() => import("@/Pages/Commission/Commission"));
+const Message = lazy(() => import("@/Pages/Message/Message"));
+const Notification = lazy(() => import("@/Pages/Notification/Notification"));
+const University = lazy(() => import("@/Pages/University/University"));
+const Setting = lazy(() => import("@/Pages/Setting/Setting"));
+const Login = lazy(() => import("@/Pages/Auth/Login"));
+const SignUp = lazy(() => import("@/Pages/Auth/SignUp"));
+const ForgetPassword = lazy(() => import("@/Pages/Auth/Forget-Password"));
+const AddStudent = lazy(() => import("@/Pages/AddStudent/AddStudent"));
+const AddAmbasddar = lazy(() => import("@/Pages/AddAmbasdar/AddAmbasddar"));
+const AddLead = lazy(() => import("@/Pages/AddLead/AddLead"));
+const Leads = lazy(() => import("@/Pages/Leads/Leads"));
+const AddAgents = lazy(()=>import('../Pages/AddAgent/AddAgents'));
+
+
+
 export {
   Dashboard,
   Student,

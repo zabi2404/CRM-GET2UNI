@@ -11,19 +11,24 @@ import AmbassddorProfile from "./Pages/Ambassdor Profile/AmbassddorProfile";
 import AgentProfile from "./Pages/Agent Profile/AgentProfile";
 import StudentProfile from "./Pages/StudentProfile/StudentProfile";
 import Testign from "./Testing";
+import { Suspense } from "react";
+import LazyLoader from "./components/common/LazyLoader";
+import { SessionManagment } from "./SessionManagment";
 
 export const router = createBrowserRouter([
     {
-        // This is the main application layout for authenticated users
         path: "/",
         element: (
-            <SidebarProvider>
-                <MainLayout />
-            </SidebarProvider>
+            <Suspense fallback={<LazyLoader />}>
+                <SidebarProvider>
+                      <SessionManagment/>
+                    <MainLayout />
+                </SidebarProvider>
+            </Suspense>
         ),
         children: [
             {
-                index: true, // This is the dashboard at "/"
+                index: true,
                 element: <Dashboard />,
             },
             {
@@ -35,8 +40,8 @@ export const router = createBrowserRouter([
                 element: <AddStudent />,
             },
             {
-                path:"student/:id",
-                element:<StudentProfile/>
+                path: "student/:id",
+                element: <StudentProfile />
             },
             {
                 path: "agent",
@@ -47,8 +52,8 @@ export const router = createBrowserRouter([
                 element: <AddAgents />,
             },
             {
-                path:"agent/:id",
-                element:<AgentProfile/>
+                path: "agent/:id",
+                element: <AgentProfile />
 
             },
             {
@@ -60,8 +65,8 @@ export const router = createBrowserRouter([
                 element: <AddAmbasddar />,
             },
             {
-                path:"ambassador/:id",
-                element:<AmbassddorProfile/>
+                path: "ambassador/:id",
+                element: <AmbassddorProfile />
 
             },
             {
@@ -93,13 +98,13 @@ export const router = createBrowserRouter([
                 element: <Setting />,
             },
             {
-                path:'testing',
-                element:<Testign/>
+                path: 'testing',
+                element: <Testign />
             }
         ],
     },
     {
-        // This is a separate, top-level layout for authentication
+
         element: <AuthLayout />,
         children: [
             {
