@@ -31,7 +31,7 @@ export function AmbassddorBasicInfo({
 
                     <div className="flex flex-1 gap-3
                         xsm:flex-col
-                    md:flex-row
+                    lg:flex-row
                     ">
 
                         <div className="grid gap-3 w-full">
@@ -53,7 +53,7 @@ export function AmbassddorBasicInfo({
 
                     <div className="flex flex-1 gap-3
                         xsm:flex-col
-                    md:flex-row
+                    lg:flex-row
                     ">
 
 
@@ -74,7 +74,7 @@ export function AmbassddorBasicInfo({
 
                     <div className="flex flex-1 gap-3
                         xsm:flex-col
-                    md:flex-row
+                    lg:flex-row
                     ">
 
 
@@ -95,7 +95,7 @@ export function AmbassddorBasicInfo({
 
                     <div className="flex flex-1 gap-3
                         xsm:flex-col
-                    md:flex-row
+                    lg:flex-row
                     ">
 
 
@@ -117,7 +117,7 @@ export function AmbassddorBasicInfo({
 
                     <div className="flex flex-1 gap-3
                         xsm:flex-col
-                    md:flex-row
+                    lg:flex-row
                     ">
 
 
@@ -135,7 +135,7 @@ export function AmbassddorBasicInfo({
 
                     <div className="flex flex-1 gap-3
                         xsm:flex-col
-                    md:flex-row
+                    lg:flex-row
                     ">
 
 
@@ -152,7 +152,7 @@ export function AmbassddorBasicInfo({
                     </div>
                     <div className="flex flex-1 gap-3">
 
-                        <div className="grid gap-3 w-full md:w-[50%]">
+                        <div className="grid gap-3 w-full lg:w-[50%]">
 
                             <DatePicker />
                         </div>

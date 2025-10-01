@@ -11,7 +11,7 @@ function CommissionTab() {
   <>
 
 
-    <div className='flex gap-4 sm:m-4 flex-wrap'>
+    <div className='flex gap-4 sm:m-4 flex-wrap xsm:mb-4'>
 
     <CheckboxForm
     title="Pending"

@@ -9,7 +9,7 @@ function ReffredSignupTab() {
   <>
 
 
-    <div className='flex gap-4 flex-wrap 
+    <div className='flex gap-4 flex-wrap  xsm:mb-4
     md:m-4'>
      <CheckboxForm
     title="Agent"

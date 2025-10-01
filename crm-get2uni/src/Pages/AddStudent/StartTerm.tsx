@@ -17,16 +17,19 @@ export default function StartTerm({
         <>
 
             <form className={cn("flex flex-col gap-6     ", className)} {...props}>
-              <AddStudentHeader
-              title="Add Student"
-              heading="Start Term"
-              
-              />
+                <AddStudentHeader
+                    title="Add Student"
+                    heading="Start Term"
+
+                />
                 <div className="grid gap-3">
 
-                    <div className="flex flex-1 gap-3">
-                        <div className="grid gap-3 w-full">
-                            <Label >{t('auth.type')}</Label>
+                    <div className="flex flex-1 gap-3   xsm:flex-col
+                    md:flex-row">
+                        <div className="grid gap-3 w-full
+                        
+                        ">
+                            <Label >Starting term</Label>
                             <TypeSelect
                                 value1="Transfer"
                                 value2="Change of Status"
@@ -37,20 +40,28 @@ export default function StartTerm({
 
                         </div>
                         <div className="grid gap-3 w-full">
-                       
-                                               <DatePicker />
-                                           </div>
+
+                            
+                            <Label >University Start Year</Label>
+                            <TypeSelect
+                            placeHolder="Pick a Year"
+                                value1="2024"
+                                value2="2025"
+                                value3="2026"
+                                value4="2027"
+                            />
+                        </div>
                     </div>
 
 
-                
-                   
 
 
-                 
-                    
+
+
+
+
                 </div>
-               
+
 
             </form>
         </>

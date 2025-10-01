@@ -251,7 +251,7 @@ export function NotificationTable() {
 
     return (
         <div className="w-full">
-            <div className="flex items-center  py-4 gap-2">
+            <div className="flex items-center  py-4 gap-2 flex-wrap">
                 <Input
                     placeholder="Search..."
                     value={(table.getColumn("StudentName")?.getFilterValue() as string) ?? ""}

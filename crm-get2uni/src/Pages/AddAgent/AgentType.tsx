@@ -1,18 +1,14 @@
 import { cn } from "@/lib/utils"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { useTranslation } from "react-i18next"
 import { TypeSelect } from "@/components/common/TypeSelect"
-
-
-import { DatePicker } from "@/components/common/DatePicker"
+import { Button } from "@/components/ui/button"
 import AddStudentHeader from "../AddStudent/AddStudentHeader"
 
 export default function AgentType({
     className,
     ...props
 }: React.ComponentProps<"form">) {
-    const { t } = useTranslation();
     return (
 
         <>
@@ -27,7 +23,7 @@ export default function AgentType({
 
                     <div className="flex flex-1 gap-3">
                         <div className="grid gap-3 w-full">
-                            <Label >{t('auth.type')}</Label>
+                            <Label >Agent Type</Label>
                             <TypeSelect
                                 value1="Transfer"
                                 value2="Change of Status"
@@ -37,22 +33,24 @@ export default function AgentType({
 
 
                         </div>
-                        <div className="grid gap-3 w-full">
                        
-                                               <DatePicker />
-                                           </div>
+                    </div>
+                    <div className="my-4">
+                        <Button >
+                Commission Model
+                        </Button>
+
+
+                    </div>
+                     <div className="grid gap-3 w-full"> 
+                            <Label className="text-secondary-foreground">Upload Logo</Label>
+
+                        <Input
+                            type="file"
+                        />
                     </div>
 
-
-                
-                   
-
-
-                 
-                    
                 </div>
-               
-
             </form>
         </>
     );
