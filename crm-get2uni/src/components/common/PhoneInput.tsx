@@ -8,7 +8,6 @@ import {
   Command,
   CommandEmpty,
   CommandGroup,
-  CommandInput,
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
@@ -34,6 +33,7 @@ const PhoneInput: React.ForwardRefExoticComponent<PhoneInputProps> =
     ({ className, onChange, value, ...props }, ref) => {
       return (
         <RPNInput.default
+          international
           ref={ref}
           className={cn("flex", className)}
           flagComponent={FlagComponent}
@@ -101,7 +101,7 @@ const CountrySelect = ({
           <Button
             type="button"
             variant="outline"
-            className="flex gap-1 rounded-e-none rounded-s-lg border-r-0 px-3 focus:z-10"
+            className="flex gap-1 cursor-pointer rounded-e-none rounded-s-lg border-r-0 px-3 focus:z-10 hover:bg-transparent hover:text-foreground"
             disabled={disabled}
           >
             <FlagComponent country={selectedCountry} countryName={selectedCountry} />
@@ -158,10 +158,10 @@ const CountrySelectOption = ({
   };
 
   return (
-    <CommandItem className="gap-2" onSelect={handleSelect}>
+    <CommandItem className="gap-2 " onSelect={handleSelect}>
       <FlagComponent country={country} countryName={countryName} />
       <span className="flex-1 text-sm">{countryName}</span>
-      <span className="text-sm text-foreground/50">{`+${RPNInput.getCountryCallingCode(country)}`}</span>
+      <span className="text-sm text-foreground ">{`+${RPNInput.getCountryCallingCode(country)}`}</span>
       <CheckIcon
         className={`ml-auto size-4 ${country === selectedCountry ? "opacity-100" : "opacity-0"}`}
       />
@@ -173,7 +173,7 @@ const FlagComponent = ({ country, countryName }: RPNInput.FlagProps) => {
   const Flag = flags[country];
 
   return (
-    <span className="flex h-4 w-6 overflow-hidden rounded-sm bg-foreground/20 [&_svg:not([class*='size-'])]:size-full">
+    <span className="cursor-pointer flex h-4 w-6 overflow-hidden rounded-sm bg-foreground/20 [&_svg:not([class*='size-'])]:size-full">
       {Flag && <Flag title={countryName} />}
     </span>
   );

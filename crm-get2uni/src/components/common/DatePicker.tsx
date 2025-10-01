@@ -15,6 +15,7 @@ import { useTranslation } from "react-i18next"
 
 export function DatePicker() {
   const [date, setDate] = useState<Date | undefined>(undefined)
+  console.log(date);
  const { t } = useTranslation();
   return (
     <div className="flex  flex-col space-y-2 w-full">

@@ -7,11 +7,26 @@ import { PhoneInput } from "./common/PhoneInput"
 import { Link } from "react-router-dom"
 import { useTranslation } from "react-i18next"
 import { DropDown } from "./common/DropDown"
+import { useState } from "react"
 
 export function SignUpForm({
   className,
   ...props
 }: React.ComponentProps<"form">) {
+
+
+  const [formData, setFormData] = useState({});
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value
+    })
+   console.log(formData);
+
+  }
+
   const { t } = useTranslation();
   return (
     <form className={cn("flex flex-col gap-6     ", className)} {...props}>
@@ -23,7 +38,7 @@ export function SignUpForm({
       </div>
       <div className="grid gap-2">
 
-      <div className="grid gap-3">
+        <div className="grid gap-3">
           <Label >{t('auth.type')}</Label>
           <DropDown
             value1="Transfer"
@@ -31,13 +46,19 @@ export function SignUpForm({
             value3="International"
             value4="Second Masters"
             width="100%"
+            onChange={(val) => 
+              setFormData({
+                ...formData,
+                type: val
+              })
+              }
           />
         </div>
 
         <div className="grid gap-3">
           <Label htmlFor="FirstName">{t('auth.firstName')}</Label>
           <Input id="FirstName"
-
+            onChange={handleChange}
             type="text" required />
         </div>
 
@@ -46,19 +67,22 @@ export function SignUpForm({
         <div className="grid gap-3">
           <Label htmlFor="LastName">{t('auth.lastName')}</Label>
           <Input id="LastName"
-
+            onChange={handleChange}
             type="text" required />
         </div>
 
-    
+
         <div className="grid gap-3">
 
-          <DatePicker />
+          <DatePicker 
+        
+          
+          />
         </div>
         <div className="grid gap-3">
           <Label htmlFor="email">Email Address</Label>
           <Input id="email"
-
+            onChange={handleChange}
             type="email" placeholder="m@example.com" required />
         </div>
         <div className="grid gap-3">
@@ -68,7 +92,7 @@ export function SignUpForm({
         </div>
 
         <div className="grid gap-3">
-          <Label htmlFor="email">{t('auth.phone')}</Label>
+          <Label htmlFor="phone">{t('auth.phone')}</Label>
 
           <PhoneInput />
         </div>

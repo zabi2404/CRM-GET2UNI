@@ -5,7 +5,6 @@ import { useEffect } from "react";
 import { useTheme } from "./Zustand/themeSwitcherStore";
 import i18n from "./i18n";
 import { useLanguage } from "./Zustand/LanguageSwitcherStore";
-import  { SessionManagment } from "./SessionManagment";
 function App() {
 
   const { theme } = useTheme();

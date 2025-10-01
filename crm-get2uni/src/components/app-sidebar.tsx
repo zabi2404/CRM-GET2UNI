@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Home, User, Users, Star, DollarSign, BarChart2, Bell, MessageSquare, BookOpen, LogOut } from "lucide-react"
-import { NavLink, useLocation } from "react-router-dom"
+import {  useLocation } from "react-router-dom"
 import {
   Sidebar,
   SidebarContent,
@@ -9,9 +9,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
   SidebarRail,
 } from "@/components/ui/sidebar"
 import { Link } from "react-router-dom"

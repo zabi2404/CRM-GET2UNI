@@ -10,7 +10,7 @@ function StudentOnboardChannel() {
                 ">
                 <ChartLineMultiple />
                 <div className="flex gap-4 flex-wrap
-                    xsm:flex-col
+                    xsm:flex-col xsm:justify-between
                  
                     ">
                     <OnboardCard

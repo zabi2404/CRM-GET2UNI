@@ -273,7 +273,7 @@ function SidebarTrigger({
       }}
       {...props}
     >
-      <div className="flex items-center justify-center  bg-primary py-2 px-4 rounded-sm ">
+      <div className="flex items-center justify-center  bg-primary py-2 px-4 rounded-sm cursor-pointer ">
 
       <Menu className="text-white" />
       </div>

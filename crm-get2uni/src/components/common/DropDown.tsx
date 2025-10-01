@@ -47,7 +47,7 @@ export function DropDown({
        
       onValueChange={(val) => {
         onChange?.(val)
-        console.log(val)
+        console.log(val);
       }}
       defaultValue={defaultValue}
     >

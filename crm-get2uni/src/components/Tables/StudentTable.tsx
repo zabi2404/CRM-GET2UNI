@@ -38,7 +38,7 @@ const data: Payment[] = [
         id: "bhqecj4p",
         StudentName: 'zohaib',
         ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
+        RecuritmentChannel: "agent",
         AssignedUniversity: "university 1",
         LastActivity: "Request Document Email",
         AssignedGet2UniStaff: ''
@@ -79,7 +79,7 @@ const data: Payment[] = [
         id: "bhqecj4p",
         StudentName: 'zohaib',
         ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
+        RecuritmentChannel: "agent",
         AssignedUniversity: "university 1",
         LastActivity: "Request Document Email",
         AssignedGet2UniStaff: ''
@@ -96,7 +96,7 @@ const data: Payment[] = [
         id: "bhqecj4p",
         StudentName: 'zohaib',
         ApplicationStatus: "pending",
-        RecuritmentChannel: "direct",
+        RecuritmentChannel: "agent",
         AssignedUniversity: "university 1",
         LastActivity: "Request Document Email",
         AssignedGet2UniStaff: ''
@@ -189,9 +189,24 @@ export const columns: ColumnDef<Payment>[] = [
     {
         accessorKey: "RecuritmentChannel",
         header: "Recuritment Channel",
-        cell: ({ row }) => (
-            <div className="capitalize">{row.getValue("RecuritmentChannel")}</div>
-        ),
+        cell: ({ row }) => {
+            const value = row.getValue("RecuritmentChannel") as "direct" | "agent" | "ambassador";
+            const colorMap: Record<typeof value, string> = {
+                direct: "text-failure",
+                agent: "text-success",
+                ambassador: "text-purple-600",
+            };
+
+            return (
+                <div className={`capitalize font-medium  cursor-pointer ${colorMap[value]}`}
+                onClick={()=>{
+             
+                }}
+                >
+                    {value}
+                </div>
+            );
+        },
     },
     {
         accessorKey: "ApplicationStatus",

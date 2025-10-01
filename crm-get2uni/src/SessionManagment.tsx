@@ -28,8 +28,11 @@ const [timer,setTimer]= useState(10);
 
     inactivityTimer.current = setTimeout(() => {
       setIsModalActive(true); // show modal
-    }, 15*60 *1000); // 15 min
+    }, 15 * 60 * 1000); // 15 min
+
   };
+
+
 
 // when modal opens → start 10s timer
   useEffect(() => {
@@ -71,15 +74,16 @@ const [timer,setTimer]= useState(10);
 
   return (
     <Dialog open={isModalActive} onOpenChange={setIsModalActive}>
-      <DialogContent>
+      <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Session</DialogTitle>
+          <DialogTitle>Session Expired</DialogTitle>
           <DialogDescription>Want to stay logged in? {timer}s</DialogDescription>
         </DialogHeader>
 
         <DialogFooter>
           <DialogClose asChild>
             <Button
+            className="cursor-pointer"
               variant="outline"
               onClick={() => navigate("/login")}
             >
@@ -89,6 +93,7 @@ const [timer,setTimer]= useState(10);
 
           <DialogClose asChild>
             <Button
+            className="cursor-pointer"
               onClick={() => {
                 resetInactivityTimer(); // restart 15 min timer
               }}
