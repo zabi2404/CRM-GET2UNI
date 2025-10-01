@@ -2,7 +2,6 @@ import { cn } from "@/lib/utils"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useTranslation } from "react-i18next"
-import { TypeSelect } from "@/components/common/TypeSelect"
 
 import AddStudentHeader from "./AddStudentHeader"
 import { DatePicker } from "@/components/common/DatePicker"
@@ -29,19 +28,21 @@ export default function StatusDetail({
                     md:flex-row
                     ">
                         <div className="grid gap-3 w-full">
-                            <Label >{t('auth.type')}</Label>
-                            <TypeSelect
-                                value1="Transfer"
-                                value2="Change of Status"
-                                value3="International"
-                                value4="Second Masters"
-                            />
+                            <Label >Current university</Label>
+                           <Input
+                           type="text"
+                           placeholder="Select"
+                           />
 
 
                         </div>
                         <div className="grid gap-3 w-full">
                        
-                                               <DatePicker />
+                                             <Label >Current course</Label>
+                           <Input
+                           type="text"
+                           placeholder="Select"
+                           />
                                            </div>
                     </div>
 

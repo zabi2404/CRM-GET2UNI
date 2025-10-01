@@ -456,7 +456,7 @@ export function DataTableDemo() {
 
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex gap-4 flex-wrap">
                     <Dialouge />
                     <Button
                         to="/add-student"

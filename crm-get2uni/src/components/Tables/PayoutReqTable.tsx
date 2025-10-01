@@ -239,7 +239,7 @@ export const columns: ColumnDef<Payment>[] = [
     {
         id: "actions",
         header: <Menu className="size-4" />,
-        enableHiding: false,
+        enableHiding: false,    
         cell: ({ row }) => {
             return (
                 <DropdownMenu>
@@ -294,7 +294,7 @@ export function PayoutReqTable() {
 
     return (
         <div className="w-full">
-            <div className="flex items-center  py-4 gap-2">
+            <div className="flex items-center  py-4 gap-2 flex-wrap">
 
              <Input
                                 placeholder="Search..."

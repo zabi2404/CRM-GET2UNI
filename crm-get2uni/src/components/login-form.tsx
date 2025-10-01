@@ -5,9 +5,7 @@ import { Label } from "@/components/ui/label"
 import { Link } from "react-router-dom"
 import { useTranslation } from "react-i18next"
 import { useState } from "react"
-import z from 'zod'
-import toast from "react-hot-toast"
-import { Eye } from "lucide-react"
+
 
 export function LoginForm({
   className,
@@ -54,9 +52,6 @@ export function LoginForm({
     //     toast.error(`${field}: ${issue.message}`);
     //   });
     // }
-
- 
-
   }
 
 
